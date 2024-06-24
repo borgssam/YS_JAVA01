@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, min-width=300, initial-scale=1.0">
+    <title>Theater Practice</title>
+
+    <!-- 초기 설정 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #header {
+            height: 100px;
+            width: 500px;
+            margin: 30px auto;
+            margin-bottom: 50px;
+            line-height: 90px;
+            border: 1px solid;
+            text-align: center;
+        }
+
+        .content {
+            width: 700px;
+            margin: 0 auto; /*화면 중앙 정렬*/
+        }
+
+        .content>div>ul {
+            text-align: center;
+            margin: 30px auto;
+            margin-bottom: 30px;
+        }
+        .content>div>ul>li {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        #a-line > ul > li:nth-of-type(2n+2) {
+            margin-right: 20px;
+        }
+
+        #a-line > ul > li:last-child {
+            margin-right: 0px;
+        }
+
+        #b-line > ul > li:nth-of-type(2n+2) {
+            margin-right: 20px;
+        }
+
+        #c-line > ul > li:nth-of-type(2n+2) {
+            margin-right: 20px;
+        }
+
+        #d-line > ul > li:nth-of-type(2n+2) {
+            margin-right: 20px;
+        }
+
+        #e-line > ul > li:nth-of-type(2n+2) {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div id="screen">
+                <h1>Screen</h1>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="a-line">
+                <ul>
+                    <li>A1</li>
+                    <li>A2</li>
+                    <li>A3</li>
+                    <li>A4</li>
+                    <li>A5</li>
+                    <li>A6</li>
+                </ul>
+            </div>
+
+            <div id="b-line">
+                <ul>
+                    <li>B1</li>
+                    <li>B2</li>
+                    <li>B3</li>
+                    <li>B4</li>
+                    <li>B5</li>
+                    <li>B6</li>
+                </ul>
+
+            </div>
+
+            <div id="c-line">
+                <ul>
+                    <li>C1</li>
+                    <li>C2</li>
+                    <li>C3</li>
+                    <li>C4</li>
+                    <li>C5</li>
+                    <li>C6</li>
+                </ul>
+
+            </div>
+
+            <div id="d-line">
+                <ul>
+                    <li>D1</li>
+                    <li>D2</li>
+                    <li>D3</li>
+                    <li>D4</li>
+                    <li>D5</li>
+                    <li>D6</li>
+                </ul>
+
+            </div>
+            <div id="e-line">
+                <ul>
+                    <li>E1</li>
+                    <li>E2</li>
+                    <li>E3</li>
+                    <li>E4</li>
+                    <li>E5</li>
+                    <li>E6</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

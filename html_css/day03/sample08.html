@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회원 관리 폼</title>
+
+<style>
+html, body {
+    min-height: 100vh; /* 전체 화면을 덮도록 설정 */
+    overflow-y: auto; /* 수직 스크롤을 활성화 */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form.gaip_form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px; /* 폼이 너무 커서 스크롤이 생기지 않을 때를 대비해 여백을 추가합니다 */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.gender,
+.gender p {
+    display: flex;
+    align-items: center;
+}
+
+.gender p {
+    margin-right: 10px;
+}
+
+.gender label {
+    margin: 0;
+}
+
+.accept {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.accept h2 {
+    margin-bottom: 10px;
+}
+
+.acceptChk {
+    margin-right: 5px;
+}
+
+.accept ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accept ul li {
+    width: 48%;
+}
+
+.bar {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.gaipBtn_wrap {
+    text-align: center;
+}
+
+.gaipBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.gaipBtn:hover {
+    background-color: #218838;
+}
+
+.gaipIdWrap,
+.gaipHpWrap {
+    position: relative;
+}
+
+.gaipId_wrap,
+.gaipHpWrap input {
+    width: calc(100% - 120px);
+    display: inline-block;
+}
+
+.gaipId_CheckBtn_wrap,
+.gaipHpWrap button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 100%;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gaipId_CheckBtn_wrap button:hover,
+.gaipHpWrap button:hover {
+    background: #0056b3;
+}
+
+.birthWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.birthWrap li {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.birthWrap li:last-child {
+    margin-right: 0;
+}
+
+h2, h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.svg_smsEmail img {
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<form class='gaip_form'>
+<ul>
+    <li>                                            
+        <div>
+            <label for='gaipId'>아이디<i>*</i></label>
+            <div class='fixedclear gaipIdWrap'> <!-- 이영역이 부모영역 relative -->
+                <div class='gaipId_wrap'>
+                    <!-- 이너비를 100% 하고 우측에 페딩 120px  -->
+                    <!-- box-sizing:border-box;  -->
+                    <input type='text' name='gaipId' id='gaipId' value='' placeholder='예 : marketkurly12'>
+                </div>
+                    <!-- 포지션 앱솔루트 우측에 정렬    -->
+                <div  class='gaipId_CheckBtn_wrap'>
+                    <button data-role='none' class='gaipId_CheckBtn'>중복확인</button>
+                </div>
+            </div>
+        </div>
+    </li><!-- 아이디 -->
+    
+    <li>                                            
+        <div>
+            <label for='gaipPw'>비밀번호<i>*</i></label>
+            <div>
+                <input type='password' name='gaipPw' id='gaipPw' value='' placeholder='비밀번호를 입력하세요'>
+            </div>
+        </div>
+    </li><!-- 비밀번호 -->
+    
+    <li>                                            
+        <div>
+            <label for='gaipPw2'>비밀번호 확인<i>*</i></label>
+            <div>
+                <input type='password' name='gaipPw2' id='gaipPw2' value='' placeholder='비밀번호를 한번 더 입력하세요'>
+            </div>
+        </div>
+    </li><!-- 비밀번호 확인 -->
+    
+    <li>                                            
+        <div>
+            <label for='gaipName'>이름<i>*</i></label>
+            <div>
+                <input type='text' name='gaipName' id='gaipName' value='' placeholder='이름을 입력해 주세요'>
+            </div>
+        </div>
+    </li><!-- 이름 -->
+    
+    <li>                                            
+        <div>
+        <label for='gaipEmail'>이메일<i>*</i></label>
+            <div>
+                <input type='email' name='gaipEmail' id='gaipEmail' value='' placeholder='예: marketkurly@kurly.com'>
+            </div>
+        </div>
+    </li><!-- 이메일 -->
+    
+    <li>                                            
+        <div>
+            <label for='gaipHp'>휴대폰<i>*</i></label>
+            <div class='gaipHpWrap'>
+                <input type='text' name='gaipHp' id='gaipHp' value='' placeholder='숫자만 입력해주세요'>
+                <button class='gaipId_CheckBtn'>인증번호 받기</button>
+            </div>
+        </div>
+    </li><!-- 휴대폰 -->
+    
+    <li>                                            
+        <div>
+            <label for='gaipAddr'>주소<i>*</i></label>
+            <div>
+                <input type='text' name='gaipAddr' id='gaipAddr' value='' placeholder='도로명, 지번, 건물명 검색'>
+            
+            </div>
+        </div>
+    </li><!-- 주소 -->
+    
+    <li>                                            
+        <div>
+            <label>생년월일<i>*</i></label>
+            <div>
+            <ul class='fixedclear birthWrap' tabindex='0'>
+                <li>
+                    <div>                                                                
+                        <input type='number' min='1900' max='2100' name='gaipBirth_Year' id='gaipBirth_Year' value='2020' placeholder='YYYY'>
+                    </div>
+                </li>
+                <li>
+                    <div>                                                                
+                        <input type='number' min='1' max='12' name='gaipBirth_Month' id='gaipBirth_Month' value='9' placeholder='MM'>
+                    </div>
+                </li>
+                <li>
+                    <div>                                                                
+                        <input type='number' min='1' max='31' name='gaipBirth_Date' id='gaipBirth_Date' value='1' placeholder='DD'>
+                    </div>
+                </li>
+            </ul>
+            
+            
+            </div>
+        </div>
+    </li> <!-- 생년월일 -->
+    
+    <li>
+        <div>
+            <h2>성별</h2>     <!--  라디오버튼은 동일한 name : 여러개중 단 한개만 선택 가능 -->
+            <div class='gender'>
+                <p>                                                           
+                    <input type='radio' name='gender_chk' id='male' class='gender_chk' value='남성'>
+                    <label for='male'>남자</label>
+                </p> 
+                <p>
+                    <input type='radio' name='gender_chk' id='feMale' class='gender_chk' value='여성'>
+                    <label for='feMale'>여자</label>
+                </p> 
+                <p>
+                    <input type='radio' name='gender_chk' id='unSelect' class='gender_chk' value='선택안함'>
+                    <label for='unSelect'>선택안함</label>
+                </p>
+             </div>
+        </div>
+    </li> <!-- 성별 -->
+    
+    
+    <li>
+        <div>
+            <h2>추가입력 사항</h2>  <!--  라디오버튼은 동일한 name : 여러개중 단 한개만 선택 가능 -->     
+            <h3>추천인 아이디와 참여 이벤트명 중 하나만 선택 가능합니다.</h3>
+            <div class='gender'>
+                <p>                                                           
+                    <input type='radio' name='choo_chk' id='chooId'  class='choo_chk' value='추천인 아이디'>
+                    <label for='chooId'>추천인 아이디</label>
+                </p> 
+                <p>
+                    <input type='radio' name='choo_chk' id='chamEvent'  class='choo_chk' value='참여 이벤트명'>
+                    <label for='chamEvent'>참여 이벤트명</label>
+                </p> 
+            </div>
+        </div>
+    </li> <!-- 추천인 -->
+</ul>
+    
+<div class='bar'></div>
+    
+<ul class='accept'>
+    <li>
+        <div>
+            <h2>이용약관동의<i>*</i></h2> <!--  체크박스은 반드시 name 이 서로 달라야한다. : 다중 선택 가능 -->
+            <p>
+                <input type='checkbox' name='allCheck' id='allCheck' class='acceptChk' value='all'>
+                <label for='allCheck'>전체 동의합니다.</label>
+            </p>
+            <h3>선택 항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</h3>
+        </div>
+    </li>
+    <li>
+        <div>
+            <input type='checkbox' name='dong1Check' id='dong1Check'  class='acceptChk'  value='이용약관 필수'>
+            <label for='dong1Check'>이용약관 <span>필수</span></label>                                                        
+        </div>
+    </li>
+    <li>
+        <div>
+            <input type='checkbox' name='dong2Check' id='dong2Check'  class='acceptChk'  value='개인정보처리방침 동의 필수'>
+            <label for='dong2Check'>개인정보처리방침 동의 <span>필수</span></label>                                                        
+        </div>
+    </li>
+    <li>
+        <div>
+            <input type='checkbox' name='dong3Check' id='dong3Check'  class='acceptChk'  value='개인정보처리방침 동의 선택'>
+            <label for='dong3Check'>개인정보처리방침 동의 <span>선택</span></label>                                                        
+        </div>
+    </li>
+    <li>
+        <div>
+            <input type='checkbox' name='dong4Check' id='dong4Check'  class='acceptChk'  value='무료배송, 할인쿠폰 등 혜택/정보 수신 동의'>
+            <label for='dong4Check'>무료배송, 할인쿠폰 등 혜택/정보 수신 동의</label>                                                        
+        </div>
+    </li>
+    <li>
+        <div>
+            <ul class='smsEmail'>
+                <li>
+                    <div>
+                        <input type='checkbox' name='smsCheck' id='smsCheck' class='acceptChk'  value='SMS'>
+                        <label for='smsCheck'>SMS</label>        
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <input type='checkbox' name='emailCheck' id='emailCheck' class='acceptChk'  value='이메일'>
+                        <label for='emailCheck'>이메일</label>        
+                    </div>
+                </li>
+            </ul>
+            <div class='svg_smsEmail'>
+                <img src='../img/bnr_join_benefit_v3.svg' alt='동의 시 한 달 간 [5% 적립] + [무제한 무료배송]'>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div>
+            <input type='checkbox' name='age14Check' id='age14Check' class='acceptChk'  value='본인은 만 14세 이상입니다.'>
+            <label for='age14Check'>본인은 만 14세 이상입니다. </label>
+        </div>
+    </li>
+</ul>
+
+<div class='gaipBtn_wrap'>
+    <button class='gaipBtn'>가입하기</button>
+</div>
+
+</form>
+
+</body>
+</html>

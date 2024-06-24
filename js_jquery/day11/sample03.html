@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function writeln(...texts){
+            const logDiv = document.getElementById('log');
+            // 여러 텍스트 인자를 각각 처리합니다.
+            texts.forEach(text => {
+                const newLogEntry = document.createElement('div');
+                newLogEntry.textContent = text;
+                logDiv.appendChild(newLogEntry);
+            });
+        }
+
+        function writeln2(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        let num1;      //변경가능
+        var num2;      //변경가능
+        const num3=3;  //변경불가
+        //변수이름은 알파벳 + 숫자 + 특수기호(_, $)
+        //숫 맨앞 못오는 경우가 많음
+        let _num;
+        //카멜표기, 파스칼, 케밥, 스네이크
+        let goodMan; //카멜(낙타) 변수,함수
+        let GoodMan; //파스칼 : 클래스
+        let good_man; //필드명
+        //let good-man; //사용자정의 태그
+
+        //변수만들기
+        // let num01;
+        // num01 = 5;
+        // writeln2(num01);
+        // console.log(num01);
+        // let num02 = 10;
+        // writeln2(num02);
+        // writeln2(num01 + num02);
+
+        // let sum01, sum02, sum03;
+        // sum01 = 3;
+        // sum02 = 5;
+        // sum03 ='설악산';
+        // writeln2(sum01, sum02,sum03);
+
+        // let num01 = 3 , num02 = 5, num03="라벤더";
+        // writeln2(num01+num02, num03);
+        // writeln2(num03+sum03);
+        // writeln2(sum03+sum02);
+        // writeln2("3"+3);
+
+        // let sum01 = 123;
+        // sum01=234;
+        // writeln2(sum01);
+        // sum01=456;
+        // writeln2(sum01);
+
+        // let sum02;
+        // writeln2(sum02);
+        // console.log(sum02)
+
+        // sum02 =456;
+        // writeln2(sum01);
+
+        // let sum01;        
+        // console.log(sum01);
+        // console.log(same);
+
+        // sum01 =456;
+        // console.log(sum01);
+
+        // const my = 5;
+        // writeln2(my);
+        // //my=6;
+        // writeln2(my);
+
+        // let a=3;
+        // let a=5;
+        // writeln2(a);
+
+        // function  logScope(){
+        //     let local =2;
+        //     if(local){
+        //         var local2 = '다른값';
+        //         writeln2('블럭안 :', local2);
+        //     }
+        //     writeln2("local : ", local2);
+        // }
+        // logScope();
+
+        
+        // function  logScope2(){
+        //     var local =2;
+        //     if(local){
+        //         var local = '다른값';
+        //         writeln2('블럭안 :', local);
+        //     }
+        //     writeln2("local : ", local);
+        // }
+        // logScope2();
+
+        //typeof연산자-----------
+        // let num = -3.141592;
+        // writeln2(typeof num);
+        // let str = "welcome";
+        // writeln2(typeof str);
+        // let boolm = true;
+        // writeln2(typeof boolm);
+        // let no = null;
+        // writeln2(typeof no);
+        // let some;
+        // writeln2(typeof some);
+        // let inf = 10/0;
+        // writeln2(10/0);
+
+        // let hn01 = "<h1>welcome</h1>";
+        // document.write(hn01);
+        // document.write("지리산");
+        // document.write("<p class=\"main\"> 문자열데이터 </p>")
+
+        // let a = 5;
+        // let b = 4;
+        // let sum = a+b;
+        // writeln2(sum);
+        // let str="1234";
+        // let istr = Number(str);
+        // let istr2 = parseInt(str);
+        // writeln2(str+1);
+        // writeln2(istr+1);
+        // writeln2(istr2+1);
+        // writeln2(typeof str, typeof istr, typeof istr2);
+
+        // Boolean타입  참(true), 거짓(false)
+        // let sam01 = 20 > 10;
+        // let sam02 = true;
+        // let sam03 = false;
+        // writeln2(sam01, sam02, sam03);
+
+        // writeln2(Boolean(10));
+        // writeln2(Boolean(0));
+        // writeln2(Boolean(-10));
+        // writeln2("----------------");
+        // writeln2(Boolean(null));
+        // writeln2(Boolean(undefined));
+        // writeln2(Boolean(Infinity));
+        // writeln2("----------------");
+        // writeln2(Boolean('거북이'));
+
+        //null undefined
+        // let num;
+        // console.log(num);
+        // let some = 1234;
+        // console.log(some);
+        // some = null;
+        // console.log(some);
+
+        writeln2(0 &&'도야지');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

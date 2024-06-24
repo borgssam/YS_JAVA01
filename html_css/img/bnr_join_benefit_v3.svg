@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="217px" height="68px" viewBox="0 0 217 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>guide_img</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="guide_img" fill-rule="nonzero">
+            <path d="M47.816,0.251 L43.372,8 L6.5,8 C2.91,8 0,10.91 0,14.5 L0,61.5 C0,65.09 2.91,68 6.5,68 L210.5,68 C214.09,68 217,65.09 217,61.5 L217,14.5 L216.996,14.267 C216.873,10.785 214.012,8 210.5,8 L53.125,8 L48.683,0.251 C48.491,-0.084 48.008,-0.084 47.816,0.251 Z M44.096,8.749 L48.249,1.505 L52.402,8.749 C52.492,8.904 52.657,9 52.836,9 L210.5,9 C213.538,9 216,11.462 216,14.5 L216,61.5 C216,64.538 213.538,67 210.5,67 L6.5,67 C3.462,67 1,64.538 1,61.5 L1,14.5 C1,11.462 3.462,9 6.5,9 L43.662,9 C43.842,9 44.007,8.904 44.096,8.749 Z" id="Shape" fill="#DDDDDD"></path>
+            <text id="동의-시-한-달-간-[5%-적립]-+-[무제한-무" fill="#5E0080" font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo" font-size="12" font-weight="500">
+                <tspan x="12" y="33">동의 시 한 달 간 [5% 적립] + [무제한 무</tspan>
+            </text>
+            <text id="료배송]" fill="#5E0080" font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo" font-size="12" font-weight="500">
+                <tspan x="12" y="51">료배송]</tspan>
+            </text>
+            <text id="(첫-주문-후-적용)" fill="#666666" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="12" font-weight="normal">
+                <tspan x="50.496" y="51">(첫 주문 후 적용)</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        body{font-family: 'Helvertica', sans-serif;}
+        li{list-style:none}
+        a{text-decoration: none;}
+    </style>
+    <style>
+        #main_header{
+            height:45px;
+            line-height:45px;
+
+            background:url('./images/header_background.png');
+            position: relative;
+            text-align: center;
+        }
+
+        #main_header>h1{
+            color:white;
+        }
+
+        #main_header>a, #main_header> label {
+            display:block;
+            height:32px;
+            position:absolute;
+        }
+
+        #main_header>a.left{
+            width:62px;left:5px; top:7px;
+            background: url('./images/sprites.png');
+            text-indent: -99999px; 
+        }
+
+        #main_header>label.right{
+            width:32px;
+            right:5px;
+            top:7px;
+            background: url(./images/sprites.png);
+            background-position: -62px 0px;
+            text-indent: -999999px;;
+        }
+    </style>
+    <!-- 토글처리 -->
+    <style>
+        #toggle{display:none;}
+        #wrap>#toggle_gnb_wrap{display:none;}
+        #toggle:checked + #wrap>#toggle_gnb_wrap{display:block;}
+        #toggle_gnb_wrap{
+            background: #363636;
+            padding:15px;
+        }
+        #toggle_gnb{
+            background: #fff;
+            padding:5px;
+        }
+        #toggle_gnb > ul{overflow: hidden;}
+        #toggle_gnb > ul >li{ width:80px; float:left;}
+
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <a class="left" href="#">Main</a>
+            <h1>Mobile</h1>
+            <label class="right" for="toggle" onclick="">Toggle</label>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>                    
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>

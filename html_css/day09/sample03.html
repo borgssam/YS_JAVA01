@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 초기화 -->
+    <style>
+        *{margin:0;padding:0;font:normal 12px 'Dotum'; }
+        a{text-decoration: none;}
+        img{border:0;}
+        ul{list-style:none;}
+        body{width:980px; margin:0 auto;}        
+    </style>
+    <!-- 해더 -->
+    <style>
+        #main_header{
+            position: relative;
+            height:75px;
+            background-color: aqua;
+        }
+        #main_header > h1.logo{
+            position: absolute;
+            left:15px; top:10px;
+        }
+        #main_header > div.login_menu{
+            position: absolute;
+            top:10px; right:0px;
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <h1 class="logo">
+            <a href="#"><img src="Images/title.png" alt=""></a>
+        </h1>
+        <div class="login_menu">
+            <span><a href="#">로그인</a></span>
+            <span><a href="#">회원가입</a></span>
+            <span><a href="#">고객센터</a></span>
+        </div>
+    </header>
+</body>
+</html>

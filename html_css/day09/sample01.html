@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 기본스타일 -->
+     <style>
+        *{margin:0; padding:0;}
+        body{font-family:'Helvetica', sans-serif}
+        li{list-style:none;}
+        a{text-decoration: none;}
+     </style>
+     <!-- 가독성을위한 배경색상 -->
+     <style>
+        header{background-color: aqua;}
+        nav{background-color: aquamarine;}
+        #wrap{background-color: burlywood;}
+        footer{background-color:greenyellow;}
+     </style> 
+     <!-- 해더 -->
+      <style>
+        #main_header{
+            height:60px;
+            line-height:60px;
+            background-color: #1d4088;
+            color:white;
+            padding-left:10px;
+            border-bottom: 1px solid black;
+        }
+      </style>
+      <!-- 네비게이션 -->
+      <style>
+        #main_gnb{
+            overflow: hidden;
+            background-color: #32394a;
+            border-bottom: 1px solid black;
+        }
+        #main_gnb>ul.left{
+            float: left;
+            overflow:hidden;
+        }
+        #main_gnb>ul.left>li{
+            float: left;
+        }
+
+        #main_gnb>ul.right{
+            float:right;
+            overflow:hidden;
+        }
+        #main_gnb>ul.right>li{
+            float:right;
+        }
+
+        #main_gnb a {
+            display:block;
+            padding:10px 20px;
+
+            color:white;
+            font-weight: bold;
+            border-left:1px solid #5f6673;
+            border-right:1px solid #32394a;
+        }
+
+      </style>
+</head>
+<body>
+    <header id="main_header"><h1>Fluid</h1></header>
+    <nav id="main_gnb">
+        <ul class="left">
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">Btn_R</a></li>
+            <li><a href="#">Btn_R</a></li>
+        </ul>
+    </nav>
+    <div id="wrap"></div>
+    <footer id="main_footer"></footer>
+</body>
+</html>

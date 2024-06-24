@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 기본스타일 -->
+     <style>
+        *{margin:0; padding:0;}
+        body{font-family:'Helvetica', sans-serif}
+        li{list-style:none;}
+        a{text-decoration: none;}
+     </style>
+     <!-- 가독성을위한 배경색상 -->
+     <style>
+        /* header{background-color: aqua;}
+        nav{background-color: aquamarine;}
+        #wrap{background-color: burlywood;}
+        footer{background-color:greenyellow;} */
+     </style> 
+     <!-- 해더 -->
+      <style>
+        #main_header{
+            height:60px;
+            line-height:60px;
+            background-color: #1d4088;
+            color:white;
+            padding-left:10px;
+            border-bottom: 1px solid black;
+        }
+      </style>
+      <!-- 네비게이션 -->
+      <style>
+        #main_gnb{
+            overflow: hidden;
+            background-color: #32394a;
+            border-bottom: 1px solid black;
+        }
+        #main_gnb>ul.left{
+            float: left;
+            overflow:hidden;
+        }
+        #main_gnb>ul.left>li{
+            float: left;
+        } 
+
+        #main_gnb>ul.right{
+            float:right;
+            overflow:hidden;
+        }
+        #main_gnb>ul.right>li{
+            float:right;
+        }
+
+        #main_gnb a {
+            display:block;
+            padding:10px 20px;
+
+            color:white;
+            font-weight: bold;
+            border-left:1px solid #5f6673;
+            border-right:1px solid #32394a;
+        }
+        body{min-width:720px;}
+      </style>
+      <!-- 콘텐츠 -->
+      <style>
+        #wrap{
+            overflow:hidden;
+
+            background-color:#71b1d1;
+        }
+        #wrap>#main_lnb{
+            float: left;
+            width:200px;
+        }
+        #wrap>#content_wrap{
+            float:left;
+            width:100%;
+            margin-right:-200px;
+        }
+        #wrap>#content_wrap> #content{padding-right: 200px;}
+      </style>
+      <!-- 좌측메뉴 -->
+      <style>
+        #main_lnb> ul> li>a{
+            display:block;
+            height:40px;line-height:40px;
+
+            border-top:1px solid #96d6f6;
+            border-bottom: 1px solid #6298b2;
+            color:white;
+            font-weight:bold;
+            padding-left:15px;
+        }
+      </style>
+      <!-- 본문 -->
+      <style>
+        #content{
+            background-color: white;
+            border-left:1px solid black;
+        }
+        article{ padding:10px;}
+      </style>
+      <!-- 푸터 -->
+      <style>
+      #main_footer{
+        padding:10px;
+        border-top:3px solid black;
+        text-align:center;
+      }
+
+      </style>
+
+
+</head>
+<body>
+    <header id="main_header"><h1>Fluid</h1></header>
+    <nav id="main_gnb">
+        <ul class="left">
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+            <li><a href="#">Btn_L</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">Btn_R</a></li>
+            <li><a href="#">Btn_R</a></li>
+        </ul>
+    </nav>
+    <div id="wrap">
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+                <li><a href="#">button</a></li>
+            </ul>
+        </nav>
+        <div id="content_wrap">
+            <div id="content">
+                <article>
+                    <h1>제목</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, sapiente, dolor saepe quia reprehenderit id nesciunt quos dicta veritatis repellat exercitationem vitae explicabo omnis cupiditate. In ducimus recusandae sunt hic.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, provident laborum? Et officia iure nihil, consequatur, consequuntur mollitia, labore ratione praesentium tempore quis expedita in illo. Consectetur nemo eveniet sed.</p>
+                </article>
+                <article>
+                    <h1>제목</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, sapiente, dolor saepe quia reprehenderit id nesciunt quos dicta veritatis repellat exercitationem vitae explicabo omnis cupiditate. In ducimus recusandae sunt hic.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, provident laborum? Et officia iure nihil, consequatur, consequuntur mollitia, labore ratione praesentium tempore quis expedita in illo. Consectetur nemo eveniet sed.</p>
+                </article>
+            </div>
+        </div>
+
+    </div>
+    <footer id="main_footer">
+        <h3>연세IT미래교육원</h3>
+        <address>수원시 장안구 영화동</address>
+    </footer>
+</body>
+</html>

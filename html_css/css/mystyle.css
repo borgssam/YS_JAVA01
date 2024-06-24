@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.container{margin: 0 auto; width:960px;}
+.row{overflow: hidden;}
+.span{float:left;}
+.span-1{width: 80px; background-color: aqua;}
+.span-2{width: 160px;background-color: rgb(98, 255, 0);}
+.span-3{width: 240px;background-color: rgb(140, 0, 255);}
+.span-4{width: 320px;background-color: rgb(0, 255, 170);}
+.span-5{width: 400px;background-color: rgb(211, 160, 9);}
+.span-6{width: 480px;background-color: rgb(158, 207, 103);}
+.span-7{width: 560px;background-color:blueviolet}
+.span-8{width: 640px;background-color:crimson}
+.span-9{width: 720px;background-color:burlywood}
+.span-10{width: 800px;background-color:darkmagenta}
+.span-11{width: 880px;background-color:greenyellow}
+.span-12{width: 960px;background-color:lawngreen}

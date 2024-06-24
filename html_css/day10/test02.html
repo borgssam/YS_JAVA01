@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Ellipsis</title>
+    <style>
+        .header-table {
+            width: 330px;
+        }
+        .header-table td a {
+            display: block;          /* 블록 요소로 변경하여 전체 셀을 채우도록 함 */
+            white-space: nowrap;     /* 텍스트를 한 줄로 표시 */
+            overflow: hidden;        /* 넘치는 텍스트를 숨김 */
+            text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 표시 */
+            width: 200px;             /* 링크가 셀의 너비에 맞도록 설정 */
+        }
+        .header-table td {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:330px; margin:0 auto; background-color: gray;">
+
+        <div class="headertop">
+            <h1>공지사항</h1>
+            <p><a href="#">더보기+</a></p>
+            <div></div>
+            <hr>      
+        <table class="header-table">
+        <tr>
+            <td style="overflow: hidden;"><a href="#" id="td1">웹표준로 제작되5555어 1234567 이상없이 어쩌구 저저구</a></td>
+            <td width="50px">2024-06-21</td>
+        </tr>
+        <tr>
+            <td><a href="#" id="td2">타업종에서도 이용이 가능하며, 그 경우 어쩌구 저쩌구</a></td>
+            <td>2024-06-21</td>
+        </tr>
+        <tr>
+            <td><a href="#" id="td3">펜션, 게스트하우스, 민박등의 업종에 적합합니당</a></td>
+            <td>2024-06-21</td>
+        </tr>
+    </table>
+    </div>
+    </div>
+</body>
+</html>

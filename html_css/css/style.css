@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+#wrap {width:100%;}
+/* 헤더영역 */
+#wrap #header {width:100%;background:#aae;}
+#wrap #header .wrap {position:relative;width:1200px;margin:0 auto;}
+/* 서브메뉴 배경 */
+#wrap #header .wrap .sub-bg {z-index:1;position:absolute;top:100px;left:0;width:100%;height:150px;background:#ddd;}
+
+#wrap #header .wrap > ul {z-index:2;position:relative;width:100%;}
+#wrap #header .wrap > ul > li:nth-child(1) {float:left;width:180px;height:100px;background:#eea;}  /* 좌측 */
+#wrap #header .wrap > ul > li:nth-child(2) {position:relative;float:left;width:1020px;height:100px;background:#aee;} /* 우측 */
+
+/* 네비게이션 */
+#wrap #header .wrap > ul > li:nth-child(2) #nav {position:absolute;right:20px;bottom:0;}
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul {width:100%;}
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul > li {float:left;width:175px;height:45px;}
+/* 메인버튼 */
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul > li > a {display:block;width:100%;line-height:45px;background:#fff;text-align:center;}
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul > li > a:hover {background:#ddd;color:#000;}
+/* 서브메뉴 */
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul > li  > .sub {width:100%;}
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul > li  > .sub ul {width:100%;}
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul > li  > .sub ul li {width:100%;}
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul > li  > .sub ul li a {display:block;line-height:35px;text-align:center;background:#ddd;}
+#wrap #header .wrap > ul > li:nth-child(2) #nav > ul > li  > .sub ul li a:hover {background:#ccc;}
+
+
+
+/* 메인영역 */
+#wrap #main   {width:1200px;margin:0 auto;}
+#wrap #main #section1 {width:100%;height:300px;background:#aea;}
+#wrap #main #section2 {width:100%;}
+#wrap #main #section2 > ul {width:100%;}
+#wrap #main #section2 > ul > li {float:left;width:33.333%;height:200px;}
+#wrap #main #section2 > ul > li:nth-child(1) {background:#dda;}
+#wrap #main #section2 > ul > li:nth-child(2) {background:#dad;}
+#wrap #main #section2 > ul > li:nth-child(3) {background:#add;}
+
+/* 푸터영역 */
+#wrap #footer {width:100%;background:#aae;}
+#wrap #footer .wrap {width:1200px;margin:0 auto;}
+#wrap #footer .wrap > ul {width:100%;}
+#wrap #footer .wrap > ul > li:nth-child(1) {float:left;width:85%;height:100px;background:#ccc;}
+#wrap #footer .wrap > ul > li:nth-child(2) {float:left;width:15%;}
+#wrap #footer .wrap > ul > li:nth-child(2) ul {width:100%;}
+#wrap #footer .wrap > ul > li:nth-child(2) ul li {width:100%;height:50px;}
+#wrap #footer .wrap > ul > li:nth-child(2) ul li:nth-child(1) {background:#eee;}
+#wrap #footer .wrap > ul > li:nth-child(2) ul li:nth-child(2) {background:#ddd;}

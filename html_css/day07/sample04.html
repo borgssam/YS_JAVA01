@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #html:checked ~ div#tab>label[for="html"]{
+            background-color: blue;
+            color:white;
+        }
+        #css:checked ~ div#tab>label[for="css"]{
+            background-color: blue;
+            color:white;
+        }
+
+        #tab_html{ display:none; }        
+        #html:checked ~ #tab_html{
+            display:block;
+        }
+
+        #tab_css{ display:none; }        
+        #css:checked ~ #tab_css{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="rbtn_tab" id="html" checked="checked">
+    <input type="radio" name="rbtn_tab" id="css">
+    <div id="tab">
+        <label for="html">HTML</label>
+        <label for="css">CSS</label>
+    </div>
+    <div id="tab_html">
+        <ul>
+            <li>고구마</li>
+            <li>토마토</li>
+            <li>사과</li>
+            <li>귤</li>
+        </ul>
+    </div>
+    <div id="tab_css">
+        <ul>
+            <li>사자</li>
+            <li>호랑이</li>
+            <li>토끼</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

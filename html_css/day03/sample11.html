@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvasBox{
+            width: 500px;
+            height:400px;
+            border:1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvasBox"></canvas>
+    <script>
+        var canvas = document.getElementById('canvasBox');
+        var con = canvas.getContext('2d');
+            con.fillStyle = 'blue';
+            con.fillRect(20,20,100,100);
+            con.beginPath();
+
+            con.moveTo(100,100);
+            con.lineTo(150,100);
+            con.strokeStyle = 'black';
+            con.stroke();
+
+
+    </script>
+    
+</body>
+</html>

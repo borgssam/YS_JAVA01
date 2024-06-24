@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        
+    <style>
+    @media screen and (max-width:767px) {
+        *{background-color:blue;}        
+    }
+    @media screen and (min-width:768px) and (max-width:959px){
+        *{background-color:green;}    
+        .container{
+            margin:0;padding:0;
+        }   
+        .row{
+            overflow: hidden;
+            width:100%;
+        } 
+        .span_1{width: 6.5%;}
+        .span_2{width: 15%;}
+        .span_3{width: 23.5%;}
+        .span_4{width: 32%;}
+        .span_5{width: 40.5%;}
+        .span_6{width: 49%;}
+        .span_7{width: 57.5%;}
+        .span_8{width: 66%;}
+        .span_9{width: 74.5%;}
+        .span_10{width: 83%;}
+        .span_11{width: 91.5%;}
+        .span_12{width: 100%;}
+    }
+    @media screen and (min-width:960px) {
+        *{background-color:yellow;}        
+        .container{ margin:0 auto; width:960px; }
+        .row{
+            overflow: hidden;
+            margin-left:10px;
+            margin-right: 10px;
+        } 
+        
+        .span_1,.span_2,.span_3,.span_4,.span_5,.span_6, 
+        .span_7,.span_8,.span_9,.span_10,.span_11,.span_12{float:left;}
+
+        .span_1{width: 60px;}
+        .span_2{width: 140px;}
+        .span_3{width: 220px;}
+        .span_4{width: 300px;}
+        .span_5{width: 380px;}
+        .span_6{width: 460px;}
+        .span_7{width: 540px;}
+        .span_8{width: 620px;}
+        .span_9{width: 700px;}
+        .span_10{width: 780px;}
+        .span_11{width: 860px;}
+        .span_12{width: 940px;}
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span_12">
+                <h1>span_12</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae alias id blanditiis numquam voluptatem, fuga ea? Ipsum animi ex accusantium? Velit delectus similique inventore veniam unde eaque iure assumenda ab?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span_2">
+                <h1>span_2</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae alias id blanditiis numquam voluptatem, fuga ea? Ipsum animi ex accusantium? Velit delectus similique inventore veniam unde eaque iure assumenda ab?</p>
+            </div>
+            <div class="span_10">
+                <h1>span_10</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae alias id blanditiis numquam voluptatem, fuga ea? Ipsum animi ex accusantium? Velit delectus similique inventore veniam unde eaque iure assumenda ab?</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span_4">
+                <h1>span_4</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae alias id blanditiis numquam voluptatem, fuga ea? Ipsum animi ex accusantium? Velit delectus similique inventore veniam unde eaque iure assumenda ab?</p>
+            </div>
+            <div class="span_4">
+                <h1>span_4</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae alias id blanditiis numquam voluptatem, fuga ea? Ipsum animi ex accusantium? Velit delectus similique inventore veniam unde eaque iure assumenda ab?</p>
+            </div>
+            <div class="span_4">
+                <h1>span_4</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae alias id blanditiis numquam voluptatem, fuga ea? Ipsum animi ex accusantium? Velit delectus similique inventore veniam unde eaque iure assumenda ab?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

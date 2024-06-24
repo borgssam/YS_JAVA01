@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas로 곰돌이 그리기</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000;"></canvas>
+    <script>
+        // 캔버스 요소 가져오기
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        // 곰돌이 그리기
+        drawBear();
+
+        function drawBear() {
+            // 몸통 그리기
+            // context.beginPath();
+            // context.art(0,0,10,10, Math*PI);
+            // context.strokeStyle = "black";
+            // context.stroke();
+            // context.closePath();
+            
+
+            
+            context.beginPath();
+            context.arc(200, 200, 100, 0, 2 * Math.PI);
+            context.fillStyle = "brown";
+            context.fill();
+            // context.strokeStyle = "black";
+            // context.stroke();
+            context.closePath();
+
+            // 머리 그리기
+            context.beginPath();
+            context.arc(200, 150, 70, 0, 2 * Math.PI);
+            context.fillStyle = "brown";
+            context.fill();
+            context.closePath();
+
+            // 눈 그리기
+            context.beginPath();
+            context.arc(180, 130, 10, 0, 2 * Math.PI);
+            context.fillStyle = "white";
+            context.fill();
+            context.closePath();
+
+            context.beginPath();
+            context.arc(220, 130, 10, 0, 2 * Math.PI);
+            context.fillStyle = "white";
+            context.fill();
+            context.closePath();
+
+            // 코 그리기
+            context.beginPath();
+            context.arc(200, 150, 5, 0, 2 * Math.PI);
+             context.fillStyle = "black";
+            context.fill();
+            context.closePath();
+
+            // 입 그리기
+            context.beginPath();
+            context.moveTo(180, 170);
+            context.lineTo(220, 170);
+            context.strokeStyle = "black";
+            context.stroke();
+            context.closePath();
+
+            // 귀 그리기
+            context.beginPath();
+            context.arc(130, 100, 20, 0, 2 * Math.PI);
+            context.fillStyle = "brown";
+            context.fill();
+            context.closePath();
+
+            context.beginPath();
+            context.arc(270, 100, 20, 0, 2 * Math.PI);
+            context.fillStyle = "brown";
+            context.fill();
+            context.closePath();
+
+            
+            context.beginPath();
+            context.arc(20, 20, 20, 2, 2 * Math.PI);
+            context.strokeStyle = "black";
+            context.stroke();
+            context.closePath();
+        }
+    </script>
+</body>
+</html>

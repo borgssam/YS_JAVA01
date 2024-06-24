@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>선택자 스타일 지정</title>
+<style>
+
+    form {text-align:center;}
+    fieldset {margin:20px auto;padding:15px 40px 20px 40px;display:inline-block;border:1px solid #29c;}
+    legend {font-size:16px;color:#333;text-align:left;padding-right:20px;letter-spacing:1px;}
+      
+ 
+        input:nth-of-type(4){
+            margin-left:20px;
+        }  
+
+        input:default + label{
+            color:#F00;
+        }
+        (#input2 , #input3) input:checked + label{
+            color:red;
+        }       
+        /* #input2 input:checked + label, #input3 input:checked + label{
+            color:red;
+        }        */
+     
+/* 
+        #input3 input:enabled + label{
+            color:#0c0;
+        }                
+        #input3 input:disabled + label{
+            color:#bbb;
+        } */
+
+</style>
+</head>
+<body>
+
+<form name='form1' id="form1" method="post" action="abc1.php">
+
+<fieldset id="input1"> 
+    <legend> [예제1] DEFAULT </legend> 
+
+    <input type='checkbox' name='idSave' id='idSaveChk1'  value='아이디저장'>
+    <label for='idSaveChk1'>아이디저장</label> 
+
+    <input type='checkbox' name='autoSave' id='autoSaveChk1' value='자동로그인'>
+    <label for='autoSaveChk1'>자동로그인</label>
+    
+    <input type='checkbox' name='secConnect' id='secConnectChk1' value='보안접속'>
+    <label for='secConnectChk1'>보안접속</label>
+    
+    <input type='radio' name='chek' id='travelChk1'  value='여행'>
+    <label for='travelChk1'>여행</label>   
+
+    <input type='radio' name='chek'  id='exerciseChk1'  value='운동'>
+    <label for='exerciseChk1'>운동</label> 
+</fieldset>  
+<br>
+
+<fieldset id="input2"> 
+    
+    <legend> [예제2] DEFAULT & CHECKED </legend>
+
+    <input type='checkbox' name='idSave' id='idSaveChk2' checked  value='아이디저장'>
+    <label for='idSaveChk2'>아이디저장</label> 
+
+    <input type='checkbox' name='autoSave' id='autoSaveChk2' value='자동로그인'>
+    <label for='autoSaveChk2'>자동로그인</label>
+    
+    <input type='checkbox' name='secConnect' id='secConnectChk2' value='보안접속'>
+    <label for='secConnectChk2'>보안접속</label>
+
+    <input type='radio' name='chek' id='travelChk2'  value='여행'>
+    <label for='travelChk2'>여행</label>   
+
+    <input type='radio' name='chek'  id='exerciseChk2' checked value='운동'>
+    <label for='exerciseChk2'>운동</label> 
+</fieldset>  
+<br>
+
+<fieldset id="input3">
+    <legend> [예제3] ENABLED DISABLED </legend>
+
+    <input type='checkbox' name='idSave' id='idSaveChk3' enabled  value='아이디저장'>
+    <label for='idSaveChk3'>아이디저장</label> 
+
+    <input type='checkbox' name='autoSave' id='autoSaveChk3' disabled value='자동로그인'>
+    <label for='autoSaveChk3'>자동로그인</label>
+
+    <input type='checkbox' name='secConnect' id='secConnectChk3' disabled  value='보안접속'>
+    <label for='secConnectChk3'>보안접속</label>
+
+    <input type='radio' name='chek' id='travelChk3' enabled value='여행'>
+    <label for='travelChk3'>여행</label>   
+
+    <input type='radio' name='chek'  id='exerciseChk3' enabled value='운동'>
+    <label for='exerciseChk3'>운동</label>  
+</fieldset>  
+</form>
+
+
+
+</body>
+</html>

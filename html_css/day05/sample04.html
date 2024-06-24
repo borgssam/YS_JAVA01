@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>텍스트가 영역을 벗어날 때 white-space word-wrap</title>
+    <style>
+        * {margin:0;}
+        body {font-size:15px;color:#555;line-height:160%;background:#f9f9f5;}
+        #wrap {margin:50px auto;width:600px;}
+        #wrap #textBox {background:#fff;}
+        #wrap #textBox .gap {padding:50px;}
+        #wrap #textBox .gap h3{font-weight:normal;font-size:20px;text-align:center;color:#99c;}
+        #wrap #textBox .gap p{width:100%;height:40px;line-height:40px;margin-bottom:10px;padding:0 10px;}
+        #wrap #textBox .gap p.text-wrap1 {word-wrap:normal;}
+        #wrap #textBox .gap p.text-wrap1-break-all{word-wrap:break-word;overflow:hidden;}
+        #wrap #textBox .gap p.text-wrap2 {word-wrap:normal;overflow:hidden;}
+        #wrap #textBox .gap p.text-wrap3 {white-space:nowrap;}
+        #wrap #textBox .gap p.text-wrap4 {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="textBox">
+        <div class="gap">
+            <div id="text-wrap">
+                <h3>word-wrap:normal;</h3>
+                <p class="text-wrap1">
+                    LoremIpsumDolorSitAmet,ConsecteturAdipiscingElit,SedDoEiusmodTemporIncididuntUtLaborEtDoloreMagnaAliqua.UtEnimAdMinimVeniam,QuisNostrudExercitationUllamcoLaborisNisiUtAliquipExEaCommodoConsequat.
+                </p>
+                <h3>word-wrap:break-word; overflow:hidden;</h3>
+                <p class="text-wrap1-break-all">
+                    LoremIpsumDolorSitAmet,ConsecteturAdipiscingElit,SedDoEiusmodTemporIncididuntUtLaborEtDoloreMagnaAliqua.UtEnimAdMinimVeniam,QuisNostrudExercitationUllamcoLaborisNisiUtAliquipExEaCommodoConsequat.
+                </p>
+                <h3>word-wrap:normal; overflow:hidden;</h3>
+                <p class="text-wrap2">
+                    문화예술 콘텐츠 시장의 급격한 팽창으로 인해 고객의 욕구는 다양해 졌으며,
+                    사업자 간 경쟁은 심화되었다. 그렇기 때문에 문화예술 마케터는 누구에게
+                    어떻게 홍보 할 것인지에 대한 고민을 반드시 해야 한다. 이를 위해 문화예술
+                    시장을 세분화하기 위한 여러 가지 차원을 파악하고, 이를 바탕으로 가장
+                    적합한 타깃시장을 선정을 할 수 있어야 한다.
+                </p>
+                <h3>white-space:nowrap;</h3>
+                <p class="text-wrap3">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipisci
+                    ng Elit, Sed Do Eiusmod Tempor Incididunt Ut Lab
+                    ore Et Dolore Magna Aliqua. Ut Enim Ad Minim Ven
+                    iam,Quis Nostrud Exercitation Ullamco Laboris Ni
+                    si Ut Aliquip Ex Ea Commodo Consequat.
+                </p>
+                <h3>white-space:nowrap; overflow:hidden; text-overflow:ellipsis;</h3>
+                <p class="text-wrap4">
+                    첫째, NCS 학습모듈은 산업계에서 요구하는 직무능력을 교육훈련 현장에
+                    활용할 수 있도록 성취목표와 학습의 방향을 명확히 제시하는 가이드라인의
+                    역할을 합니다.
+                    둘째, NCS 학습모듈은 특성화고, 마이스터고, 전문대학, 4년제 대학교의
+                    교육기관 및 훈련기관, 직장교육기관 등에서 표준교재로 활용할 수 있으며
+                    교육과정 개편 시에도 유용하게 참고할 수 있습니다.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
