@@ -63,17 +63,85 @@
         // log(`고양이 ${num1+num2}마리`);
 
         //비교연산자 ----------------------------------------
-        let a = 20;
-        let b = 10;
-        let c = '10';
+        // let a = 20;
+        // let b = 10;
+        // let c = '10';
 
-        log(a>b);
-        log(b>c);
-        log(b>=c);
-        log(b==c);
-        log(b===c);
-        log(b!=c);
-        log(b!==c);
+        // log(a>b);
+        // log(b>c);
+        // log(b>=c);
+        // log(b==c);
+        // log(b===c);
+        // log(b!=c);
+        // log(b!==c);
+
+        //논리연산자 ---------------------------------------
+        // let id = 'main';
+        // let pwd = '1234';
+
+        // let userId = 'main';
+        // let userPwd = '1234';
+
+        // let result = (id === userId) && (pwd === userPwd);
+        // log(result);
+
+        // log(id==='main' && pwd==='5678');
+        // log(id==='main' || pwd==='5678');
+        // log( !(id==='main' || pwd==='5678') );
+
+        // let classA = prompt('소프트웨어 설계 점수?');
+        // let classB = prompt('소프트웨어 개발 점수?');
+        // let classC = prompt('프로그램 언어활용 점수?');
+        // let classD = prompt('정보시스템구축관리 점수?');
+
+        // //평균 60 과락 40
+        // let resultA = (Number(classA) >=40 );
+        // let resultB = (Number(classB) >=40 );
+        // let resultC = (Number(classC) >=40 );
+        // let resultD = (Number(classD) >=40 );
+
+        // let total = Number(classA)+ Number(classB)+Number(classC) + Number(classD);
+        // let avg   = (total/4) >= 60;
+
+        // log("합격:", resultA && resultB && resultC && resultD && avg );
+
+        // 문제) 대출받는데
+        // 조건)
+        // 나이가 20세이상 대출가능
+        // 자산이 100원미만는 대출불가  
+        //        100원이상은  50원까지 대출가능
+        //        200원이상은 100원까지 대출가능
+
+        // prompt으로 나이, 자산, 희망대출금액 입력받아서 대출승인여부 판단 코드만드세요
+
+        let age = parseInt(prompt("나이"));
+        let assets = parseInt(prompt("자산"));
+        let money = parseInt(prompt("희망금액"));
+
+        let loanAge = age >=20;
+        let loanAssets100Down = assets >= 100;
+        let loanAssets100Up   = (assets >= 100) && (assets <200) && (money<=50);
+        let loanAssets200Up   = (assets >= 200) && (money<=100);
+
+        let loan = loanAge && loanAssets100Down && ( loanAssets100Up || loanAssets200Up );        
+        log("대출:", loan);
+        
+        let loan2 = ( loanAge && loanAssets100Down && loanAssets100Up) ||(loanAge && loanAssets100Down &&  loanAssets200Up );        
+        log("대출2:", loan2);
+
+
+
+
+
+        
+
+
+
+
+        
+        
+        
+        
 
 
 
