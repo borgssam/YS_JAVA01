@@ -125,9 +125,14 @@
 
         let loan = loanAge && loanAssets100Down && ( loanAssets100Up || loanAssets200Up );        
         log("대출:", loan);
-        
+
         let loan2 = ( loanAge && loanAssets100Down && loanAssets100Up) ||(loanAge && loanAssets100Down &&  loanAssets200Up );        
         log("대출2:", loan2);
+
+        let result = (loan)? "가능": "불가능";
+        log("대출", result);
+        
+        (loan)? log("대출가능"): log("대출불가능");
 
 
 
