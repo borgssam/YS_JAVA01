@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문실습</title>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // let score = 65;
+        // if(score >= 90){
+        //     log("A학점");
+        // }
+        // if(score >=80 && score <90) {
+        //     log("B학점");
+        // }
+        // if( 70 <= score && score < 80){
+        //     log("C학점");
+        // }
+        // if( 60 <= score && score < 70){
+        //     log("D학점");
+        // }
+        // if( score < 60){
+        //     log("F학점");
+        // }
+        // log("종료");
+
+        // let score = 50;
+        // if(score >60){
+        //     log("합격");
+        // } else {
+        //     log("불합격");
+        // }
+
+        // let score = 75;
+        // if(score >= 90){
+        //     log("A학점");
+        // } else{
+        //     if(score >=80 && score <90) {
+        //         log("B학점");
+        //     } else {
+        //         if( 70 <= score && score < 80){
+        //             log("C학점");
+        //         } else {
+        //             if( 60 <= score && score < 70){
+        //                 log("D학점");
+        //             } else {
+        //                 log("F학점");
+        //             }
+        //         }
+        //     }
+        // }
+        // log("종료");
+
+        // let score = 85;
+        // if(score >= 90){
+        //     log("A학점");
+        // } else{
+        //     if(score >=80) {
+        //         log("B학점");
+        //     } else {
+        //         if( 70 <= score){
+        //             log("C학점");
+        //         } else {
+        //             if( 60 <= score){
+        //                 log("D학점");
+        //             } else {
+        //                 log("F학점");
+        //             }
+        //         }
+        //     }
+        // }
+        // log("종료");
+
+        // let score = 95;
+        // if(score>=90){
+        //     log("A학점");
+        // } else if (score >= 80) {
+        //     log("B학점");
+        // } else if (score >= 70) {
+        //     log("C학점");
+        // } else if (score >= 60) {
+        //     log("D학점");
+        // } else{ 
+        //     log("F학점");
+        // }
+        // log("종료");
+
+
+        let score = 100;
+        switch(parseInt(score/10) ){
+            case 10:
+            case 9:
+                log("A학점");break;
+            case 8:
+                log("B학점");break;
+            case 7:
+                log("C학점");break;
+            case 6:
+                log("D학점");break;
+            default:
+                log("F학점");break;
+        }
+    </script>
+    
+</body>
+</html>
