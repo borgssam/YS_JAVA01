@@ -122,14 +122,56 @@
         //     }
         // }
 
-        for(let i = 0; i<81; i++){
-            let dan = parseInt(i/9) + 1;
-            let n   = i%9+1;
-            log(dan, "*", n, "=", dan*n);
+        // for(let i = 0; i<81; i++){
+        //     let dan = parseInt(i/9) + 1;
+        //     let n   = i%9+1;
+        //     log(dan, "*", n, "=", dan*n);
+        // }
+
+        // let num = 123;
+        // sum = num%10;
+        // while(true){
+        //     num = parseInt(num / 10);
+        //     sum += (num % 10);
+        //     if(num<10){
+        //         break;
+        //     }
+        // }
+        // log(sum);
+
+
+        // let i = 314923;
+        // num = i * 10;
+        // let count = 0;
+        // while(true){
+        //     num = parseInt(num / 10);
+        //     if((num % 10)%3==0){count++;}
+        //     if(num<10){
+        //         break;
+        //     }
+        // }
+        // log(count);
+
+        let total_clap = 0;
+        let stop = 1234;
+        for(let i = 1; i<2000; i++){
+            num = i * 10;
+            let count = 0;
+            while(true){
+                num = parseInt(num / 10);
+                if((num % 10)==3 || (num % 10)==6 || (num % 10)==9 ){count++;}
+                if(num<10){
+                    break;
+                }
+            }
+            total_clap += count;
+
+            log(i,"번째", i%4 ,"번 선수가 박수:", count ,"누적박수:",total_clap);
+            if(total_clap >= stop){
+                log(i%4,"번 선수가", stop,"번째 박수를 쳤습니다.");
+                break;
+            }
         }
-
-
-
 
 
 
