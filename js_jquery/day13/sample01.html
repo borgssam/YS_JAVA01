@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-family: 'd2coding';
+            white-space: pre; /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        }
+    </style>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // for(let i = 1; i < 3; i++){
+        //     log(i);
+        // }
+        // log("종료");
+
+        //복리 --------------------------------
+        // let money = 1000000;
+        // for(let i = 1; i<=12; i++){
+        //     log(money);
+        //     money *=1.01;
+        // }
+        // log(money);
+
+        // for(let i = 2; i <=9; i++){
+        //     log( "2 *", i , "=", 2*i);
+        // }
+
+        // for(let dan = 2; dan <=4; dan++){
+        //     for(let n = 2; n<=9; n++){
+        //         log( dan,"*", n , "=", dan*n);
+        //     }
+        // }
+
+        // for(let line = 0; line < 5; line++){
+        //     let strStar = "";
+        //     for( let star = 0; star <= line; star++){
+        //         strStar += "*";
+        //     }
+        //     log(strStar);
+        // }
+        
+        // let strStar = "";
+        // for(let line = 0; line < 5; line++){
+        //     strStar += "*";
+        //     log(strStar);
+        // }
+
+        // for(let line = 0; line<5;line++){            
+        //     let strStar = "";
+        //     for(blank=4; blank>line;blank--){
+        //         strStar+=" ";
+        //     }
+        //     for(let star = 0; star <= line  ; star++){
+        //         strStar += "*";
+        //     }   
+        //     log(strStar);
+        // }
+
+        // let num = 1;
+        // let sum = 0;
+        // while(num <= 10){
+        //     sum += num;
+        //     num++;
+        // }
+        // log(sum);
+
+        // let money =1000000;
+        // let month =1
+        // while(month <=12){
+        //     log(money);
+        //     money *= 1.01;
+        //     month++;
+        // }
+        // log(money);
+
+        // for(let i = 2; i<=10; i += 2){
+        //     log(i);
+        // }
+
+        // for(let i=1; i<=10; i++){
+        //     if(i%2 == 1) {
+        //         continue;
+        //     }
+        //     log(i);
+        // }
+        // for(let i = 1 ; i <=10; i++){
+        //     if(i%3 == 0){continue;}
+        //     log(i);
+        // }
+
+        // for(let i = 1 ; i <=10; i++){
+        //     if(i%3 != 0){log(i);}            
+        // }
+
+        // for(let dan = 2; dan<=9; dan++){
+        //     for(let n= 2; n<=9; n++){
+        //         log(dan, "*", n, "=", dan*n);
+        //     }
+        // }
+
+        // let dan=2;
+        // for(let n= 2; n<=9 && dan <= 9; n++){
+        //     log(dan, "*", n, "=", dan*n);
+        //     if(n>=9){
+        //         dan++;
+        //         n=2;
+        //     }
+        // }
+
+        for(let i = 0; i<81; i++){
+            let dan = parseInt(i/9) + 1;
+            let n   = i%9+1;
+            log(dan, "*", n, "=", dan*n);
+        }
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
