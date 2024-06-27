@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const max = (a, b) => a > b ? a : b;
+        const min = (a, b) => a < b ? a : b;
+
+// sort 함수: 주어진 배열을 max 함수를 사용하여 내림차순으로 정렬하는 함수
+        const sort = (arr, method) => {
+            // 선택 정렬(selection sort)을 사용하여 정렬
+            const n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                let maxIndex = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (method(arr[j], arr[maxIndex]) === arr[j]) {
+                        maxIndex = j;
+                    }
+                }
+                if (maxIndex !== i) {
+                    [arr[i], arr[maxIndex]] = [arr[maxIndex], arr[i]];
+                }
+            }
+            return arr;
+        };
+
+    // 예제 배열
+    const numbers = [5, 3, 8, 1, 2, 7, 4, 6];
+
+    // const max = (a, b) => a > b ? a : b;
+    // const min = (a, b) => a < b ? a : b;
+    // 배열 정렬 (내림차순)
+    const sortedNumbers = sort(numbers, (a, b) => a > b ? a : b );
+    document.write("Sorted :", sortedNumbers);
+    </script>
+</body>
+</html>

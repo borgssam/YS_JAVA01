@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- date-fns CDN 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/2.23.0/date-fns.min.js"></script>
+</head>
+<body>
+    <script>
+        // date-fns 라이브러리가 로드된 후에 사용 가능
+        let today = new Date();
+        let formattedDate = format(today, 'yyyy-MM-dd');
+        document.write(formattedDate);  // 예시 출력: "2024-06-27"
+    </script>
+</body>
+</html>

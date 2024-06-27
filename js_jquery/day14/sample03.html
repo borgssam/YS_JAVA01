@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function writeln(...str){
+            document.write(str, "<br>");
+        }
+    </script>
+</head>
+<body>
+    <script>
+        //날짜객체
+        // let today = new Date();
+        // document.write(today,'<br>');
+        // document.write("요일:",today.getDay(),"<br>");//
+        // // 0  1  2  3  4  5  6
+        // // 일 월 화 수 목 금 토
+
+        // document.write("시간:",today.getHours(),"<br>");//
+        // document.write("년:",today.getFullYear(),"<br>");//
+        // document.write("월:",today.getMonth(),"<br>");//
+        // document.write("일:",today.getDate(),"<br>");//
+        // document.write("초:",today.getTime(),"<br>");//
+
+        // let day1 = new Date('2024,6,27 14:00:00');
+        // let day2 = new Date('2024,6,27 15:02:03');
+        // let toDiff  = day2- day1;
+        // document.write(toDiff,"<br>");
+        // document.write(
+        // `
+        // ${Math.floor(toDiff % (1000*60*60*24)/(1000*60*60))}시
+        // ${Math.floor(toDiff % (1000*60*60)/(1000*60))}분
+        // ${Math.floor(toDiff % (1000*60)/(1000))}초
+        // `);
+
+        //숫자객체
+        // document.write("절대값:",Math.abs(-23),"<br>"); //절대값 -> 23
+        // document.write("몇승:",Math.pow(2,3),"<br>"); //지수,승수  ->8
+        // document.write("제곱근:",Math.sqrt(2),"<br>"); //제곱근
+        // document.write("올림:",Math.ceil(2.3),"<br>"); //올림 ->3
+        // document.write("반올림:",Math.round(2.3),"<br>"); //반올림 ->2
+        // document.write("내임:",Math.floor(2.3),"<br>"); //내림 -2
+        // document.write("큰값:",Math.max(2,3),"<br>"); //
+        // document.write("작은값:",Math.min(2,3),"<br>"); //
+        // document.write("랜덤:",Math.random(),"<br>"); //
+
+        // let dice = Math.floor(Math.random()*6)+1;
+        // document.write("주사위:", dice);
+
+        //배열
+        // let pen = new Array(5);
+        // pen[0] = "red";
+        // pen[1] = "green";
+        // pen[2] = "blue";
+        // pen[3] = "orange";
+        // pen[4] = "yellow";
+
+        // pen.unshift("sky");
+
+        // writeln(pen.length);
+        // writeln(pen[2]);
+        // writeln("--------");
+        // for(let i=0; i<pen.length; i++){
+        //     writeln(pen[i]);
+        // }
+
+        let stars = new Array();
+
+        stars.push("박지성");
+        stars.push("윤지현");
+        stars.push("김윤지");
+        // stars.shift();
+        // stars.pop();
+        stars.push("아이유");
+        stars.push("현빈");
+        stars.push("강호동");
+
+
+        for(let i=0; i<stars.length; i++){
+            writeln(i,stars[i]);
+        }
+
+        // strbuffer = stars.join("&");
+        // writeln(strbuffer);
+
+        // stars.sort(function(b,a){
+        //     if(a>b){
+        //         return 1;
+        //     } else if(a<b) {
+        //         return -1;
+        //     } else{
+        //         return 0;
+        //     }
+        // });
+    //     stars.sort(( b, a) => a > b ? 1 : (a < b ? -1 : 0) );
+
+    //    //stars.reverse();
+    //     for(let i=0; i<stars.length; i++){
+    //         writeln(i,stars[i]);
+    //     }
+
+        writeln("---------");
+
+        // superStars = stars.slice(0,4);
+
+        // for(let i=0; i<superStars.length; i++){
+        //     writeln(i,superStars[i]);
+        // }
+
+        // stars.forEach(
+        //     function(item, index,array){
+        //         if(index %2 == 1){
+        //             writeln(index, item);
+        //         }
+        //     }
+        // )
+
+        let idx = 0;
+        for(item of stars){
+            writeln(idx++, item);
+        }
+
+
+
+        
+
+    </script>
+
+    
+</body>
+</html>

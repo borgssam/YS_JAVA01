@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'd2coding';
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // function addNum(num1, num2){
+        //     let sum = num1 + num2;
+        //     return sum;
+        // }
+        // let sum1 = addNum(1,2);
+        // document.write(sum1,"<br>");
+        // document.write(addNum(3,4),"<br>");
+
+        // function writeSum(num1, num2){
+        //     document.write(num1+num2);
+        // }
+        // writeSum(3,4)
+
+        // for(let dan = 2; dan < 10; dan++){
+        //     for(let n=2; n<10;n++){
+        //         document.write(dan,"*",n,"=", dan*n,"<br>");
+        //     }
+        // }
+
+        // function displayDan( dan ){
+        //     for(let n=2; n<10;n++){
+        //         document.write(dan,"*",n,"=", dan*n,"<br>");
+        //     }
+        // }
+
+        // for(let dan=2; dan<10;dan++){
+        //     displayDan(dan);
+        // }
+
+
+        function writeBlank(count){
+            for(let i = 0; i<count; i++){
+                document.write("&nbsp;");
+            }
+        }        
+        function writeStar(count){
+            for(let i = 0; i<count; i++){
+                document.write("*");
+            }
+        }
+
+        // for(let n=4, s=1; n>=0 & s<6; n--, s++){
+        //     writeBlank(n); writeStar(s); document.write("<br>");
+        // }
+
+        // writeBlank(4); writeStar(1); document.write("<br>");
+        // writeBlank(3); writeStar(2); document.write("<br>");
+        // writeBlank(2); writeStar(3); document.write("<br>");
+        // writeBlank(1); writeStar(4); document.write("<br>");
+        // writeBlank(0); writeStar(5); document.write("<br>");
+
+        // for(let n=5, s=1; n>=0 & s<6; n--,s++){
+        //     writeBlank (s); writeStar (n);
+        //     writeBlank (n); writeStar (s);
+        //     document.write("<br>");
+        // }
+        // for(let n=5, s=1; n>=0 & s<6; n--,s++){
+        //      writeStar (n); writeBlank (s);
+        //      writeStar (s); writeBlank (n);
+        //     document.write("<br>");
+        // }
+
+        // function line(str, n){
+        //     for(i=1; i<=n;i++){
+        //         document.write(str);
+        //     }
+        //     document.write("<br>");
+        // }
+        // line("*",5);
+        // line("@",1);
+        // line("#",10);
+
+        // function add(num1, num2){
+        //     let sum = num1+num2;
+        //     document.write(sum+'<br>');
+        // }
+        // add(2,3);
+        // add(45,3463);
+        // add(123456,876543);
+        // function gift(sport){
+        //     switch(sport){
+        //         case "축구": 
+        //             alert("박지성 사인볼에 당첨되셨습니다.");break;
+        //         case "야구":
+        //             alert("류현진 사인볼에 당첨되셨습니다.");break;
+        //         case "농구":
+        //             alert("마이클조던 사인 티셔츠에 당첨되셨습니다.");break;
+        //         default :
+        //             alert("꽝");break;
+        //     }
+        // }
+        // var num = 1;
+        // function love(num){
+        //     var a = num+1;
+        //     document.write(a);
+        // }
+        // love(3);
+        // document.write("<br>", num, ",");
+
+        // var num = 1;
+        // function love(){
+        //     a="산";
+        //     var b="강";
+        //     document.write("함수내에서 출력 :", a, "<br>");
+        //     document.write("함수내에서 출력 :", b, "<br>");
+        //     //return a;
+        // }
+        // love();
+        // document.write(b,'<br>')
+
+        //기명함수
+        // function all(a,b){
+        //     let result;
+        //     result = a>b? console.log('a>b') : console.log('a<b');
+        //     return result;
+        // }
+
+        // var all = function(a,b){
+        //     let result;
+        //     result = a>b? console.log('a>b') : console.log('a<b');
+        //     return result;
+        // }
+
+        // let first =13;
+        // let last = 7;
+        // all(first, last);
+        // all(23,45);
+        // all(1/2, 3/4);
+
+        // let first =13;
+        // let last = 7;
+        // var all = function(a,b){
+        //     let result;
+        //     a>b? document.write('a>b') : document.write('a<b');
+        //     result =  a>b? 'a>b' : 'a<b';
+        //     return result;
+        // }(first,last);
+
+        // console.log(all);
+
+        function maxFunc(a,b){
+            let result = a>b? a: b;
+            return;
+        }
+
+        const max = (a,b)=> a>b? a: b;
+        document.write(max(15,6));
+
+    </script>
+<!-- 
+    <button type="button" onclick="gift('축구')">축구</button>
+    <button type="button" onclick="gift('야구')">야구</button>
+    <button type="button" onclick="gift('농구')">농구</button> -->
+</body>
+</html>
