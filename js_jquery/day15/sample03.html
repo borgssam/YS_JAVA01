@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dog {
+            background-color: brown;
+        }
+
+        .cat {
+            background-color: orange;
+        }
+
+        .cat2 {
+            color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="headerWrap">
+        <header>
+            <h1><a href="#" class="cat">My Portfolio</a></h1>
+            <nav>
+                <h2 class="hideClass">메인네비게이션</h2>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- sec01 -->
+    <div id="sec01">
+        <section>
+            <article id="skill">
+                <h4>skill</h4>
+                <dl>
+                    <dt>Photoshop</dt>
+                    <dd>90%</dd>
+                    <dt>illustrator</dt>
+                    <dd>80%</dd>
+                    <dt>Html/Css</dt>
+                    <dd>90%</dd>
+                    <dt>PowerPoint</dt>
+                    <dd>70%</dd>
+                    <dt>jQuery</dt>
+                    <dd>80%</dd>
+                </dl>
+            </article>
+        </section>
+
+        <h3 class="hideClass">나의 슬로건</h3>
+        <p>Inspire with heart
+            Life's a deisgn
+            Everything idea</p>
+        <ul>
+            <li>
+                <dl>
+                    <dt>MY STORY</dt>
+                    <dd>design is what you make of it photoshop illustrotor html css jQuery</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>DESIGN</dt>
+                    <dd>hyundai official site main nike korea site main illustration</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>CODING</dt>
+                    <dd>guess official site mainhyundai official site mainsk cm mobile site main</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <script>
+        //01.id로 요소찾기
+        // const main = document.getElementById("skill");
+        // console.log(main);
+
+        //02.tag이름으로 요소찾기
+        //const sub = document.getElementsByTagName('a');
+        // sub[4].innerHTML=`
+        // <select id="cars" name="cars">
+        //     <option value="volvo">Volvo</option>
+        //     <option value="saab">Saab</option>
+        //     <option value="mercedes">Mercedes</option>
+        //     <option value="audi">Audi</option>
+        // </select>
+        // `;
+        //console.log(sub);
+        //03.css선택를 사용해서 요소찾기 -------------
+        // const ele_css = document.querySelector('#skill>dl');
+        // console.log(ele_css);
+        // ele_css.style.backgroundColor='skyblue';
+
+        //04.클래스(classList)이용하기
+        // let ele_a = document.getElementsByTagName('a');
+        // for (ele of ele_a) {
+        //     ele.classList.remove('cat');
+        //     // ele.classList.add('dog');
+        //     // ele.classList.add('cat2');
+        // }
+
+        // let ele_li = document.querySelector('nav>ul>li:nth-child(3)');
+        // let foo = ele_li.classList.add('sub');
+        // console.log(ele_li);
+        // console.log(foo);
+    </script>
+</body>
+
+</html>
