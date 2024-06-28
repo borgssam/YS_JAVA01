@@ -10,20 +10,20 @@
     <!-- <dl>
         <dt>에벨탑의 신랑신부</dt>
         <dd><img src="./images/pic01.jpg" alt=""></dd>
-    </dl> -->
+    </dl>  -->
     <script>
         //1차 자바스크리트로 그림태그만들기
-        //document.write('<dl><dt>에벨탑의 신랑신부</dt><dd><img src="./images/pic01.jpg" alt=""></dd></dl>');
+        // document.write('<dl><dt>에벨탑의 신랑신부</dt><dd><img src="./images/pic01.jpg" alt=""></dd></dl>');
     </script>
     <script>
         //2차 자바스크리트로 변수에 해당하는 코드로 분류하기
         // document.write('<dl><dt>','에벨탑의 신랑신부','</dt><dd><img src="',
-        //     './images/pic01.jpg','" alt=""></dd></dl>');
+        //      './images/pic01.jpg','" alt=""></dd></dl>');
     </script>
     <script>    
         //3차 자바스크리트로 변수를 선언하고 값을 이용하기
-        // let title = '에벨탑의 신랑신부2345';
-        // let imgAddr = './images/pic03.jpg';        
+        // let title = '에벨탑의 신랑신부';
+        // let imgAddr = './images/pic04.jpg';        
         // document.write('<dl><dt>',title,'</dt><dd><img src="',
         //     imgAddr,'" alt=""></dd></dl>');
     </script>
@@ -49,30 +49,38 @@
         // let Picture = new Object();
         // Picture.title = '에펠탑의 신랑신부';
         // Picture.imgAddr = './images/pic01.jpg';
+        // Picture.author = '사걀';
         // document.write('<dl><dt>',Picture.title,'</dt><dd><img src="',
-        // Picture.imgAddr,'"></dd></dl>');      
+        // Picture.imgAddr,'"></dd><dd>',Picture.author,'</dd></dl>');      
     </script>
     <script>    
         //6차 new object이용해서 객체만들기고 배열로 사용하기
         // let Pictures = new Array();
+
         // let Picture = new Object();
         // Picture.title = '에펠탑의 신랑신부';
         // Picture.imgAddr = './images/pic01.jpg';
+        // Picture.author ='사걀';
+        // Picture.year   = '1899';
         // Pictures.push(Picture);
 
         // Picture = new Object();
         // Picture.title = '꿈';
         // Picture.imgAddr = './images/pic02.jpg';
+        // Picture.author ='피카소';
+        // Picture.year   = '1900';
         // Pictures.push(Picture);
 
         // Picture = new Object();
         // Picture.title = '무용실';
         // Picture.imgAddr = './images/pic03.jpg';
+        // Picture.author ='드가';
+        // Picture.year   = '1901';
         // Pictures.push(Picture);
 
         // for(let i = 0; i< 3;i++){
         //     document.write('<dl><dt>',Pictures[i].title,'</dt><dd><img src="',
-        //     Pictures[i].imgAddr,'"></dd></dl>');      
+        //     Pictures[i].imgAddr,'"></dd><dd>',Pictures[i].author,'(',Pictures[i].year,')</dd></dl>');      
         // }
     </script>
     <script>    
@@ -80,25 +88,31 @@
         // let Pictures = new Array();
         // let Picture = {
         //     title:'에펠탑의 신랑신부',
-        //     imgAddr:'./images/pic01.jpg'
+        //     imgAddr:'./images/pic01.jpg',
+        //     author:'사갈',
+        //     year:'1900'
         // }
         // Pictures.push(Picture);
 
         // Picture = {
         //     title:'꿈',
-        //     imgAddr:'./images/pic02.jpg'
+        //     imgAddr:'./images/pic02.jpg',
+        //     author:'피카소',
+        //     year:'1901'
         // }
         // Pictures.push(Picture);
 
         // Picture = {
         //     title:'무용실',
-        //     imgAddr:'./images/pic03.jpg'
+        //     imgAddr:'./images/pic03.jpg',
+        //     author:'드가',
+        //     year:'1902'
         // }
         // Pictures.push(Picture);
 
         // for(let i = 0; i< 3;i++){
         //     document.write('<dl><dt>',Pictures[i].title,'</dt><dd><img src="',
-        //     Pictures[i].imgAddr,'"></dd></dl>');      
+        //     Pictures[i].imgAddr,'"></dd><dd>',Pictures[i].author,'(',Pictures[i].year,')</dd></dl>');      
         // }
     </script>
     <script>    
@@ -111,6 +125,7 @@
         // }
 
         // let pic = new Picture('에펠탑의 신랑신부','./images/pic01.jpg');
+        
         // Pictures.push(pic);
         // Pictures.push(new Picture('꿈','./images/pic02.jpg'));
         // Pictures.push(new Picture('무용실','./images/pic03.jpg'));
@@ -197,19 +212,20 @@
         //11차 생성자함수 이용해서 속성과기능을 추가해서 객체만들기고 배열로 사용하기
         let Pictures = new Array();
         //생성자함수
-        function Picture(aTitle, aImgAddr){
+        function Picture(aTitle, aImgAddr,aAuthor){
             this.title = aTitle;
             this.imgAddr = aImgAddr;
+            this.author = aAuthor;
             this.show = function(){
                 document.write('<dl><dt>',this.title,'</dt><dd><img src="',
-                    this.imgAddr,'"></dd></dl>');  
+                    this.imgAddr,'"></dd><dd>',this.author,'</dd></dl>');  
             }
         }
 
-        let pic = new Picture('에펠탑의 신랑신부','./images/pic01.jpg');
+        let pic = new Picture('에펠탑의 신랑신부','./images/pic01.jpg','사갈');
         Pictures.push(pic);
-        Pictures.push(new Picture('꿈','./images/pic02.jpg'));
-        Pictures.push(new Picture('무용실','./images/pic03.jpg'));
+        Pictures.push(new Picture('꿈','./images/pic02.jpg','피카소'));
+        Pictures.push(new Picture('무용실','./images/pic03.jpg','드가'));
 
         for(let i = 0; i< 3;i++){
             Pictures[i].show();      
