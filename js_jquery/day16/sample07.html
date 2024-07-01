@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div{
+        text-align:center;
+        width:500px; 
+        margin:0 auto;
+        font:bold 25px/45px '나눔고딕',sans-serif;
+        color:#666;}
+    div>p{
+        display:inline-block;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="num01">현재시간</p>
+        <p class="num02">현재분</p>
+        <p class="num03">현재초</p>
+    </div>
+    <script>
+        //p태그요소 찾기
+        let hEle = document.querySelector(".num01");
+        let mEle = document.querySelector(".num02");
+        let sEle = document.querySelector(".num03");
+
+
+        //1초마다 이벤트발생
+        function clock(){
+            //현재시간구하기=>시분초분류하기
+            let date = new Date();
+            let hr   = date.getHours();
+            let min  = date.getMinutes();
+            let sec  = date.getSeconds();
+            let ampm = "오전 ";
+            //24시 기준 -> 12시 기준
+            if( hr > 12) {
+                hr -= 12;
+                ampm = "오후 ";
+            }
+            //p태그 텍스트변화하기
+            hEle.textContent = ampm + (hr>10? hr: "0"+hr)  + " : ";
+            mEle.textContent = (min>10? min : "0"+min) + " : ";
+            sEle.textContent = sec>10? sec : "0"+sec ;
+
+
+
+
+        }
+        clock();
+        setInterval(clock, 1000);
+    </script>
+
+</body>
+</html>

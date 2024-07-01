@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #control_box{
+            position: relative;
+            width: 150px;
+            height:150px;
+            border: 1px solid black;
+        }
         button{
-            position: absolute;
-            width:45px;
+            position:absolute;
+            width: 45px;
             height:45px;
-            margin: 5px 5px;
-            font: bold 25px/50px Arial;
             background-color: red;
             color:white;
             text-align: center;
-            border: none;
-        }
-        #control_box{
-            position: relative;
-            width:150px;
-            height:150px;
-            margin: 0px 15px;
-
+            border:none;
         }
         #left{
             left:0px;
+            top:50px;
+        }
+        #right{
+            left:100px;
             top:50px;
         }
         #up{
@@ -35,10 +36,6 @@
             left:50px;
             top:100px;
         }
-        #right{
-            left:100px;
-            top:50px;
-        }
         #stop{
             left:50px;
             top:50px;
@@ -46,12 +43,11 @@
 
         #box{
             position: absolute;
-            left: 100px;
-            top:200px;
             width: 50px;
             height: 50px;
-            z-index: 1;
             background-color: blue;
+            left:300px;
+            top:300px;
         }
     </style>
 </head>
@@ -65,62 +61,59 @@
         <button type="button" id="stop">ㅁ</button>
     </div>
     <script>
-        const btnLeft = document.querySelector('#left');
-        const btnRight = document.querySelector('#right');
-        const btnUp = document.querySelector('#up');
-        const btnDown = document.querySelector('#down');
-        const btnStop = document.querySelector('#stop');
-        const   boxEle  = document.querySelector("#box");
+        //객체구하기
+        const btnLeft = document.querySelector("#left");
+        const btnRight = document.querySelector("#right");
+        const btnUp = document.querySelector("#up");
+        const btnDown = document.querySelector("#down");
+        const btnStop = document.querySelector("#stop");
+        const boxEle = document.querySelector("#box");
 
-        let boxTop = 0;
-        let boxLeft = 0;
+        let boxTop = 300;
+        let boxLeft = 300;
+        let btnMode = 'stop';
 
         function moveBox(){
-            switch(mode){
-                case 'u':
-                    boxTop -= 1;
-                    break;
-                case 'd':
-                    boxTop += 1;
-                    break;
-                case 'l':
+            switch(btnMode){
+                case 'left':
                     boxLeft -= 1;
                     break;
-                case 'r':
+                case 'right':
                     boxLeft += 1;
                     break;
-                case 's':
+                case 'up':                    
+                    boxTop -= 1;
+                    break;
+                case 'down':           
+                    boxTop += 1;
+                    break;
+                case 'stop':
                     break;
                 default:
                     break;
             }
-            
-            boxEle.style.left=boxLeft+"px";
-            boxEle.style.top=boxTop+"px";
+
+            boxEle.style.left = boxLeft+"px";
+            boxEle.style.top = boxTop+"px";
+
         }
 
-        let mode = 's';
-
-        setInterval(moveBox, 20);
+        setInterval(moveBox,20);
 
         function up(){
-            mode='u';
+            btnMode = "up";
         }
-
         function down(){
-            mode='d';
+            btnMode = "down";
         }
-
         function left(){
-            mode='l';
+            btnMode = "left";
         }
-
         function right(){
-            mode='r';
+            btnMode = "right";
         }
-
         function stop(){
-            mode='s';
+            btnMode = "stop";
         }
         
         btnUp.addEventListener("click", up);
@@ -128,6 +121,7 @@
         btnLeft.addEventListener("click", left);
         btnRight.addEventListener("click", right);
         btnStop.addEventListener("click", stop);
+
     </script>
 </body>
 </html>

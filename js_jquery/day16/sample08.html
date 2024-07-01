@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width:150px;
+            margin: 0px 15px;
+            font: bold 25px/50px Arial;
+            background-color: red;
+            color:white;
+            text-align: center;
+            border: none;
+        }
+        #box{
+            position: absolute;
+            left: 0px;
+            top:200px;
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+            background-color: blue;
+
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="play">Play</button>
+    <button type="button" id="stop">Stop</button>
+    <div id="box"></div>
+    <script>
+        const btnPlay = document.querySelector('#play');
+        const btnStop = document.querySelector('#stop');
+        let   boxEle  = document.querySelector("#box");
+
+        let boxLeft = 0;
+        function moveBox(){
+            boxLeft += 1;
+            boxEle.style.left=boxLeft+"px";
+        }
+
+        let mvTimer;
+        function play(){
+            //document.write(typeof mvTimer);
+            mvTimer = setInterval(moveBox, 20);
+            //document.write(typeof mvTimer);
+        }
+
+        function stop(){
+            mvTimer = clearInterval(mvTimer);
+            //document.write(typeof mvTimer);
+        }
+        
+        btnPlay.addEventListener("click", play);
+        btnStop.addEventListener("click", stop);
+    </script>
+</body>
+</html>
