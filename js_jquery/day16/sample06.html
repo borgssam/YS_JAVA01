@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display:none;
+            margin-left:20px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="title1">제목1</h2>
+    <ul id="list1">
+        <li>리스트1-1</li>
+        <li>리스트1-2</li>
+        <li>리스트1-3</li>
+        <li>리스트1-4</li>
+        <li>리스트1-5</li>
+    </ul>
+    <h2 id="title2">제목2</h2>
+    <ul id="list2">
+        <li>리스트2-1</li>
+        <li>리스트2-2</li>
+        <li>리스트2-3</li>
+        <li>리스트2-4</li>
+        <li>리스트2-5</li>
+    </ul>
+    <script>
+        //모든요소 구하기
+        const titleEle1 = document.getElementById('title1');
+        const listEle1 = document.getElementById('list1');
+        const titleEle2 = document.getElementById('title2');
+        const listEle2 = document.getElementById('list2');
+
+        titleEle1.addEventListener("mouseover", 
+            function(){
+                list1.style.display="block";
+            }
+        );
+        titleEle1.addEventListener("mouseout", 
+            function(){
+                list1.style.display="none";
+            }
+        );
+
+        titleEle2.addEventListener("mouseover", 
+            function(){
+                list2.style.display="block";
+            }
+        );
+        titleEle2.addEventListener("mouseout", 
+            function(){
+                list2.style.display="none";
+            }
+        );
+
+
+    </script>
+    
+</body>
+</html>

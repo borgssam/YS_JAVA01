@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이미지생성하기</title>
+</head>
+<body>
+<div>
+    <!-- <img src="./images/color_1.png" alt="">
+    <img src="./images/color_2.png" alt="">
+    <img src="./images/color_3.png" alt="">
+    <img src="./images/color_4.png" alt="">
+    <img src="./images/color_5.png" alt="">
+    <img src="./images/color_6.png" alt=""> -->
+</div>
+<script>
+    //div엘리먼트 구하기
+    const divEle = document.querySelector('div');
+    for( let i = 1; i<=6; i++){
+        //이미지 요소노드 만들기
+        imgEle = document.createElement('img');
+        //이미지 요소에 속성추가하기
+        // imgEle.setAttribute("src", "./images/color_"+i+".png");
+        imgEle.setAttribute("src", `./images/color_${i}.png`);
+        //div에 이미지 추가하기
+        divEle.append(imgEle);
+    }
+</script>
+</body>

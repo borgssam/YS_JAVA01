@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리스트 펼치기 예제</title>
+    <style>
+        .list {
+            display: none; /* 처음에 리스트를 감춥니다. */
+            margin-left: 20px; /* 들여쓰기를 줍니다. */
+        }
+    </style>
+</head>
+<body>
+    <h2 id="title1">제목1</h2>
+    <ul id="list1" class="list">
+        <li>리스트1-1</li>
+        <li>리스트1-2</li>
+        <li>리스트1-3</li>
+    </ul>
+
+    <h2 id="title2">제목2</h2>
+    <ul id="list2" class="list">
+        <li>리스트2-1</li>
+        <li>리스트2-2</li>
+        <li>리스트2-3</li>
+    </ul>
+
+    <script>
+        const title1 = document.getElementById('title1');
+        const list1 = document.getElementById('list1');
+        const title2 = document.getElementById('title2');
+        const list2 = document.getElementById('list2');
+
+        // 제목1에 마우스를 올렸을 때
+        title1.addEventListener('mouseover', function() {
+            list1.style.display = 'block'; // 리스트1을 보이도록 설정
+        });
+
+        // 제목1에서 마우스를 뗐을 때
+        title1.addEventListener('mouseout', function() {
+            list1.style.display = 'none'; // 리스트1을 감추도록 설정
+        });
+
+        // 제목2에 마우스를 올렸을 때
+        title2.addEventListener('mouseover', function() {
+            list2.style.display = 'block'; // 리스트2을 보이도록 설정
+        });
+
+        // 제목2에서 마우스를 뗐을 때
+        title2.addEventListener('mouseout', function() {
+            list2.style.display = 'none'; // 리스트2을 감추도록 설정
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 1em;
+            background: #f0f0f0;
+            margin-top: 1em;
+            border: 1px solid #ccc;
+        }
+        .container p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .container a {
+            display: block;
+            margin-top: 0.5em;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id = "content">
+        <!-- 
+        <div class="container">
+            <p>이것은 새로 생성된 문단입니다.</p>
+            <a href="https://www.naver.com">네이버로 이동</a>
+        </div>
+         -->
+    </div>
+    <script>
+        //HTML 요소생성하기
+        //01.
+        //삽입할 요소찾기
+        const mainEle = document.getElementById("content");
+        const divEle = document.createElement("div");
+        divEle.classList.add("container");
+
+        const pEle = document.createElement("p");
+        pEle.textContent = "새문장입니다.";
+
+        const aEle = document.createElement("a");
+        aEle.setAttribute("href","https://www.naver.com");
+        aEle.textContent = "네이버로 이동";
+
+        divEle.appendChild(pEle);
+        divEle.appendChild(aEle);
+        mainEle.appendChild(divEle);
+
+
+    </script>
+
+</body>
+</html>

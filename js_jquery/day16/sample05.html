@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script>
+        window.onload = function(){
+            const aEle = document.querySelector(".cta>a");
+            aEle.textContent="예약취소";
+        };
+    </script> -->
+</head>
+<body>
+    
+    <div class="cta">
+        <p id="reservation1" onclick="javascript:doclick1();">예약1</p>
+        <p id="reservation2">예약2 </p>
+        <p id="reservation3">예약3 </p>
+        <section id="no" class="hide">
+        <h3 class="title">Sorry about that!</h3>
+        <p>By some weird coincidence, all the rooms at Moonwalk Manor are booked out for the date you planned to take your trip. Unfortunately we are unable to provide you with sufficient lodging for your party at this time. Moonwalk Manor is very busy and your satisfaction is our top priority. When you take your first steps in the moon dust, your life will change. We are always at your service. Your satisfaction matters to us.</p>
+        </section>
+    </div>    
+    <script>
+        //이벤트와 핸들러연결 1방식
+        function doclick1(){
+            alert('예약1');
+        }
+
+        //이벤트와 핸들러연결 2방식
+        //장점: 간편, 예전브라우저에서 동작
+        //단점: 이벤트1 => 핸들러1개 적용가능, 런타임중에 변경불가
+        const btn2 = document.getElementById("reservation2");
+        btn2.onclick = function(){
+            alert('예약2');
+        }
+        btn2.onclick = function(){
+            btn2.textContent="예약2버튼이 눌렸습니다.";
+        }
+
+        //이벤트와 핸들러연결 3방식
+        //장점: 이벤트1 => 핸들러 여러개 적용가능, 런타임중에 변경가능
+        //단점: 복잡, 예전브라우저에서 동작불가(IE8)
+        const btn3 = document.getElementById("reservation3");
+        btn3.addEventListener('click', function(){
+            alert('예약3');
+        });
+
+        btn3.addEventListener('click', function(){
+            btn3.textContent="예약3버튼이 눌렸습니다.";
+        });
+    </script>
+    
+</body>
+</html>
