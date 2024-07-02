@@ -10,18 +10,21 @@
 <body>
 <p><button id="btn_01">Click Me</button></p>
 <ul>
-<li id="first"     title="a1a">내용1</li>
-<li class="second" title="bb"> 내용2 </li>
+<li id="first"     title="a1a" >내용1</li>
+<li class="second" title="bb"  >내용2</li>
 <li id="third"     title="cerc">내용3</li>
-<li class="fourth" title="ded">내용4 </li>
+<li class="fourth" title="ded" >내용4</li>
 </ul>
 <script>
     $(  
         function(){
             $('#btn_01').click(
                 function(){
+                    //title속성이 a로 시작되는 요소의 폰트칼러를 붉은색으로
                     $('li[title^="a"]').css('color','red');
+                    //title의 값이 bb인경우 배경을 노란색으로
                     $('li[title!="bb"]').css('background-color','yellow');
+                    //title=bb이고 클래스가 s시작되면 배경을 녹으로
                     $('[title="bb"][class^="s"]').css('background-color','green');
                 }
             );

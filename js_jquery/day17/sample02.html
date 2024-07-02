@@ -11,10 +11,17 @@
     <div></div>
     <p></p>
     <script>
+        // $(function(){
+
+        // });
         $(function(){
-            $("div").text('제이쿼리시작하기');
+
+            $("div").text('제이쿼리시작하기');//div 텍스트노드 제이쿼리시작하기 넣어주기
             $("button").click(function(e){
+                //버튼 클릭시 실행
+                //스타일 속성이 1개인겨우
                 // $("p").text('weclome').css('color','red');
+                //스타일 속성이 여러개인 경우
                 $("p").text('weclome').css({
                     'color':'red',
                     'background-color':'blue'

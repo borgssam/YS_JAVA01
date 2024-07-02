@@ -24,18 +24,18 @@
 <script>
     $(function(){
         $('#btn').click(function(){
-            //has
-            $('li:has(span)').css('border','3px solid red');
+            //has : 요소를 가지고 있는 경우
+            //$('li:has(span)').css('border','3px solid red');
 
             //contains
-            $('li:contains("세번")').css('border','3px solid blue');
+            //$('li:contains("세번")').css('border','3px solid blue');
 
             //empty
-            $('li:empty').text('내용없음');
+            //$('li:empty').text('내용없음');
 
             //parent
             //header
-            $(':header').css('background-color','pink');
+            //$(':header').css('background-color','pink');
             //not
             $('li:not(:first-child)').css('background-color','green');
 

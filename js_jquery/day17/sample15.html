@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        *{   margin:0; padding:0;   }
+        ul, li{list-style:none;}
+        #box{
+            width:770px;
+            margin: 30px auto;
+            padding:10px;
+            background-color: black;
+        }
+
+        ul{overflow: hidden;margin-bottom: 50px;}
+        li{
+            float: left;
+            padding:10px;
+            border:1px solid #fff;
+            margin: 0px 10px;
+            background-color: chartreuse;
+        }
+        p{text-align: center;margin-bottom: 20px;}
+        button{
+            background-color: #069;
+            width: 200px;
+            font-size: 3em;
+            font-weight: bolder;
+            color:white;
+            margin: 0px 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li><img src="images/pic1.jpg" alt="이미지01"></li>
+            <li><img src="images/pic2.jpg" alt="이미지02"></li>
+            <li><img src="images/pic3.jpg" alt="이미지03"></li>
+            <li><img src="images/pic4.jpg" alt="이미지04"></li>
+        </ul>
+        <p>
+            <button id="left"> <<< </button>
+            <button id = "right"> >>> </button>
+        </p>
+    </div>
+    <script>
+        $(function(){
+            $('#left').click(
+                function(){
+                    $('ul>li:first-child').appendTo('ul');
+                }
+            );
+            $('#right').click(
+                function(){
+                    $('ul>li:last-child').prependTo('ul');                    
+                }
+            );
+        });
+    </script>
+
+    
+</body>
+</html>

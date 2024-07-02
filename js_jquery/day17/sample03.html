@@ -25,6 +25,8 @@
 
 <script>
     $(function(){
+        //일반자바스크립트 : 객체.style.속성=값
+        //$("css선택자")
         $("#btn").click(function(){
             $(".a").css("color","red");
             $('#list1').css({
@@ -32,7 +34,9 @@
                 'list-style':'none'
             });
             $('#first').text('변경후');
+            //클래스가 num인 p태그 바로 다음에 나오는 q요소에 녹색배경만들기
             $('p.num+q').css('background-color','green');
+            //클래스가 num인 p태그 다음에 오는 모든 p요소의 배경을 빨간색으로 만들기
             $('p.num~p').css('background-color','red');
         });
     });

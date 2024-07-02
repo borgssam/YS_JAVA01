@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>dom</title>
+<style>
+    ul{display:none;}
+    </style>
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+    <button id="btn01">요소 변경</button>
+    <button id="btn02">이미지 가져오기</button>
+    <p id="first">변경전</p>
+    <p id="second"> 이미지 가져오기</p>
+    
+    
+    <ul>
+    <li><img src="images/pic_04.jpg" alt="sample01"></li>
+    <li><img src="images/pic_03.jpg" alt="sample01"></li>
+    </ul>
+    <script>
+        $(function(){
+            $('#btn01').click(
+                function(){
+                    $('p#first').text('<b>중요사항</>');
+                    $('p#second').html('<b>중요사항</>');    
+                }
+            );
+            $('#btn02').click(
+                function(){
+                    let imgEle = $('ul>li:last-child').html();
+                    $('p#second').html(imgEle);
+                }
+            );
+
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

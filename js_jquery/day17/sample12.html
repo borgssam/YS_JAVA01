@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        section{
+            width: 380px;
+            margin: 20px auto;
+            border: 1px solid black;
+        }
+        section>p{
+            width: 100%;
+            text-align: center;
+            margin-bottom:25px;
+        }
+        section>div{
+            width:100%;
+            padding: 25px 0px;
+            overflow: hidden;
+        }
+        section>div>div{
+            float: left;
+            width:110px;
+            border:1px solid red;
+            margin: 0 3px;
+        }
+        .box01{
+            background-color: yellowgreen;
+            border: 5px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>
+            <button id="btn01">배경스타일</button>
+            <button id="btn02">외곽선스타일</button>
+        </p>
+        <div>
+            <div class="box01"><p><img src="images/img01.png" alt=""></p></div>
+            <div class="box02"><p><img src="images/img02.png" alt=""></p></div>
+            <div class="box03"><p><img src="images/img03.png" alt=""></p></div>
+        </div>
+    </section>
+    <script>
+        $(
+            function(){
+                $('#btn01').click(
+                    function(){                            
+                        let style = $('.box01').css('background');
+                        $('.box02').css('background',style);
+                    }
+                );
+
+                $('#btn02').click(
+                    function(){
+                        let style = $('.box01').css('border');
+                        $('.box03').css('border',style);
+                    }
+
+                );
+            }
+        );
+    </script>
+    
+</body>
+</html>

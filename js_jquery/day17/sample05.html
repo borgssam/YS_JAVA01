@@ -28,15 +28,20 @@
             function(){
                 
 
-                $('ul>li:eq(2)').css('border','4px solid red');
-                $('ul>li:lt(2)').css('border','4px solid yellow');
-                $('ul>li:gt(2)').css('border','4px solid blue');
+                //인덱스가 2인경우 (0부터시작)
+                // $('ul>li:eq(2)').css('border','4px solid red');
+                //인덱스가 2보다 작은경우
+                // $('ul>li:lt(2)').css('border','4px solid yellow');
+                //인덱스가 21보다 큰경우
+                // $('ul>li:gt(2)').css('border','4px solid blue');
 
-                $('ul>li:odd').css('background-color','#666');
-                $('ul>li:even').css('background-color','green');
+                //홀수번째
+                // $('ul>li:odd').css('background-color','#666');
+                //짝수번째
+                // $('ul>li:even').css('background-color','green');
 
                 // $('ul>li:eq(2)').css('border','4px solid red');
-                // $('ul>li').eq(2).prevAll().css('border','4px solid red');
+                $('ul>li').eq(2).next().next().css('border','4px solid red');
 
 
             }

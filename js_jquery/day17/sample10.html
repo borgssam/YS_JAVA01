@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>dom</title>
+    <style>
+        section {
+            width: 500px;
+            margin: 25px auto;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        div {
+            display: none;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <section>
+        <p class="btn">
+            <button id="btn01">이미지 가져오기</button>
+            <button id="btn02">링크 변경하기</button>
+        </p>
+        <p class="box01">
+            <img src="images/img01.png" alt="sample">
+        </p>
+        <p class="box02">
+            <a href="http://www.naver.com">네이버</a>
+        </p>
+
+        <div><img src="images/img02.png" alt="sample"></div>
+    </section>
+    <script>
+        $(function(){
+            $('#btn01').click(function(){
+                //img02문자열 얻어오기
+                let imgAddr = $('div>img').attr('src');
+                // alert(imgAddr);
+                $('.box01>img').attr('src', imgAddr);
+            });
+            $('#btn02').click(function(){
+                $('.box02>a').attr('href','http://www.daum.net').text('다음컨뮤니티');
+            });
+
+        });
+    </script>
+</body>
+
+</html>
