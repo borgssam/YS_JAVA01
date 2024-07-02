@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<p><button id="btn_01">Click Me</button></p>
+<ul class="box01">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+    <li>내용5</li>
+    <li>내용6</li>
+</ul>
+<ul class="box02">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+    <li>내용5</li>
+    <li>내용6</li>
+</ul>
+<ul class="box03">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+    <li>내용5</li>
+    <li>내용6</li>
+    </ul>   
+<script>
+    $(function(){
+        //버튼.click(무명함수);
+        $('#btn_01').click(
+            function(){
+                $('.box01 li:nth-child(2)').css('border','2px solid red');
+                $('.box02 li:nth-child(4n+1),li:nth-child(4n+2)').css('background-color','pink');
+                $('.box03 li').css('background-color','blue');
+                $('.box03 li:lt(3)').css('background-color','red');
+            }
+        );
+
+    });
+</script>
+</body>
+</html>
