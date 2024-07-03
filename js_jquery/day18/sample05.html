@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn01">버튼1</button>
+    <button id="btn02">버튼2</button>
+    <button id="btn03">버튼3</button>
+    <button id="btn04">버튼4</button>
+    <script>
+        $(function(){
+            $('#btn01').click(function(){
+                alert('버튼1이눌렸어요');
+            })
+
+            $('#btn02').on('click',function(){
+                alert('버튼2이눌렸어요');
+            })
+
+            $('#btn03').on('mouseover mouseout mouseup mousedown',function(e){
+                
+                if(e.type === 'mouseover'){
+                    $(this).css('background-color','green');
+                } else if(e.type === 'mousedown'){
+                    $(this).css('background-color','white');
+                } else if(e.type === 'mouseup'){
+                    $(this).css('background-color','red');
+                } else{
+                    $(this).css('background-color','yellow');
+                }
+            })
+
+            $('#btn04').one('click',function(){
+                alert('버튼3이눌렸어요');
+            })
+        });
+    </script>
+    
+</body>
+</html>

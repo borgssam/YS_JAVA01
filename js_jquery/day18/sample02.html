@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn01">replace</button>
+    <button id="btn02">html</button>
+    <button id="btn03">remove</button>
+    <button id="btn04">empty</button>
+    <button id="btn05">clone</button>
+    <button id="btn06">detach</button>
+    <p class="no01">no01 요소바꾸기</p>
+    <p class="no02">no02 내용바꾸기</p>
+    <p class="no03">no03 없애기</p>
+    <p class="no04">no04 비우기</p>
+    <p class="no05">no05 채우기</p>
+    <p class="no06">no06 복제하기</p>
+    <p class="no07">no07 자르기</p>    
+</body>
+    <script>
+        $(function(){
+            //replace
+            $('#btn01').click(function(){
+                $('p.no01').replaceWith("<h2>replace변환</h2>")
+                
+            });
+            //html
+            $('#btn02').click(function(){
+                $('p.no02').html("<h2>html변환</h2>")
+                
+            });
+            //remove
+            $('#btn03').click(function(){                
+                $('p.no03').remove();
+            });
+
+            //empty
+            $('#btn04').click(function(){            
+                $('p.no04').empty();
+            });
+
+            //clone ctrl c, v
+            $('#btn05').click(function(){
+                let temp = $('p.no06').clone();
+                $('p.no01').prepend(temp);
+            });
+
+            //detach ctrl x, v
+            $('#btn06').click(function(){
+                let temp = $('p.no07').detach();
+                $('p.no01').prepend(temp);
+                
+            });
+
+        });
+    </script>
+</html>

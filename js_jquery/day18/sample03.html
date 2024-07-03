@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 부모, 자식, 형제 요소 이동 예제</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        .lv01 {
+            width: 500px;
+            height: 300px;
+            background-color: lightgrey;
+            margin-bottom: 20px;
+            padding: 20px;
+            overflow: hidden; /* 자식 요소가 벗어날 경우 숨김 처리 */
+        }
+        .lv02 {
+            padding:20px;
+            width: 90%;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+            overflow: hidden; /* 자식 요소가 벗어날 경우 숨김 처리 */
+        }
+        .lv03 {
+            float: left; /* 좌측으로 배치 */
+            width: 22%; /* 48%의 너비 설정 */
+            height: 100%;
+            background-color: lightgreen;
+            margin: 1%; /* 사이 간격 설정 */
+            box-sizing: border-box; /* 박스 크기 계산 시 패딩과 보더 포함 */
+        }
+    </style>
+</head>
+<body>
+    <div class="lv01" id="grandfather">
+            
+        <div class="lv02 son01" id="big_father">
+            <div class="lv03 son01" id="big_son1">큰집 손자1</div>
+            <div class="lv03 son01" id="big_son2">큰집 손자2</div>
+            <div class="lv03 son01" id="big_son3">큰집 손자3</div>
+            <div class="lv03 son01" id="big_son4">큰집 손자4</div>
+        </div>
+        <div class="lv02 son02" id="small_father">
+            <div class="lv03 son02" id="small_son1">작은집 손자1</div>
+            <div class="lv03 son02" id="small_son1">작은집 손자2</div>
+            <div class="lv03 son02" id="small_son1">작은집 손자3</div>
+            <div class="lv03 son02" id="small_son1">작은집 손자4</div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            //앞뒤로 이동
+            // $('#big_son3').click(
+            //     function(){
+            //         $(this).first().css('background-color','red');
+            //     }
+            // );
+
+            //자식이동
+            // $('#big_father').click(
+            //      function(){
+            //         $(this).children().last().css('background-color','red');
+            //      }
+            // );
+
+            //부모로이동
+            $('#big_son3').click(
+                 function(){
+                    $(this).parent().next().children().first().next().css('background-color','red');
+                 }
+            );
+
+
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>이벤트</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>Click or double click here.</p>
+    <script>
+        $(function () {
+            $('p').on('click', function (e) {
+                alert('welcome');
+            });
+            $('p').off('click');
+        });
+    </script>
+</body>
+
+</html>

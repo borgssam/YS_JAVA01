@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        p{
+            border:3px solid blue;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>    
+    <p>
+        <button id="btn01">버튼(wrap)</button>
+        <button id="btn02">버튼(wrapAll)</button>
+        <button id="btn03">버튼(wrapInner)</button>
+        <button id="btn04">버튼(unwrap)</button>
+    </p>
+    <div>
+        <strong>강한글씨</strong>       
+        <strong>강한글씨</strong>
+        <em>em글씨</em>
+        <strong>강한글씨</strong>
+        <strong>강한글씨</strong>
+    </div>
+    <script>
+        $(
+            function(){
+                //버튼1 wrap------
+                $('#btn01').click(
+                    function(){
+                        $('strong').wrap('<p>');
+                    }
+                );
+
+            //버튼2 wrapAll------
+            $('#btn02').click(
+                function(){
+                    $('strong').wrapAll('<p>');
+                }
+            );
+
+            //버튼3    wrapInner------
+            $('#btn03').click(
+                function(){
+                    $('div').wrapInner('<p>');
+                }
+            );
+
+            //버튼4   unwrap ------
+            $('#btn04').click(
+                function(){
+                    $('strong').unwrap();
+                }
+            );
+
+
+
+            }
+        );
+    </script>
+</body>
+</html>

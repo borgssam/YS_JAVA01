@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자식 창 2</title>
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                data1: parseInt(params.get('data1')),
+                data2: parseInt(params.get('data2')),
+                callback: params.get('callback')
+            };
+        }
+
+        window.onload = function() {
+            const params = getQueryParams();
+            const product = params.data1 * params.data2;
+            //document.write(product);
+            const result = params.data1+ ' * ' + params.data2 + ' = ' + product;
+            window.parent[params.callback](result);
+        }
+    </script>
+</head>
+<body>
+    <h1>자식 창 2</h1>
+</body>
+</html>

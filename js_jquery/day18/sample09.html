@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        ul,li{list-style: none;}
+        a{cursor: pointer;}
+        a:hover{background-color: aqua;}
+    </style>
+</head>
+<body>
+    <button>요소추가</button>
+    <ul id="linkBtn">
+        <li><a data="img/flower.jpg">꽃</a></li>
+        <li><a data="img/sea.jpg">바다</a></li>
+        <li><a data="img/Jellyfish.jpg">해파리</a></li>
+    </ul>
+    <p><img src="img/flower.jpg" alt="꽃"></p>
+    <script>
+        $(function(){
+            // $('#linkBtn>li>a').on('click', function(){
+            //     let data = $(this).attr('data');
+            //     $('p>img').attr('src', data);
+            // });
+            
+            //형식 
+            //$(이벤트부모).on('이벤트','타겟', 실행)
+            $('body').on('click','#linkBtn>li>a',function(){
+                let data = $(this).attr('data');
+                $('p>img').attr('src', data);
+            });
+
+            $('button').on('click', function(){
+                $('ul').append('<li><a data="img/building.jpg">건물</a></li>');
+            });
+
+        });
+    </script>
+    
+</body>
+</html>

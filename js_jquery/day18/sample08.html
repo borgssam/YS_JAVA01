@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        ul,li{list-style: none;}
+        a{cursor: pointer;}
+        a:hover{background-color: aqua;}
+    </style>
+</head>
+<body>
+    <ul id="btn">
+        <li><a data="img/house_01.jpg" id="btn01">주택1</a></li>
+        <li><a data="img/house_02.jpg" id="btn02">주택2</a></li>
+        <li><a data="img/house_03.jpg" id="btn03">주택3</a></li>
+        <li><a data="img/house_04.jpg" id="btn04">주택4</a></li>
+    </ul>
+    <p><img src="img/house_05.jpg" alt="" id="back_img"></p>
+    <script>
+        $(function(){
+            $('li>a').dblclick(function(){
+                let img = $(this).attr('data');
+                $('p>img').attr('src', img);
+            });
+            return false;
+        });
+    </script>
+
+</body>
+</html>
