@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <style>
+        .txt{
+            width: 100px;
+            height:100px;
+            background-color: blue;
+            margin-left: 0;
+            margin-top: 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button id="aniBtn">애니메이션시작</button>
+    <div class="txt"></div>
+    <script>
+        $(function(){
+            $('#aniBtn').on('click', function move(){
+                $('.txt').animate({marginLeft:'200px',backgroundColor:'blue'},500)
+                         .animate({marginTop:'200px'},500)
+                         .delay(1000)
+                         .animate({marginLeft:'0px',backgroundColor:'red'},500)
+                         .animate({marginTop:'0px'},500, move);
+            });
+
+        });
+    </script>
+    
+</body>
+</html>

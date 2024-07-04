@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        section{
+            width:500px; margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+        div{
+            float: left;
+            width:240px;
+            text-align: center;
+            border: 1px solid blue;
+        }
+        p{
+            margin: 20px auto;
+            text-align: center;
+        }
+        p.box{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+            
+        <div id="box01">
+            <p><button class="btn01">일반버튼</button></p>
+            <p class="box general"></p>
+        </div>
+        <div id="box02">
+            <p><button class="btn02">광클버튼</button></p>
+            <p class="box spamming"></p>
+        </div>
+    </section>
+    <script>
+        $(function(){
+            //일반버튼
+            $('.btn01').on('click', function(){
+                $('.general').slideToggle(1000);
+
+            });
+
+            //광클버튼
+            $('.btn02').on('click', function(){
+                $('.spamming:not(:animated)').slideToggle(1000);
+
+            });
+
+
+
+        });
+    </script>
+
+    
+</body>
+</html>

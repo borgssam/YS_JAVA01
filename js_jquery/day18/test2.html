@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        #wrap {
+            width: 500px;
+            margin: 0 auto;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #bigimage {
+            margin: 10px 30px;
+        }
+        li {list-style: none;
+        flex: 0 0 auto;}
+        ul{
+            width: 800px;
+            overflow-x: hidden; /* 가로 스크롤 숨기기 */
+            white-space: nowrap;
+            display: flex;
+        }
+        .smallImage {
+            display: block;
+        }
+        .smallImage img {
+            width: 260px;
+            display: block;
+            /* float: left; */
+            margin-right: 10px;
+        }
+        .showview {
+            overflow: hidden;
+            position: relative;
+
+        }
+        div#all {
+            width: 800px;
+            /* height: 130px; */
+            background-color: black;
+            padding: 10px 30px;
+            overflow: hidden;
+            position: relative;
+            
+        }
+        #all>p {
+            position: absolute;
+            cursor: pointer;
+        }
+        p#prev {
+            left: 4px;
+            top: 85px;
+        }
+        p#next {
+            right: 4px;
+            top: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="bigimage">
+            <img src="pic/flw_01.jpg" alt="이미지01" width="800px">
+        </div>
+        <div id="all">
+            <p id="prev"><img src="pic/prev.png" width="23px" height="23px"></p>
+            <p id="next"><img src="pic/next.png" width="23px" height="23px"></p>
+            <div id="show_view">
+                <ul>
+                    <li><a class="smallImage" href="pic/flw_01.jpg">
+                        <img src="pic/flw_01.jpg">
+                    </a></li>
+                    <li><a class="smallImage" href="pic/flw_02.jpg">
+                        <img src="pic/flw_02.jpg">
+                    </a></li>
+                    <li><a class="smallImage" href="pic/flw_03.jpg">
+                        <img src="pic/flw_03.jpg">
+                    </a></li>
+                    <li><a class="smallImage" href="pic/flw_04.jpg">
+                        <img src="pic/flw_04.jpg">
+                    </a></li>
+                    <li><a class="smallImage" href="pic/flw_05.jpg">
+                        <img src="pic/flw_05.jpg">
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#prev').click(function(){
+                $('ul>li:last-child').prependTo('ul');
+            });
+            $('#next').click(function(){
+                $('ul>li:first-child').appendTo('ul');
+            });
+            $('a').click(function(){
+                $('#bigimage>img').attr('src',$(this).attr('href'));
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

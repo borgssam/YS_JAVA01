@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        p{margin: 0;padding: 0;}
+        div{
+            width: 650px;
+            height: 70px;
+            margin: 0 auto 25px;
+            
+        }
+        p:first-child{
+            width: 300px;height:70px;
+            float: left;
+            background-color: #333;
+            text-align: center;
+            line-height: 70px;
+            font-size:1.2em;
+            color:white;
+        }
+        p:last-child{
+            width: 330px;height:70px;
+            float: right;
+            background-color: #099;
+        }
+    </style>
+</head>
+<body>
+    <div id="effect01">
+        <p class="button">
+            <button type="button" class="btn01">show</button>
+            <button type="button" class="btn02">hide</button>
+            <button type="button" class="btn03">toggle</button>
+        </p>
+        <p class="back01"></p>
+    </div>
+    <div id="effect02">
+        <p class="button">
+            <button type="button" class="btn01">slideDown</button>
+            <button type="button" class="btn02">slideUp</button>
+            <button type="button" class="btn03">slideToggle</button>
+        </p>
+        <p class="back02"></p>
+    </div>
+
+    <div id="effect03">
+        <p class="button">
+            <button type="button" class="btn01">fadeIn</button>
+            <button type="button" class="btn02">fadeOut</button>
+        </p>
+        <p class="back03"></p>
+    </div>
+
+    <div id="effect04">
+        <p class="button">
+            <button type="button" class="btn01">fadeTo</button>
+            <button type="button" class="btn02">fadeToggle</button>
+        </p>
+        <p class="back04"></p>
+    </div>
+    <script>
+        $(function(){
+            //show,hide,toggle ------------------------
+            //show
+            $('#effect01 button.btn01').on('click', function(){
+                //alert('버튼1');
+                //선택자.동작(시간,가속도,완료시동작);
+                $('.back01').show(2000,'linear', function(){
+                    $(this).css('background-color','red');
+
+                });
+            });
+            //hide
+            $('#effect01 button.btn02').on('click', function(){
+                //alert('버튼2');   
+                $('.back01').hide(2000,'linear', function(){
+                    //alert('박스가 숨겨졌습니다.');
+                    $(this).css('background-color','blue');
+                });             
+            });
+            //toggle
+            $('#effect01 button.btn03').on('click', function(){
+                //alert('버튼3');     
+                $('.back01').toggle(2000);           
+            });
+            //slideDown,slideUp, slideToggle ------------------------
+            //slideDown
+            $('#effect02 button.btn01').on('click', function(){
+                //alert('버튼1');
+                //선택자.동작(시간,가속도,완료시동작);
+                $('.back02').slideDown(2000,'linear', function(){
+                    $(this).css('background-color','red');
+
+                });
+            });
+            //slideUp
+            $('#effect02 button.btn02').on('click', function(){
+                //alert('버튼2');   
+                $('.back02').slideUp(2000,'linear', function(){
+                    //alert('박스가 숨겨졌습니다.');
+                    $(this).css('background-color','blue');
+                });             
+            });
+            //slideToggle
+            $('#effect02 button.btn03').on('click', function(){
+                //alert('버튼3');     
+                $('.back02').slideToggle(2000);           
+            });
+            //fadeIn, fadeOut ------------------------
+            //fadeIn
+            $('#effect03 button.btn01').on('click', function(){
+                //alert('버튼1');
+                //선택자.동작(시간,가속도,완료시동작);
+                $('.back03').fadeIn(2000,'linear', function(){
+                    $(this).css('background-color','red');
+
+                });
+            });
+            //fadeOut
+            $('#effect03 button.btn02').on('click', function(){
+                //alert('버튼2');   
+                $('.back03').fadeOut(2000,'linear', function(){
+                    //alert('박스가 숨겨졌습니다.');
+                    $(this).css('background-color','blue');
+                });             
+            });
+
+
+            //fadeTo, fadeToggle ------------------------
+            //fadeTo
+            $('#effect04 button.btn01').on('click', function(){
+                //alert('버튼1');
+                //선택자.동작(시간,가속도,완료시동작);
+                $('.back04').fadeTo(2000,0.1);
+            });
+            //fadeToggle
+            $('#effect04 button.btn02').on('click', function(){
+                //alert('버튼2');   
+                $('.back04').fadeToggle(2000);             
+            });
+
+
+
+        });
+    </script>
+    
+</body>
+</html>

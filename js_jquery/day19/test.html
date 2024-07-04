@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>이펙트</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li id="flower"><img src="img/flower.jpg" alt="flower"></li>
+            <li id="building"><img src="img/building.jpg" alt="building"></li>
+        </ul>
+    </div>
+    <script>
+        $(function () {
+            $('#flower').on('click', function (e) {
+                var width2 = $(this).width();
+                $('div>ul').animate({
+                    marginLeft: '-=' + width2
+                }, 300, 'swing');
+            });
+            $('#building').on('click', function (e) {
+                var width3 = $(this).width();
+                $('div>ul').animate({
+                    marginLeft: '+=' + width3
+                }, 300, 'swing');
+            });
+        });
+    </script>
+</body>
+
+</html>

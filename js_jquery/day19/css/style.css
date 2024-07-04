@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*보이는 것 기준*/
+div{
+width:400px;
+height:267px;
+}
+/*전체기준*/
+ul{width:800px;
+height:267px;}
+/*보이는 것 기준*/
+ul>li{float:left;}
+ul>li>img{vertical-align:top;}
