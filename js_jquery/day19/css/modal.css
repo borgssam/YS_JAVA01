@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ul{width:700px; }
+ul li{float:left; margin:10px; width:140px;}
+ul li img{width:100%;}
