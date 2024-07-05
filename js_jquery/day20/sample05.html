@@ -12,7 +12,8 @@
     <button id="btn03">버튼3</button>
     <h1>메인창</h1>
     <div>
-        <iframe src="" width="600" height="400"></iframe>
+        <iframe id="frame1" src="" width="600" height="400"></iframe>
+        <iframe id="frame2" src="" width="600" height="400"></iframe>
     </div>
     <script>        
         function show(data){
@@ -28,7 +29,10 @@
         }
 
         function sumAsnc(data1, data2){            
-            $('iframe').attr('src','child.html?data1='+data1+'&data2='+data2+'&callback=show');
+            $('#frame1').attr('src','child.html?data1='+data1+'&data2='+data2+'&callback=show');
+        }
+        function sumAsnc2(data1, data2){            
+            $('#frame2').attr('src','child.html?data1='+data1+'&data2='+data2+'&callback=show');
         }
 
         $(function(){
@@ -45,16 +49,16 @@
     
             $('#btn02').on('click',function(){
                 sum(1,10);
-                sumAsnc(2,5100);
+                sumAsnc(2,51000000);
                 sum(3,10);
                 sum(4,10);
                 sum(5,10);
-                sum(6,10);
+                sumAsnc2(6,10);
                 sum(7,100210);
                 sum(8,10);
             });
             $('#btn03').on('click',function(){
-                $('iframe').attr('src','child.html?data1=1&data2=10&callback=show');
+                $('#frame2').attr('src','child.html?data1=1&data2=10&callback=show');
             });
     
         });

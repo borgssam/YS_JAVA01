@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <h1>jquery AJAX</h1>
+    <p> 
+        <button id="btn01" type="button">AJAX</button>
+        <button id="btn02" type="button">get</button>
+        <button id="btn03" type="button">post</button>
+        <button id="btn04" type="button">load</button>
+    </p>
+    <p id="main"></p>
+    <script>
+        function func1(data){
+            $('#main').append("<br>----------<br>"+data);
+        }
+        function func2(xhr, status, strErr){
+            $('#main').append("error =>"+strErr);
+
+        }
+        function func3(xhr, status){
+            $('#main').append("<p>종료되었습니다.</p>");
+        }
+
+        $(function(){
+            $('#btn01').on('click',function(){
+                $.ajax({
+                    url:"hello.txt",
+                    type:"GET",
+                    dataType:"text",
+                    success:func1,
+                    error:func2,
+                    complete:func3
+                });
+            });
+            $('#btn02').on('click',function(){
+                $.get('hello.txt', func1);
+            });
+            $('#btn03').on('click',function(){
+                $.post('hello.txt','', function(response){
+                    func1(response);
+                },'text').fail(function(xhr, status, strErr){
+                    func2(xhr, status, strErr);
+                });
+            });
+            $('#btn04').on('click',function(){
+                $("#main").load('hello.txt', function(response, status, xhr){
+                    if(status=="success"){
+                        func1(response);
+                    } else {
+                        func2(xhr, status, xhr.statusText);
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>
