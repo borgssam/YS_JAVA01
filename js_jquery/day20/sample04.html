@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <button id="btnSum">합산</button>
+    <script>
+        function show(data){
+            console.log(data);
+        }
+        function sum(data1, data2){
+            result  = 0;
+            for(let i = data1; i<=  data2; i++){
+                result += i;
+            }
+            show(data1+' ~ ' +data2 +'=>'+result);
+        }
+        $(function(){
+            $('#btnSum').on('click', function(){
+                sum(1,5);
+                sum(2,1000000);
+                sum(3,6);
+                sum(4,60);
+                sum(5,600);
+                sum(6,6000);
+            })
+        });
+
+
+    </script>    
+</body>
+</html>
