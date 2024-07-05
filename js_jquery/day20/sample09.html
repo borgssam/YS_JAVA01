@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        section{
+            border:1px solid black;
+            width:500px;
+            margin:20px auto;
+            padding:30px;
+            position: relative;
+        }
+        section>h1{
+            font:bold 25px Aria;
+            text-align:center;
+            margin-bottom:25px;
+            color:#63c;
+        }
+        section>p{position: absolute; top:220px;}
+        section>p#prev{left:-11px;        }
+        section>p#next{right:-11px;        }
+        div#view{
+            overflow: hidden; 
+            width: 402px; margin:0 auto; border: 1px solid red;}
+
+        div#view>ul{width:2000px; height:250px;}
+        div#view>ul>li{float: left;width:400px}
+        div#view>ul>li>img{vertical-align: top;}
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Slide Gallery</h1>
+        <p id="prev"><img src="img/prev.png" ></p>
+        <p id="next"><img src="img/next.png" ></p>
+        <div id="view">
+            <ul id="source">
+                <li><img src="img/pic01.jpg" alt="화보1"></li>
+                <li><img src="img/pic02.jpg" alt="화보2"></li>
+                <li><img src="img/pic03.jpg" alt="화보3"></li>
+                <li><img src="img/pic04.jpg" alt="화보4"></li>
+                <li><img src="img/pic05.jpg" alt="화보5"></li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        $(function(){
+            
+            $('#source').css('margin-left','-400px');
+            $('#prev').on('click', function(){
+                $('#source').animate({marginLeft :'-=400px'},300,'swing',function(){
+                    //첫번째그림을 맨뒤로 보내기
+                    $('#source>li:first').appendTo('#source');
+                    $(this).css('margin-left','-400px');
+                });
+
+            });
+
+            $('#next').on('click', function(){
+                $('#source').animate({marginLeft :'+=400px'},300,'swing',function(){
+                    //맨뒤그림을 맨앞으로보내기
+                    $('#source>li:last').prependTo("#source");
+                    $(this).css('margin-left','-400px');
+                });
+            });
+
+
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="js/jquery.js"></script>
+    <style>
+        div#content{width:960px;margin: 100px auto;border: 1px solid black;}
+        ul{
+            width: 300px;
+            float: left;  
+            background-color: black; 
+            padding: 10px;         
+        }
+        ul,li{list-style: none;}
+        ul>li{width:140px;float:left;margin:5px;}
+        ul>li a>img{width: 100%;vertical-align: top;}
+        div#main{
+            float:right; 
+            width: 520px;
+            border: 1px solid red;
+            position: relative;
+        }
+        div#main>img{
+            position: absolute;
+            left:0;right:0;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li><a data="img/img_01.jpg"><img src="img/img_01.jpg" ></a></li>
+            <li><a data="img/img_02.jpg"><img src="img/img_02.jpg" ></a></li>
+            <li><a data="img/img_03.jpg"><img src="img/img_03.jpg" ></a></li>
+            <li><a data="img/img_04.jpg"><img src="img/img_04.jpg" ></a></li>
+            <li><a data="img/img_05.jpg"><img src="img/img_05.jpg" ></a></li>
+            <li><a data="img/img_06.jpg"><img src="img/img_06.jpg" ></a></li>
+        </ul>
+        <div id="main"><img src="img/img_01.jpg"></div>
+    </div>
+    <script>
+        $(function(){
+            $('ul>li>a').on('click',function(){
+                let url = $(this).attr('data');
+                //alert(url);
+                // $('#main>img').attr('src', url);
+                $('#main').prepend('<img src="'+url+'">');
+                $('#main>img:last').fadeOut(700,function(){
+                    $('#main>img:last').remove();
+                });
+            });
+
+        });
+    </script>
+
+    
+</body>
+</html>

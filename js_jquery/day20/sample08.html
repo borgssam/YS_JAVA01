@@ -17,12 +17,16 @@
         });
 
         function getData(){
-            $.get("testdata.txt",successFn)
+            $.get("testxmldata.xml",successFn)
              .fail(errorFn)
              .always(completeFn);
         }
         function successFn(result){
-            $('#main').append(result+"<br>");
+            let titles = result.getElementsByTagName('title');
+            let names = result.getElementsByTagName('name');
+            for(let i = 0; i < titles.length; i++){
+                $('#main').append('제목:'+titles[i].textContent+',이름:'+names[i].textContent+"<br>");
+            }
         }
         function errorFn(xhr, status, strErr){
             $('#main').append("error:"+strErr+ "<br>");

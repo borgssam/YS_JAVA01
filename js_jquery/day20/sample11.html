@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>scroll</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/scroll01.css">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+<!--header-->
+<header>
+<h1>로고</h1>
+<nav>
+<h2 class="hideClass">메인메뉴</h2>
+<ul>
+<li><a href="#menu1">menu1</a></li>
+<li><a href="#menu2">menu2</a></li>
+<li><a href="#menu3">menu3</a></li>
+<li><a href="#menu4">menu4</a></li>
+</ul>
+</nav>
+</header>
+<!--#box01-->
+<section id="menu1">
+box01
+</section>
+<!--#box02-->
+<section id="menu2">
+box02
+</section>
+<!--#box03-->
+<section id="menu3">
+box03
+</section>
+<!--#box04-->
+<section id="menu4">
+box04
+</section>
+<!--footer-->
+<footer>footer</footer>
+</div>
+<script>
+$(function () {
+var wHeight = $(window).height();
+//스타일 준비하기
+$('section').height(wHeight);
+
+$('nav>ul>li>a').on('click', function (e) {
+var aName = $(this).attr('href');
+var sTop = $(aName).offset().top;
+$('html,body').animate({scrollTop: sTop - 60}, 500, 'swing');
+return false;
+});
+});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>폼요소 계산하기</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/test01.css">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<section>
+<h1>-페인트 소요량 계산</h1>
+<div>
+<form action="#" method="post">
+<fieldset>
+<legend>[넓이]</legend>
+<ul class="box01">
+    <li>
+        <label for="userWidth">가로</label>
+        <input type="text" id="userWidth"><span>M</span></li>
+    <li>
+        <label for="userHeight">세로</label>
+     <input type="text" id="userHeight"><span>M</span></li>
+    <li>
+        <input type="button" value="계산하기"></li>
+    </ul>
+<ul class="box02">
+    <li>
+        <label for="usreArea">면적</label>
+        <input type="text" id="userArea"><span>m<sup>2</sup></span></li>
+    <li>
+        <label for="userLiter">페인트양</label>
+        <input type="text" id="userLiter"><span>L</span></li>
+</ul>
+</fieldset>
+</form>
+<script>
+    $(function(){
+        $('input[type="button"]').on('click',function(e){
+        var sWidth = parseInt($('#userWidth').val());
+        var sHeight = parseInt($('#userHeight').val());
+        var sAll = sWidth * sHeight;
+        var sLiter = sAll/4;
+            $('#userArea').val(sAll);
+            $('#userLiter').val(sLiter);
+        });
+    });
+    </script>
+</body>
+</html>

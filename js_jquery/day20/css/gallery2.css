@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#content{width:960px; margin:100px auto;}
+ul{width:300px; float:left; border:1px solid #666;
+    padding-top:10px;}
+ul>li{width:140px; float:left; margin: 0 5px 10px;}
+ul>li a>img{width:100%;vertical-align: top;}
+/*메인이미지*/
+div#main{width:502px; float:right; position:relative;}
+div#main>img{border:3px solid #000; position:absolute;
+left:0; top:0;}
