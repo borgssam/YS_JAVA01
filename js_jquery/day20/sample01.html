@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<ul>
+	<li><input type="text" value="INPUT 태그1"></li>
+	<li><input type="text" value="INPUT 태그2" disabled></li>
+	<li><input type="password" value="INPUT 태그, :password" ></li>
+	<li><input type="image" src="img/button.png" ></li>
+	<li><input type="file"></li>
+	<li><input type="checkbox">123</li>
+	<li><input type="checkbox" checked>456</li>
+	<li><input type="radio">789</li>
+	<li><input type="radio" checked>012</li>
+	<li><select>
+		<option>SELECT 태그, 가</option>
+		<option>SELECT 태그, 나</option>
+	</select></li>
+	<li><input type="button" value="INPUT 태그, :button" ></li>
+	<li><button type="reset">BUTTON 태그, :reset</button></li>
+	<li><button type="submit">BUTTON 태그, :submit</button></li>
+</ul>	
+<script>
+	$(function(){
+        //$(':selected').css('background-color','red');
+        // $(':selected').css('border','3px solid yellow');
+        // $(':enabled').css('border','3px solid green');
+        //$(':selected').css('accent-color','red');
+        //버튼클릭시 인풋박스에 값넣기
+        $(':button').click(function(){
+            $(':input').val('안녕하세요');
+        });
+	});
+</script>
+</body>
+</html>

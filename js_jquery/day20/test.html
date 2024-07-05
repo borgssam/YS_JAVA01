@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>val</title>
+<script src="js/jquery.min.js"></script>
+<style>
+  span {
+    display: none;
+  }
+  </style>
+</head>
+
+<body>
+<p><input type="text"> <span>focus fire</span></p>
+<p><input type="password"> <span>focus fire</span></p>    
+<script>
+
+	// 입력값이 한글로만 이루어져 있는지 확인하는 함수
+	function isKorean(input) {
+		const regex = /^[가-힣]+$/;
+		return regex.test(input);
+	}
+
+	// 입력값이 영문으로만 이루어져 있는지 확인하는 함수
+	function isEnglish(input) {
+		const regex = /^[A-Za-z]+$/;
+		return regex.test(input);
+	}
+  $(function(){
+  $('input').on('focus',function(e){
+    //$(this).next('span').show();
+    $(this).next('span')
+          .css('display','inline')
+          .delay(800)
+          .fadeOut(1000);
+  });
+  });  
+  </script>
+</body>
+</html>

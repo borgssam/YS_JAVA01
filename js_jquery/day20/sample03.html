@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        span{display: none;}
+    </style>
+</head>
+<body>
+    <p>이름(한글):<input type="text" name="" id=""><span>한글로 입력하세요</span></p>    
+    <p>이름(영문):<input type="text" name="" id=""><span>영문으로 입력하세요</span></p>
+
+    <script>
+
+        $(function(){
+            //입력상자가 포커스를 받으면 실행되는 함수
+            $('input').on('focus',function(){
+                $(this).next('span')             //입력상자 다음에오는 span요소 선택하기
+                        .css('display','inline') //스타일속성으로 보이기
+                        .delay(800)     //0.8초 대기
+                        .fadeOut(1000); //1초동한 서서히 사라지기(감추기)
+            });
+        });
+    </script>
+    
+</body>
+</html>
