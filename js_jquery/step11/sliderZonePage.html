@@ -1,0 +1,85 @@
+
+            <!-- 슬라이더Zone시작 -->
+            <style>
+           
+                /* 슬라이더 배경이미지처리 */
+                #sliderZone{
+                    position: relative;
+                    width: 100% ;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                }
+                .slider_panel{
+                    /* width: 100%; */
+                    display: flex;
+                    position: relative;
+                    left:0;  /*좌표변경으로 스라이딩 표현 */
+                    transition: left 0.5s ease; 
+                }
+                /* .slider_panel>li */
+                .slider_image{
+                    min-width: 100%;
+                }
+                .slider_image img{
+                    width: 100%;
+                    display: block;
+                }
+
+                /* 슬라이더 컨트롤 */
+                #sub_photo_bg{
+                    background-color: aqua;
+                }
+                .control_panel{
+                    position: absolute;
+                    bottom:10px;
+                    left:50%;
+                    display: flex;
+                    gap:5px;
+                    transform: translateX(-50%);
+                }
+                .control_btn{
+                    width: 10px;
+                    height: 10px;
+                    background-color: white;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                .control_btn.active{
+                    background-color: red;
+                }
+                /* 좌우버튼 */
+                .direct_btn{
+                    position: absolute;
+                    top:50%;
+                    width: 100%;
+                    display: flex;
+                    transform:translateY(-50%);
+                    justify-content:space-between;
+                }
+                .direct_btn img{ cursor: pointer;}
+
+            </style>
+            <div id="sliderZone">
+                <div id="sub_photo_bg">
+                    <ul class="slider_panel">
+                        <li class="slider_image"><img src="img/1.jpg" alt=""></li>
+                        <li class="slider_image"><img src="img/2.jpg" alt=""></li>
+                        <li class="slider_image"><img src="img/3.jpg" alt=""></li>
+                        <!-- <li class="slider_image"><img src="img/1.jpg" alt=""></li>
+                        <li class="slider_image"><img src="img/2.jpg" alt=""></li>
+                        <li class="slider_image"><img src="img/3.jpg" alt=""></li> -->
+                    </ul>
+                    <div class="control_panel">
+                        <div class="control_btn active"  data-index="0"></div>
+                        <div class="control_btn" data-index="1"></div>
+                        <div class="control_btn" data-index="2"></div>
+                    </div>
+                    <div class="direct_btn">
+                        <div class="left_btn"><img src="img/left_btn.png" alt=""></div>
+                        <div class="right_btn"><img src="img/right_btn.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 슬라이더Zone끝 -->

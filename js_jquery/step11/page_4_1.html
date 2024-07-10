@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특별함</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        *{margin:0; padding: 0;}
+        a{text-decoration: none; text-align: center;}
+        ul,li{
+            list-style: none;
+            border: 1px solid green;
+        }
+        div{
+            border: 1px solid blue;
+            /* height:30px; */
+        }
+    </style>
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function(data) {
+                $('#' + ctrl).html(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }          
+    </script>    
+    <script>
+        function initSlider() {
+            const $sliderPanel = $('.slider_panel');
+            const $controlBtns = $('.control_btn');
+            const $leftBtn     = $('.left_btn img');
+            const $rightBtn    = $('.right_btn img');
+
+            let currentIndex = 0;
+            function updateSlider(index){
+                $sliderPanel.css('left', `-${index * 100}%`);
+                $controlBtns.removeClass('active');
+                $controlBtns.eq(index).addClass('active');
+            }
+
+            $leftBtn.on('click',function(){
+                currentIndex--;
+                if(currentIndex<0){
+                    currentIndex=0;
+                }
+                updateSlider(currentIndex);
+            });
+            $rightBtn.on('click', function(){
+                currentIndex++;
+                if(currentIndex>2){
+                    currentIndex=2;
+                }
+                updateSlider(currentIndex);
+            });
+
+            $controlBtns.on('click',function(){
+                currentIndex = parseInt($(this).data('index'));
+                updateSlider(currentIndex);
+
+            });
+            setInterval(function(){
+                currentIndex=(currentIndex+1) % $controlBtns.length;
+                updateSlider(currentIndex);
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <div id="site">
+        <!-- 상단Area시작 -->
+        <div id="topArea">
+
+            <!-- 타이틀Zone시작 -->
+            <div id="titleZonePage"></div>
+            <script>
+                $(function(){
+                    includeHTML('titleZonePage','titleZonePage.html', null);
+                });
+            </script>            
+            <!-- 타이틀Zone끝 -->
+
+            <!-- 메뉴Zone시작 -->
+            <div id="menuZonePage"></div>
+            <script>
+                $(function(){
+                    includeHTML('menuZonePage','menuZonePage.html', null);
+                });
+            </script>     
+            <!-- 메뉴Zone끝 -->
+
+
+            <!-- 슬라이더Zone시작 -->
+            <div id="sliderZonePage"></div>
+            <script>
+                $(function(){
+                    includeHTML('sliderZonePage', 'sliderZonePage.html', initSlider);
+                });
+            </script>
+            <!-- 슬라이더Zone끝 -->
+        </div>
+        <!-- 상단Area끝 -->
+        <!-- 본문Area시작 -->
+        <style>
+            #bodyArea{
+                position: relative;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                overflow: hidden;
+
+            }
+            #leftmenuZone{
+                float: left;
+                width: 20%;
+
+            }
+            #contentsZone{
+                float: right;
+                width: 75%;
+            }
+        </style>
+        <div id="bodyArea">
+
+            <!-- 왼쪽메뉴Zone시작 -->
+            <div id="leftmenuZonePage"></div>
+            <script>
+                $(function(){
+                    includeHTML('leftmenuZonePage','page_4_menu.html',null);
+                });
+            </script>
+
+            <!-- 왼쪽메뉴Zone끝 -->
+
+            <!-- 내용Zone시작 -->
+            <style>
+                .contents_title{
+                    font-size: 32px;
+                    padding: 10px 30px;
+                    border-bottom: 5px solid gray;
+                }
+                .album{
+                    border-top:1px solid green;
+                }
+                .album td{
+                    padding : 5px;
+                    border-bottom: 1px solid green;
+                }
+            </style>
+            <div id="contentsZone">
+                <div class="contents_title">특별함</div>
+                <div id="article" class="contents">
+                    <h3>사계절 낭만이 있는 곳에서 행복한 추억을 많이 만들어 가세요</h3>
+                    <table class="album" border="0" style="width: 100%;">
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <img src="img/album_01.jpg" width="160" alt="">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    비가 오나 눈이 오나 걱정없는 실내 바비큐장에서 사계절 편안하게 드세요~본 내용은 샘플로 작성되었으며 추후에 관리자가 펜션에 맞게 직접 내용을 등록하실 수 있습니다.  감사합니다.                                    
+                                    <div align="right">[<font style="color:#878787;font-size:12px;">작성일자 : 2015-12-27</font>, <font style="color:#878787;font-size:12px;">조회수 : 51</font>]</div>                         
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <img src="img/album_01.jpg" width="160" alt="">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    비가 오나 눈이 오나 걱정없는 실내 바비큐장에서 사계절 편안하게 드세요~본 내용은 샘플로 작성되었으며 추후에 관리자가 펜션에 맞게 직접 내용을 등록하실 수 있습니다.  감사합니다.                                    
+                                    <div align="right">[<font style="color:#878787;font-size:12px;">작성일자 : 2015-12-27</font>, <font style="color:#878787;font-size:12px;">조회수 : 51</font>]</div>                         
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <img src="img/album_01.jpg" width="160" alt="">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    비가 오나 눈이 오나 걱정없는 실내 바비큐장에서 사계절 편안하게 드세요~본 내용은 샘플로 작성되었으며 추후에 관리자가 펜션에 맞게 직접 내용을 등록하실 수 있습니다.  감사합니다.                                    
+                                    <div align="right">[<font style="color:#878787;font-size:12px;">작성일자 : 2015-12-27</font>, <font style="color:#878787;font-size:12px;">조회수 : 51</font>]</div>                         
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <!-- 내용Zone끝 -->
+        </div>
+        <!-- 본문Area끝 -->
+        <!-- 하단Area시작 -->
+        <div id="bottomAreaPage"></div>
+        <script>
+            $(function(){
+                includeHTML('bottomAreaPage', 'bottomAreaPage.html', null);
+            });
+        </script>
+        <!-- 하단Area끝 -->
+    </div>
+
+    
+</body>
+</html>
