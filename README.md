@@ -22,5 +22,8 @@
   - Step 10
   - Step 11
     - 사이트연습
+      <p >
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+      </p>
       ![image](https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b)
 
