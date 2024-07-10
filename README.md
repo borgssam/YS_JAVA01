@@ -1,7 +1,22 @@
 # HTML & CSS
   - Step 01
+    HTML(기본)
   - Step 02
+    HTML(폼)
   - Step 03
+    CSS연습
+    <table border="0" width="50%" style="margin: 0 auto;">
+      <tr>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/0d82550d-fdeb-4c3e-81a6-c582fc1546df" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/1c739f75-9fa6-4d1c-8e8d-ad4b18042ba9" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/cc61cdf2-98da-4b7f-8e64-297b48fcf1d6" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/9fe8f2b1-c433-4938-abb3-4fc2fcf57fa5" width="100%"/></td>
+      </tr>      
+    </table>
+
+
+
+
   - Step 04
   - Step 05
   - Step 06
