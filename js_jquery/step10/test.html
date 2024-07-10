@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        li {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>로고</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu1">menu1</a></li>
+                    <li><a href="#menu2">menu2</a></li>
+                    <li><a href="#menu3">menu3</a></li>
+                    <li><a href="#menu4">menu4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="menu1">box01</section>
+        <section id="menu2">box02</section>
+        <section id="menu3">box03</section>
+        <section id="menu4">box04</section>
+        <footer>footer</footer>
+    </div>
+    <script>
+        $(function(){
+            let wHeight = $(window).height();
+            $('section').height(wHeight);
+
+            $('html','body').animate({scrollTop: '300px' }, 2000,'swing');
+
+            $('nav>ul>li>a').on('click',function(){
+                let aName = $(this).attr('href');
+                let sTop= $(aName).offset().top;
+                $('html','body').animate({scrollTop: sTop -60}, 500,'swing');
+                return false;
+            });
+        });
+    </script>
+    
+</body>
+</html>
