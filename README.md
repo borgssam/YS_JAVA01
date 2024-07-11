@@ -118,11 +118,25 @@
     
 # 자바스크립트 & 제이쿼리
   - Step 01
+    - 변수 & 자료형
   - Step 02
+    - 연산자 &조건문
   - Step 03
+    - 반복문
   - Step 04
+    - 삼각별 & 배열객체 & 날짜객체
   - Step 05
+    - 자바스크립트 객체(object, 리터럴, 생성자)
+    - 클래스객체
   - Step 06
+    - DOM객체(생성,이동,수정,삭제)
+    <table border="0" width="100%" style="margin: 0 auto;">
+      <tr>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/e3397a86-2d9d-48a0-9ab5-2e62cd32247a" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/4c28acda-3a09-4101-bfd0-46f200dca17b" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/b9ecb617-2cc1-43b7-88cc-3e2676d7aa33" width="100%"/></td>
+      </tr>      
+    </table>
   - Step 07
   - Step 08
   - Step 09
