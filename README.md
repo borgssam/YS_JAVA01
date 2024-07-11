@@ -17,7 +17,7 @@
     - Text 꾸미기
     <table>
       <tr>
-      <td>
+      <td style="height:100px;">
         <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/1c1180ac-69b3-489e-a61b-7b79de07db07" width="100%"/>     
       </td>
       <td >
@@ -28,7 +28,7 @@
       </td>
     </tr>
     <tr>
-      <td>
+      <td style="height:100px;">
         <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/0abdad81-d492-4710-a4f4-edfc155c9656" width="100%"/>     
       </td>
       <td >
