@@ -138,6 +138,30 @@
       </tr>      
     </table>
   - Step 07
+    - jQuery코딩방식 & 선택자 & 요소변경 & 속성변경 & 클래스변경
+    <table border="0" width="100%" style="margin: 0 auto;">
+      <tr>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/752b397c-0ead-4cfe-81ca-c1109e2ab5b2" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/72c63c86-109e-4aeb-9592-c982b5fae0d3" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/f1ee7549-49a2-41a2-9cdc-a09ba27d9c1b" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/a262d084-0680-4fde-b05e-f4f6f0ffcb55" width="100%"/></td>
+      </tr>      
+      <tr>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/e84332f9-f86f-4e09-a854-d6f96f7a1f05" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/e3b2ede7-d18f-408b-9396-ff978c10d54f" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/238669df-f83d-41b8-8e29-f2aa2dab81f9" width="100%"/></td>
+        <td><img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/f5cddd0a-2690-4099-a826-09466a9ee82a" width="100%"/></td>
+      </tr>   
+    </table>
+    
+
+
+
+
+
+
+
+
   - Step 08
   - Step 09
   - Step 10
