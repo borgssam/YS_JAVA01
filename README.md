@@ -232,21 +232,25 @@
   - Step 조별
     - 1조
       <p >
-        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/675d14a0-a412-4295-bd55-0f819c3858c0" width="50%"/>
       </p>
+
     - 2조
       <p >
-        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/b98ea5ff-233e-4c52-a8f0-8e8a1ef2bd6d" width="50%"/>
       </p>
+
     - 3조
       <p >
-        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/cc00a5fa-19c9-4bc8-987b-657513465451" width="50%"/>
       </p>
+
     - 4조
       <p >
-        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/3c2040af-1557-4faf-b4d0-44362f39f3b4" width="50%"/>
       </p>
+
     - 5조
       <p >
-        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+        <img src="https://github.com/user-attachments/assets/00070577-3344-4099-90bf-7ad9cd487d48" width="50%"/>
       </p>
