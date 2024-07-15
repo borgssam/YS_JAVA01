@@ -162,18 +162,86 @@
     // sayHello('홍길동');
     // sayHello();
 
-    const sayHello2 = (name='손흥민',age=1) => console.log(`당신 ${name}입니다. 나이는 ${age}살입니다.`);
+    // const sayHello2 = (name='손흥민',age=1) => console.log(`당신 ${name}입니다. 나이는 ${age}살입니다.`);
 
-    sayHello2('홍길동',24);
-    sayHello2();
-    sayHello2('을지문덕');
-    sayHello2(null,33);  //앞은 디폴트 뒤는 지정하는 방식은 안됨
+    // sayHello2('홍길동',24);
+    // sayHello2();
+    // sayHello2('을지문덕');
+    // sayHello2(null,33);  //앞은 디폴트 뒤는 지정하는 방식은 안됨
 
 
-    const myProfile={age:24,name:'홍길동'}
-    const {name="을지문덕"} = myProfile;
-    const message3 = `나의 이름은 ${name}입니다. 나이는 ${myProfile.age} 살입니다.`;
-    console.log(message3);
+    // const myProfile={age:24,name:'홍길동'}
+    // const {name="을지문덕"} = myProfile;
+    // const message3 = `나의 이름은 ${name}입니다. 나이는 ${myProfile.age} 살입니다.`;
+    // console.log(message3);
+  </script>
+  <script>
+    //11.스프레드 구문 (...)
+    // const arr1 = [1,2];
+    // console.log(arr1);
+    // console.log(...arr1);
+
+    // const printSum = (num1,num2)=>console.log(num1+num2);   
+    // printSum(arr1[0],arr1[1]);
+    // printSum(...arr1);
+
+    // const arr2 = [1,2,3,4,5];
+    // const [num1,num2,...arr3] = arr2;
+    // console.log('num1 => ',num1);
+    // console.log('num2 => ',num2);
+    // console.log('arr3 => ',arr3);
+
+    // const arr4 = [10,20];
+    // const arr5 = [30,40];
+    // // const arr6 = [10,20,30,40]
+    // const arr6 = [...arr4,  ...arr5];
+    // console.log(arr6); // [10,20,30,40]
+
+    // //얕은복사 깊은복사
+    // const arr7 = arr4;
+    // console.log('arr4=>', arr4);
+    // console.log('arr7=>', arr7);
+
+    // arr7[0] = 99;
+    // console.log('arr4=>', arr4); //99 20
+    // console.log('arr7=>', arr7); //99 20 
+
+    // arr8=[...arr4];
+    // arr8[0] = 999;
+    // console.log('arr4=>', arr4); //99 20
+    // console.log('arr8=>', arr8); //999 20 
+  
+  </script>
+  <script>
+    //12.객체생략표기법
+    // const name = '홍길동';
+    // const age  = 24;
+
+    // const user = {
+    //   name: name,
+    //   age: age,
+    // };
+    // console.log(user);
+
+    // const user2 ={
+    //   name,
+    //   age,
+    // };
+    // console.log(user2);
+  </script>
+  <script>
+    //13.삼항연산자
+    //(조건)? 참이면실행: 거짓이면 실행;
+    const val = 1>0 ? "참입니다.": "거짓입니다.";
+    console.log(val);
+    1>0 ? console.log( "참입니다."): console.log( "거짓입니다.");
+
+    const printNum = (num) =>{
+      const message = typeof num === 'number' ? num.toLocaleString() : "숫자가 아닙니다.";
+      console.log(message);
+    }
+    printNum(13000);
+    printNum("13000");
 
   </script>
 
