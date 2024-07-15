@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productPage</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/style2.css">
+    <script src="./script/script.js"></script>
+
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function(data) {
+                $('#' + ctrl).html(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+    </script>
+
+    <!-- 왼쪽 메뉴 스타일 -->
+    <style>
+        /* 전체 스타일 */
+        #productSurvice{
+            width: 1400px;
+            min-height: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-left: 60px;
+        }
+
+        /* 왼쪽 메뉴 전체 스타일 */
+        #main-content{
+            width: 20%;
+            float: left;
+        }
+
+        /* 왼쪽 메뉴 세부 스타일 */
+        a.main-nav-title {
+            width: 300px;
+            height: 150px;
+            position: absolute;
+            background-color: rgb(62 28 106 / 90%);
+            color: white;
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: center;
+            display: block;
+        }
+
+        .main-nav-box{
+            margin-top: 20px;
+        }
+
+        .main-nav > li{
+            padding: 10px;
+        }
+        .main-nav > li > a{
+            padding: 20px 25px;
+            border: 3px solid #f1f1f1;
+            background-color: #f1f1f1;
+            /* border: 2px solid #f55; */
+            margin-bottom: 30px;
+        }
+        #head-sub-menu-sub1 > li{
+            list-style-image: url('./img/list_style_circle_on.png');
+            font-size: 13px;
+            margin: 10px;
+            /* display: none; */
+        }
+        #head-sub-menu-sub2 > li{
+            list-style-image: url('./img/list_style_circle_on.png');
+            font-size: 13px;
+            margin: 10px;
+            /* display: none; */
+        }
+    </style>
+
+    <!-- 왼쪽 메뉴 이벤트 스타일 -->
+    <style>
+        .main-nav > li > a:hover{
+            background-color: #fff;
+            border: 3px solid #676BA7;
+            color: #676BA7;
+            display: block;
+        }
+        #head-sub-menu-sub1 > li > a:hover{
+            color: #676BA7;
+        }
+        #head-sub-menu-sub2 > li > a:hover{
+            color: #676BA7;
+        }
+        .main-nav > li > a.active{
+            background-color: #fff;
+            border: 3px solid #676BA7;
+            color: #676BA7;
+            display: block;
+        }
+        #head-sub-menu-sub1:active{
+            display: block;
+        }
+    </style>
+
+    <!-- 컨텐츠 스타일 -->
+    <style>
+        #contentZone{
+            width: 73%;
+            margin: 0 auto;
+            margin-top: 30px;
+            float: right;
+        }
+
+        /* 컨텐츠 타이틀 스타일 */
+        #content_title{
+            margin-top: 25px;
+            margin-bottom: 100px;
+        }
+        #content_title > h2{
+            font-weight: 600;
+        }
+
+        /* 컨텐츠 네비 스타일 */
+        #content_nav{
+            margin-right: 20px;
+            float: right;
+            position: relative;
+        }
+        #content_nav > ul > li{
+            float: left;
+            margin-left: 15px;
+            font-size: 13px;
+        }
+
+        /* 컨텐츠 메뉴 스타일 */
+        #content_menu{
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .content_paragraph{
+            width: 100%;
+            height: 30%;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #000;
+            display: block;
+        }
+        .content_paragraph img{
+            width: 30%;
+            display: block;
+        }
+
+        .txt_overline{
+            width: 20px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #000;
+        }
+        .txt_overline2{
+            width: 20px;
+            margin: 15px;
+            border-bottom: 3px solid #000;
+        }
+
+        .txt_style3{
+            width: 50%;
+            display: block;
+            float: left;
+        }
+        .txt_style3 > h3{
+            font-weight: 600;
+        }
+        .txt_style3 > p{
+            margin-bottom: 50px;
+        }
+
+        button.btn01{
+            width: 170px;
+            padding: 5px;
+            padding-left: 25px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #222;
+            border-radius: 25px;
+            text-align: left;
+        }
+
+        .content_whiteBox{
+            width: 20%;
+            display: block;
+        }
+    </style>
+
+    <!-- 컨텐츠 이벤트 스타일 -->
+    <style>
+        .content_paragraph {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .content_paragraph.visible {
+            opacity: 1;
+        }
+
+        button.btn01:hover{
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+    
+    <!-- 이벤트 스크립트 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const items = document.querySelectorAll('.content_paragraph');
+
+            const observerOptions = {
+                threshold: 0.1 // 요소가 10% 보일 때 트리거
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // 한 번만 트리거되도록 관찰 해제
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            items.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 상단영역 시작 includeHTML용으로 개조 -->
+        <header>
+            <!-- 헤드영역 시작 -->
+            <nav>
+                <!-- 탑영역 시작 -->
+                <div class="top">
+                    <ul class="top-menu">
+                        <li><a href="#"> 연구센터 </a></li>
+                        <li><a href="#"> 소식마당 </a></li>
+                        <li><a href="#"> 로그인 </a></li>
+                    </ul>
+                </div>
+                <!-- 탑영역 끝 -->
+    
+                <!-- 로고메뉴영역 시작 -->
+                <div class="head">
+                    <!-- 로고영역 시작 -->
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="./img/logo_white.png" alt="">
+                        </a>
+                    </div>
+                    <!-- 로고영역 끝 -->
+        
+                    <!-- 메뉴영역 시작 -->
+                    <div class="head-menu">
+                        <ul class="head-main-menu">
+                            <li>
+                                <a href="./index.html"> 메인페이지 </a>
+                            </li>
+                            <li>
+                                <a href="./sub-page1-1-1.html"> 회사소개 </a>
+                                <ul class="head-sub-menu">
+                                    <li><a href="./sub-page1-1-1.html"> 회사소개 </a>
+                                        <ul class="head-sub-menu-sub">
+                                            <li><a href="./sub-page1-1-1.html"> 회사소개 스타일1 </a></li>
+                                            <li><a href="./sub-page1-1-2.html"> 회사소개 스타일2 </a></li>
+                                            <li><a href="./sub-page1-1-3.html"> 회사소개 스타일3 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./sub-page1-2-1.html"> 회사비전 </a>
+                                        <ul class="head-sub-menu-sub">
+                                            <li><a href="./sub-page1-2-1.html"> 회사비전 스타일1 </a></li>
+                                            <li><a href="#"> 회사비전 스타일2 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"> 회사연혁 </a></li>
+                                    <li><a href="#"> 조직소개 </a></li>
+                                    <li><a href="#"> 오시는 길 </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./productPage.html"> 제품서비스 </a>
+                                <ul class="head-sub-menu">
+                                    <li><a href="./productPage.html"> 서비스소개</a>
+                                        <ul class="head-sub-menu-sub">
+                                            <li><a href="./productPage.html"> 서비스소개 스타일1 </a></li>
+                                            <li><a href="./productPage_1_2.html"> 서비스소개 스타일2 </a></li>
+                                            <li><a href="#"> 서비스소개 스타일3 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./productPage_2_1.html"> 제품안내</a>
+                                        <ul class="head-sub-menu-sub">
+                                            <li><a href="./productPage_2_1.html"> 제품안내 스타일1 </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./gallery.html"> 갤러리 </a>
+                                <ul class="head-sub-menu">
+                                    <li><a href="./gallery.html"> 갤러리 스타일1</a></li>
+                                    <li><a href="./gallery.html"> 갤러리 스타일2</a></li>
+                                    <li><a href="./gallery.html"> 갤러리 스타일3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./newsPage_11.html"> 뉴스센터 </a>
+                                <ul class="head-sub-menu">
+                                    <li><a href="./newsPage_11.html"> 고객센터</a></li>
+                                    <li><a href="#"> 미디어</a></li>
+                                    <li><a href="#"> 자주묻는 질문</a></li>
+                                    <li><a href="#"> Contact Us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- 영역 끝 -->
+    
+                        <!-- 아이콘영역 시작 -->
+                        <ul class="icon">
+                            <li><a href="#"> 
+                                <img src="https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/icon_search.svg" alt=""> 
+                                <img src="https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/icon_search_black.svg" alt="">
+                            </a></li>
+                            <li><a href="#"> 
+                                <img src="https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/icon_full_menu.svg" alt="">
+                                <img src="https://mwpdemo12348.mycafe24.com/wp-content/themes/ktheme_biz_fabric/images/icon_full_menu_black.svg" alt="">
+                            </a></li>
+                        </ul>
+                        <!-- 아이콘영역 끝 -->
+
+                    </div>
+                    <!-- 메뉴영역 끝 -->
+
+                </div>
+                <!-- 로고메뉴영역 끝 -->
+
+            </nav>
+            <!-- 헤드영역 끝 -->
+
+            <!-- 검색 시작 -->
+            <div class="head-search"></div>
+                
+            <!-- 토글메뉴 시작 -->
+            <div class="head-toggle-menu"></div>
+
+        </header>
+        <div class="title-page">
+            <div id="main-title-area">
+                <h1 id="main-title1" class="main-title">Electronic Data Research Cent<border
+                        style="border-top: 3px solid white;">er</border>
+                </h1>
+                <h3 id="main-title2" class="main-title">EDRC는 대한민국의 데이터 산업의 기틀을 마련하기 위한 기틀을 마련합니다</h3>
+            </div>
+        </div>
+    </div>
+    <!-- 상단영역 끝 -->
+         
+    <!-- 제품 서비스 페이지 -->
+    <div id="productSurvice">
+
+        <!-- 왼쪽 메뉴 -->
+        <div id="main-content">
+            <div class="main-nav">
+                <ul class="main-nav-index">
+                    <a href="./productPage.html" class="main-nav-title"><br>제품서비스</a>
+                    <ul style="margin: 0; padding: 0;">
+                        <li class="main-nav-box nav-main not-select"><a href="./productPage.html">서비스소개 +</a></li>
+                        <li class="main-nav-box hidden"><a  href="./productPage.html">서비스소개 스타일1</a></li>
+                        <li class="main-nav-box hidden"><a href="./productPage_1_2.html">서비스소개 스타일2</a></li>
+                        <li class="main-nav-box hidden"><a href="#">서비스소개 스타일3</a></li>
+                    </ul>
+                    <ul id="nav-second" style="margin: 0; padding: 0;">
+                        <li class="main-nav-box nav-main this-page"><a href="./productPage_2_1.html">제품안내 +</a></li>
+                        <li class="main-nav-box"><a href="./productPage_2_1.html" id="this-page" style="color: #676ba7;">제품안내 스타일1</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 컨텐츠존 -->
+        <div id="contentZone">
+            <!-- 컨텐츠 네비 -->
+            <div id="content_nav">
+                <ul>
+                    <li><a href="#"><img src="img/home.png" alt=""></a></li>
+                    <li><a href="./productPage.html"><img src="img/arrow.png" alt=""> 제품서비스</a></li>
+                    <li><a href="./productPage.html"><img src="img/arrow.png" alt=""> 제품안내</a></li>
+                    <li><a href="./productPage_1_2.html"><img src="img/arrow.png" alt=""> 제품안내 스타일2</a></li>
+                </ul>
+            </div>
+            <!-- 컨텐츠 타이틀 -->
+            <div id="content_title"><h2>제품안내 스타일1</h2></div>
+            <div id="content_menu">
+                <!-- 컨텐츠 메뉴1 -->
+                <div class="content_paragraph">
+                    <!-- 컨텐츠 왼쪽 텍스트 -->
+                    <div class="content_menu_txt txt_style3">
+                        <div class="txt_overline"></div>
+                        <h3>갤럭시 Z 폴드3 5G</h3>
+                        <p>갤럭시 폴드 사상 가장 얇고 휴대성이 뛰어난 동시에, 외부와 내부 모두에 풀스크린 디스플레이를 탑재했습니다. 접으면 일반 스마트폰처럼 한 손에 쏙 들어오지만 펼치면 광활한 시야가 당신의 것이 되죠.</p>
+                        <div>
+                            <button class="btn01">제품스팩</button>
+                            <button class="btn01">카달로그</button>
+                        </div>
+                    </div>
+                    <!-- 컨텐츠 오른쪽 사진 -->
+                    <img src="./img/picture_250x250.png" alt="">
+                </div>
+            </div>
+            <!-- 중앙 상자들 -->
+            <div class="content_whiteBox">
+                <img src="./img/home.png" alt="">
+                <div class="txt_overline2"></div>
+                <h5>갤럭시 Z폴드3 블랙</h5>
+            </div>
+        </div>
+    </div>
+                <!-- 푸터 시작 -->
+                <footer style="z-index: -1;">
+                    <div class="footertarget"></div>
+                    
+                    <div class="footer-wrap">
+                        <div class="footer-contents">
+                            <div class="footer-logo">
+                                <img src="./img/logo_black-1.png" alt="">
+                            </div>
+                            <div class="footer-row">
+
+                                <div class="footer-top">
+                                    <div class="footer-col">
+                                        <ul class="footer-menu">
+                                            <li><a href="#">개인정보처리방침</a></li>
+                                            <li><a href="#">이메일무단수집거부</a></li>
+                                            <li><a href="#">이용약관</a></li>
+                                            <li><a href="#">통신판매신고번호: 제 2020-서울특별시-1419호</a></li>
+                                        </ul>
+
+                                        <ul class="footer-sns">
+                                            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                            <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                                            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                            <li><a href="#"><i class="bi bi-line"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer-box">
+                                    <address>
+                                        그라피코스 스튜디오 서울사무실 사무실장 신영빈 사업자등록번호 117-13-49878
+                                    </address>
+                                    <p>서울시 노원구 공릉2동 26-21 제1실습관 507호 코자인 스튜디오 Tel. 070-7566-1666 E-mail. touchxe@gmail.com</p>
+                                </div>
+  
+                                <p>Copyright © 2021 그라피코스  All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- 푸터 끝 -->
+</body>
+</html>

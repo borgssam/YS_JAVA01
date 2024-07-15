@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3단계(타이틀Zone)</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        *{margin:0; padding: 0;}
+        a{text-decoration: none; text-align: center;}
+        ul,li{
+            list-style: none;
+            border: 1px solid green;
+        }
+        div{
+            border: 1px solid blue;
+            /* height:30px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="site">
+        <!-- 상단Area시작 -->
+        <div id="topArea">
+            <!-- 타이틀Zone시작 -->
+            <style>
+                #titleZone{
+                    background-color: yellowgreen;
+                    position: relative;
+                }
+                #gnb{
+                    position: absolute;    
+                    right:20px;
+                    top:5px;                
+                }
+                #gnb>ul{
+                    overflow: hidden;
+                }
+                #gnb>ul>li{
+                    float: left;
+                    margin:0px 10px;
+                }
+                #logo{
+                    width: 200px;
+                    margin: 5px auto;
+                }
+                #logo>img{
+                    width: 100%;
+                }
+            </style>
+            <div id="titleZone">
+                <div id="gnb">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Join</a></li>
+                        <li><a href="#">Mypage</a></li>
+                    </ul>                    
+                </div>
+                <div id="logo">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+            </div>
+            <!-- 타이틀Zone끝 -->
+            <!-- 메뉴Zone시작 -->
+            <div id="menuZone"></div>
+            <!-- 메뉴Zone끝 -->
+            <!-- 슬라이더Zone시작 -->
+            <div id="sliderZone"></div>
+            <!-- 슬라이더Zone끝 -->
+        </div>
+        <!-- 상단Area끝 -->
+        <!-- 본문Area시작 -->
+        <div id="BodyArea">
+            <!-- 왼쪽메뉴Zone시작 -->
+            <div id="leftmenuZone"></div>
+            <!-- 왼쪽메뉴Zone끝 -->
+            <!-- 내용Zone시작 -->
+            <div id="contentsZone"></div>
+            <!-- 내용Zone끝 -->
+        </div>
+        <!-- 본문Area끝 -->
+        <!-- 하단Area시작 -->
+        <div id="bottomArea">
+            <!-- 핫메뉴Zone시작 -->
+            <div id="hotmenuZone"></div>
+            <!-- 핫메뉴Zone끝 -->
+            <!-- 주소Zone시작 -->
+            <div id="addrZone"></div>
+            <!-- 주소Zone끝 -->
+
+        </div>
+        <!-- 하단Area끝 -->
+    </div>
+
+    
+</body>
+</html>

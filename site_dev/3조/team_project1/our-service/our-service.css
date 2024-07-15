@@ -1,0 +1,194 @@
+* { box-sizing: border-box; }
+
+/* 공통 부분
+    section, .wrap
+*/
+/* section {
+  position: relative;
+  width: 100%;
+}
+.wrap {
+  position: relative;
+  width: 1170px;
+  padding: 80px 15px;
+  margin: 0 auto;
+} */
+
+#ourServiceWrap {
+  position: relative;
+  width: 100%;
+  padding-top: 80px;  
+}
+
+section#ourService {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+}
+section#ourService .wrap{
+  position: relative;
+  width: 1170px;
+  padding: 0 15px 80px;
+  margin: 0 auto;
+}
+
+/* 
+  section#ourService 
+  .titleWrap
+*/
+section#ourService .titleWrap {
+  position: relative;
+  width: 100%;
+}
+section#ourService .titleWrap h1 {
+  font-size: 32px;
+  color: #232323;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+section#ourService .titleWrap div {
+  width: 100px;
+  height: 2px;
+  background-color: #f7d23d;
+  margin: 0 auto;
+}
+section#ourService .titleWrap p {
+  width: 60%;
+  color: #666;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  line-height: 160%;
+}
+
+
+/* 
+  section#ourService 
+  .itemsWrap
+*/
+section#ourService .itemsWrap {
+  position: relative;
+  width: 100%;
+  margin-top: 80px;
+}
+section#ourService .itemsWrap ul {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+section#ourService .itemsWrap ul li.serviceItem {
+  width: 33.333%;
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 60px;
+  opacity: 0.8;
+  bottom: -500px;
+}
+section#ourService .itemsWrap ul li.serviceItem:nth-child(n+4):nth-child(-n+6) {
+  margin-bottom: 0;
+}
+section#ourService .itemsWrap ul li.serviceItem .sItemTitle {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  color: #333;
+}
+section#ourService .itemsWrap ul li.serviceItem .sItemTitle .sItemTitleIcon {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  display: block;
+  float: left;
+}
+section#ourService .itemsWrap ul li.serviceItem .sItemTitle img {
+  position: relative;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+section#ourService .itemsWrap ul li.serviceItem:nth-child(2) img,
+section#ourService .itemsWrap ul li.serviceItem:nth-child(3) img,
+section#ourService .itemsWrap ul li.serviceItem:nth-child(5) img {
+  width: 80%;
+  margin-top: 4px;
+}
+section#ourService .itemsWrap ul li.serviceItem .sItemTitle span {
+  position: absolute;
+  height: 54px;
+  line-height: 54px;
+  left: 68px;
+  font-size: 18px;
+  font-weight: 600;
+}
+section#ourService .itemsWrap ul li.serviceItem .sItemSub {
+  position: relative;
+  font-size: 14px;
+  line-height: 160%;
+  color: #666;
+}
+
+
+/* 
+  section#work
+*/
+
+section#work {
+  position: relative;
+  width: 100%;
+  background: #1c1c1c;
+}
+section#work .wrap {
+  position: relative;
+  width: 1170px;
+  padding: 80px 15px;
+  margin: 0 auto;
+}
+section#work ul.workItemsWrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+section#work ul.workItemsWrap li.workItem {
+  position: relative;
+  width: 25%;
+  padding: 0 15px;
+  opacity: 0;
+  right: -100%;
+}
+section#work ul.workItemsWrap li.workItem .wItemIcon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+}
+section#work ul.workItemsWrap li.workItem .wItemIcon img {
+  width: 100%;
+  display: block;
+}
+section#work ul.workItemsWrap li.workItem .wItemText {
+  display: block;
+  float: left;
+  line-height: 40px;
+  padding-left: 20px;
+}
+section#work ul.workItemsWrap li.workItem .wItemText span {
+  display: block;
+}
+section#work ul.workItemsWrap li.workItem .wItemText span:first-child {
+  font-size: 25px;
+  color: #fff;
+  line-height: 34px;
+  font-weight: bold;
+}
+section#work ul.workItemsWrap li.workItem .wItemText span:last-child {
+  font-size: 12px;
+  color: #666;
+  line-height: 16px;
+}

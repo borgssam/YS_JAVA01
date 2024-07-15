@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main-MR.css" />
+    <script src="js/jquery.js"></script>
+    <script>
+      function includeHTML(ctrl, page, callback) {
+        $.get(page, function (data) {
+          $("#" + ctrl).append(data);
+          if (callback) {
+            callback();
+          }
+        });
+      }
+
+      // exampleCode
+      $(function () {
+        // window 내부 스크립트가 있다면 스크립트 분리 후
+        // includeHTML을 해당 스크립트에서 사용하고 script:src로 연결 하기
+        includeHTML("main_header", "main_header.html", null);
+        includeHTML("main_footer", "main_footer.html", null);
+      });
+    </script>
+  </head>
+  <body>
+    <header id="main_header"></header>
+
+    <main>
+      <div class="bath">
+        <p>리빙</p>
+        <div class="item-align">
+          <p>4ITEMS</p>
+          <ul>
+            <li><a href="#">신상품</a></li>
+            <li><a href="#">상품평</a></li>
+            <li><a href="#">낮은가격</a></li>
+            <li><a href="#">높은가격</a></li>
+            <li><a href="#">제조사</a></li>
+            <li><a href="#">인기상품</a></li>
+            <li><a href="#">사용후기</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bath-item">
+        <ul>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202304/a3e56e1a60204fb7139a2e28f6dac2ba.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 모달 워셔블 사계절 경추 베개</p></a>
+            <div>
+              <p>43,900원</p>
+              <p><s>59,900원</s></p>
+            </div>
+            <div class="price-percent">27%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202210/27905aaae17cc88fc8a34b1645907193.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>
+                퓨어셀 허리에좋은 액티브 메모리폼 매트리스 침대 매트릭스
+                슈퍼싱글 사이즈 SS
+              </p></a
+            >
+            <div>
+              <p>309,000원</p>
+              <p><s>429,000원</s></p>
+            </div>
+            <div class="price-percent">28%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202210/b7527a52b93f7da15fff9467a52f9ee9.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>
+                퓨어셀 허리에좋은 액티브 메모리폼 매트리스 침대 매트릭스 퀸
+                사이즈 Q
+              </p></a
+            >
+            <div>
+              <p>339,000원</p>
+              <p><s>459,000원</s></p>
+            </div>
+            <div class="price-percent">26%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202307/b35e51226c93dd7732946ee295b8fdd1.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>
+                퓨어셀 3단 접이식 매트리스 바닥 토퍼 접는 단단한 허리에좋은
+                1인용 디스크 매트릭스 싱글
+              </p></a
+            >
+            <div>
+              <p>169,000원</p>
+              <p><s>549,000원</s></p>
+            </div>
+            <div class="price-percent">69%</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-btn">
+        <a href="#"
+          ><img
+            src="	https://img.echosting.cafe24.com/skin/base/common/btn_page_first.gif"
+            alt=""
+        /></a>
+        <a href="#"
+          ><img
+            src="	https://img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif"
+            alt=""
+        /></a>
+        <a href="product-living.html"><u>1</u></a>
+        <a href="#"
+          ><img
+            src="https://img.echosting.cafe24.com/skin/base/common/btn_page_next.gif"
+            alt=""
+        /></a>
+        <a href="#"
+          ><img
+            src="https://img.echosting.cafe24.com/skin/base/common/btn_page_last.gif"
+            alt=""
+        /></a>
+      </div>
+    </main>
+    
+    <footer id="main_footer"></footer>
+  </body>
+</html>

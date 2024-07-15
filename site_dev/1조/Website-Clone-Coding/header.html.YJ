@@ -1,0 +1,238 @@
+<!-- header.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <style>
+        span {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .a {
+            text-decoration: none;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .promotion-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .promotion-content-text {
+            margin-right: 10px;
+        }
+
+        .rnb-login-layout {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .rnb-login-layout>p {
+            margin-top: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 로그인 메뉴 사이 가로 선 */
+        .rnb-login-layout>p:not(:last-child)::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            background: #cde4da;
+            position: absolute;
+            right: -9px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .rnb-login-layout>a {
+            text-decoration: none;
+        }
+
+        .rnb-login-layout>p>a {
+            color: black;
+            font-size: 13px;
+        }
+
+        .main-logo-layout {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #promo-login-content {
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        .gnb ul {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .gnb ul>li {
+            position: relative;
+            font-size: 18px;
+            margin-right: 70px;
+        }
+
+        /* 리스트 사이에 대각선 넣기 */
+        .gnb ul>li:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 80px;
+            width: 1.5px;
+            height: 14px;
+            background: #cde4da;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .gbn ul>li:last-child {
+            margin-right: 0;
+        }
+
+        .gnb ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul {
+            display: flex;
+            /*flex 이용해서 가로 정렬 */
+            list-style-type: none;
+        }
+
+        ul>li {
+            position: relative;
+            /* margin-left: 30px; */
+            font-size: 18px;
+        }
+
+        ul>li:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-left: 10px;
+            width: 1.5px;
+            height: 14px;
+            background: black;
+            transform: translateY(-50%) rotate(45deg);
+            /* 대각선으로 회전 */
+        }
+
+        ul>li:first-child {
+            margin-left: 0;
+        }
+
+        ul>li:last-child {
+            margin-right: 0;
+        }
+
+        ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .ic-box {
+            position: absolute;
+            right: 10%;
+            margin-top: -20px;
+        }
+        .list-ic-search {
+            margin-right: 15px;
+        }
+
+        /* TODO: 리스트에 호버했을 시 서브 카테고리 나오도록 하기 */
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- 메인 배너 콘텐츠 시작 -->
+        <div id="main-banner-content" class="header">
+
+            <!-- 프로모션 배너 시작 -->
+            <div class="promotion-banner">
+                <a href="#" class="a">
+                    <div class="image-container">
+                        <img src="/images/2c8f696ba5f27ed5c5950f5660c53a79.jpg" alt="카카오 채널 추가 시 할인 쿠폰 지급">
+                        <div class="promotion-content">
+                            <span class="promotion-content-text">카카오 채널 추가 시 할인 쿠폰 지급</span>
+                            <img src="/images/m_ic_top_bn.png" class="coupon-logo" alt="쿠폰 로고">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- 프로모션 배너 끝 -->
+        </div>
+        <!-- 메인 배너 콘텐츠 끝 -->
+
+        <div id="promo-login-content">
+            <!--로그인 메뉴 시작 -->
+            <div class="rnb-login-layout">
+                <p class="login"><a href="login.html" class="a">로그인</a></p>
+                <p id="sign-up"><a href="sign-up.html" class="a">회원가입</a></p>
+                <p id="cs-center"><a href="cs-center.html" class="a">고객센터</a></p>
+            </div>
+            <!-- 로그인 메뉴 끝 -->
+
+            <!-- 메인 로고 시작 -->
+            <div class="main-logo-layout">
+                <a href="#" class="a">
+                    <img src="images/title_logo.png" alt="메인 로고">
+                </a>
+            </div>
+        </div>
+        <!--메인 로고 끝  -->
+
+        <!-- 리스트 메뉴 시작 -->
+        <div class="gnb">
+            <ul>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">ALL</a></li>
+                <li><a href="#">바스</a></li>
+                <li><a href="#">주방용품</a></li>
+                <li><a href="#">리빙</a></li>
+                <li><a href="#">CS</a></li>
+            </ul>
+            <div class="ic-box">
+                <a href="#" class="list-ic-search"><img src="/images/svg/ic_hd_search.svg" alt=""></a>
+                <a href="#" class="list-ic-bag"><img src="/images/svg/ic_bag.svg" alt=""></a>
+            </div>
+        </div>
+        </div>
+        <!-- 리스트 메뉴 끝 -->
+        <hr>
+    </header>
+</body>
+
+</html>

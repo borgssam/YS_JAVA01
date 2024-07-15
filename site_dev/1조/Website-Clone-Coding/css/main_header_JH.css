@@ -1,0 +1,253 @@
+* {
+    font-family: sans-serif;
+    /* margin: 0 auto; */
+    padding: 0;
+}
+ul,li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+}
+#header {
+    width: 100%;
+    z-index: 9;
+    background-color: white;
+    position: fixed;
+}
+body {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* 검색창  */
+#searchImg {
+    display: none;
+    /* position: absolute; */
+    z-index: 11;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.7) ;
+}
+.searchSize {
+    /* border: 1px solid white; */
+    width: 860px;          
+    height: 500px;  
+    margin: 200px auto;
+}
+.searchClose{
+    /* border: 1px solid salmon; */
+    width: 750px;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+.searchClose>img {
+    float: right;
+    transition: transform 0.5s;
+}
+.searchClose>img:hover {
+    transform:rotate(90deg);
+}
+.searchInput{
+    width: 860px;
+    /* border: 1px solid aliceblue; */
+    position: relative;
+}
+.searchInput>input{
+    width: 860px;
+    height: 60px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #eee;
+    font-size: 25px;
+    color: white;
+    padding: 2px 4px 2px 15px;
+}
+.inputImg {
+    top: 10px;
+    right: 0;
+    position: absolute;
+}
+input::placeholder {color:#eee;}
+input:focus {outline: none;} /* outline 테두리 없애기 */
+.inputImg>a>img {
+    width: 35px;
+    height: 35px;
+}
+.searchFav{
+    padding: 40px 20px;
+    overflow: hidden;
+    width: 860px;
+    /* border: 1px solid salmon; */
+}
+.searchFav>p {
+    float: left;
+    margin: 0 30px 0 0;
+    color: #eee;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.searchFav>div>a {
+    margin: 0 5px;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+    border: 3px solid #eee;
+    color: #eee;
+    font-size: 13px;
+    padding: 0 18px;
+    border-radius: 10px;
+}
+.searchFav>div>a:hover {
+    background-color: white;
+    color: #555;
+    transition: 0.5s;
+}
+
+/* 헤더 상단 카카오 */
+#header_top {
+    width: 100%;
+    position: relative;
+}
+#header_top .topBannerImg {
+    height: 40px;
+    width: 100%;
+}
+#header_top>a {
+    text-align: center;
+    color: black;
+}
+#header_top>a>span {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 40px;
+}
+#header_top span:hover {
+    color: skyblue;
+}
+#header_top>a>span>img {
+    transform: translate(0, 32%);
+}
+
+/* 헤더 로그인 , 로고 */
+#header_bottom {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+}
+#logo {
+    text-align: center;
+    margin: 15px auto;
+}
+
+#header_login {
+    overflow: hidden;
+    margin: 0 10px;
+    font-size: 13px;
+    margin-top: 5px;
+}
+#header_login span{
+    color: #ccc;
+    float: right;
+    margin-right: 10px;
+    
+}
+#header_login a {
+    margin-right: 10px;
+    float: right;
+    font-weight: 600;
+    color: #555;
+}
+/* 헤더 네비게이션 */
+#header_gnb {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#main_gnb {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+}
+
+#main_gnb>li {
+    position: relative;
+}
+#main_gnb>li>a {
+    display: block;
+    padding: 5px 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+    width: 90px;
+}
+#main_gnb>li>a:hover {
+    color: #2af;
+}
+#main_gnb>div {
+    color: #aaa;
+    font-weight: 700px;
+    line-height: 30px;
+}
+.gnb {
+    width: 130px;
+    padding: 20px 2px;
+    display: none;
+    z-index: 10;
+    left: -20px;
+    border: 1px solid #444;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+.gnb>li {
+    margin-bottom: 10px;
+}
+.gnb>li>a {
+    color: #222;
+}
+.gnb>li>a:hover {
+    color: #2af;
+}
+.line {
+    border-bottom: 1px solid #ccc;
+}
+#main_gnb>li:hover> .gnb {
+    display: block;
+}
+/* 헤더 카트 , 검색 */
+#cart {
+    width: 100%;
+    max-width: 1500px;
+    min-width: 700px;
+    position: absolute;
+    top: 140px;
+}
+#cart >.search {
+    position: absolute;
+    right: 0;
+    margin: 0 10px;
+}
+#cart>.search>a {
+    margin: 0 10px;
+}
+/* 스크롤버튼 */
+#btn_scroll{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    z-index: 10;
+}
+#btn_scroll>a{
+    display: block;
+}

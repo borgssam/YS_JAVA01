@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+#content {
+    box-sizing: border-box;
+    position: relative;
+    width: 1080px;
+    margin: 0px auto;
+}
+/* 회원가입 */
+#sigh_up,#terms {
+    width: 600px;
+    margin: 80px auto;
+    
+    font-size: 14px;
+}
+#sigh_up p {
+    color: #b2b2b2;
+    font-size: 13px;
+    margin-left: 150px;
+    padding: 4px 0px;
+}
+#sigh_up_title {
+    text-align: center;
+    margin-bottom: 40px;
+    
+    font-size: 28px;
+}
+#make_id,#make_pw,#check_pw,#make_name,#make_email {
+    box-sizing: border-box;
+    float: right;
+    padding: 10px;
+    width: 76%;
+    height: 40px;
+    border: 1px solid #b2b2b2;
+    border-radius: 4px;
+}
+/* id */
+#su01 {
+    height: 100px;
+}
+#su01 > label {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+/* pw */
+#su02 {
+    height: 80px;
+}
+#su02 > label {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+/* check pw */
+#su03 {
+    height: 60px;
+}
+#su03 > label {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+/* check pw */
+#su04 {
+    height: 60px;
+}
+#su04 > label {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+/* make name */
+#su05 {
+    height: 80px;
+}
+#su05>p {
+    color: red;
+}
+#su05 span {
+    width: 76%;
+    float: right;
+}
+#make_tel_first,#make_tel_middle,#make_tel_last {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 30%;
+    height: 40px;
+    border: 1px solid #b2b2b2;
+    border-radius: 4px;
+}
+#su05 > label {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+/* make email */
+#su06 {
+    height: 60px;
+}
+#su06 > label {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+/* 이용약관 */
+#terms_title {
+    height: 60px;
+    border-bottom: 1px solid #b2b2b2;
+
+    font-size: 24px;
+}
+#terms_all_check {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #b2b2b2;
+
+    font-weight: bold;
+}
+#terms01,#terms02,#terms03{
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 20px 20px;
+    border: 1px solid #b2b2b2;
+
+}
+#terms_box1,#terms_box2,#terms_box3{
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 560px;
+    height: 100px;
+    border: 1px solid #b2b2b2;
+    margin: 10px auto;
+    padding: 10px 14px;
+
+    font-size: 12px;
+    color: #b2b2b2;
+}
+#terms > div:last-child {
+    text-align: center;
+}
+#sigh_up_btn2 {
+    box-sizing: border-box;
+    background-color: black;
+    
+    margin: 40px auto;
+    width: 200px;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+
+    color: white;
+    font-size: 14px;
+
+    transition: 0.4s ease;
+}
+#sigh_up_btn2:hover {
+    background-color: #b2b2b2;
+
+}

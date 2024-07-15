@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/shop-1-item.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/shop-1-item.js"></script>
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function (data) {
+                $('#' + ctrl).html(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+        includeHTML('navZone', 'nav/nav_sub.html', null);
+        includeHTML('footerArea', 'footer/footer.html', null);
+    </script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <!-- 내비영역 -->
+    <div id="navZone"></div>
+    <!-- 상단영역 -->
+    <div id="topArea">
+        <!-- 상단 왼쪽 영역 -->
+        <div class="top_leftZone">
+            <div class="mainImg">
+                <img src="Images/1_shop1_235009.jpg" alt="">
+            </div>
+            <div class="subImg">
+                <img src="Images/img1.png" alt="Images/1_shop1_235009.jpg" class="active">
+                <img src="Images/img2.png" alt="Images/2_shop1_235009.jpg">
+                <img src="Images/img3.png" alt="Images/3_shop1_235009.jpg">
+                <img src="Images/img4.png" alt="Images/img4.png">
+            </div>
+        </div>
+        <!-- 상단 왼쪽 영역 끝-->
+        <!-- 상단 오른쪽영역 -->
+        <div class="top_rightZone">
+            <h2>수공예 유리화병</h2>
+            <h4>43,000원</h4>
+            <p>수공예로 제작된 유리 화병입니다. 유리의 질감을 살린 소박하고<br>
+                사랑스러운화병은 작은 사이즈이지만 한다발의 꽃을 담거나, 발향의 오일을<br>
+                담거나, 인테리어 소품들을 진열해 다양한 쓰임으로 활용할 수 있습니다. 하나<br>
+                하나손으로 제작되어 상품마다 차이가 있습니다.
+            </p>
+            <div class="detail header" data="active">
+                <div class="box">
+                    <p>세부정보</p>
+                    <p id="arrow">
+                        &lt;</p>
+                </div>
+            </div>
+            <div class="detail_content content">
+                <ul>
+                    <li>소비자가</li>
+                    <li>적립금</li>
+                    <li>제조사</li>
+                    <li>브랜드</li>
+                    <li>배송비</li>
+                </ul>
+                <ul>
+                    <li>50,000원</li>
+                    <li>860원(2%)</li>
+                    <li>자체제작</li>
+                    <li>자체브랜드</li>
+                    <li>2,500원(50,000원 이상 구매시 무료)</li>
+                </ul>
+            </div>
+            <div class="delivery_info header" data="unactive">
+                <p>배송정보</p>
+                <p id="arrow">
+                    &lt;</p>
+            </div>
+            <div class="delivery_content content">
+                <ul>
+                    <li>-배송비는 기본 2,500원이며, 5만원 이상 구매시 무료배송됩니다.</li>
+                    <li>-제주 및 도서산간 지역의 경우 6,000원의 배송비가 부과됩니다.</li>
+                    <li>-배송기간은 결제완료 후 기본 1-2일이 소요됩니다.</li>
+                    <li>-좋아하는것은 CJ대한통운 택배를 이용하고 있습니다. 배송조회 바로가기</li>
+                </ul>
+            </div>
+            <div class="refund_info header" data="unactive">
+                <p>교환 및 환불</p>
+                <p id="arrow">
+                    &lt;</p>
+            </div>
+            <div class="refund_content content">
+                <ul>
+                    <li>교환 및 반품 주소</li>
+                    <li>-</li>
+                </ul>
+                <ul>
+                    <li>교환 및 반품이 가능한 경우</li>
+                    <li>- 상품을 공급 받으신 날로부터 7일이내 단, 가전제품의<br>
+                        경우 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우에는 교환/반품이<br>
+                        불가능합니다.
+                    </li>
+                    <li>- 공급받으신 상품 및 용역의 내용이 표시.광고 내용과<br>
+                        다르거나 다르게 이행된 경우에는 공급받은 날로부터 3월이내, 그사실을 알게 된<br>
+                        날로부터 30일이내
+                    </li>
+                </ul>
+                <ul>
+                    <li>교환 및 반품이 불가능한 경우</li>
+                    <li>- 고객님의 책임 있는 사유로 상품등이 멸실 또는 훼손된 경우. 단, 상품의 내용을 확인하기 위하여
+                        포장 등을 훼손한 경우는 제외</li>
+                    <li>- 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우
+                        (예 : 가전제품, 식품, 음반 등, 단 액정화면이 부착된 노트북, LCD모니터, 디지털 카메라 등의 불량화소에
+                        따른 반품/교환은 제조사 기준에 따릅니다.)</li>
+                    <li>- 고객님의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우 단, 화장품등의 경우 시용제품을
+                        제공한 경우에 한 합니다.</li>
+                    <li>- 시간의 경과에 의하여 재판매가 곤란할 정도로 상품등의 가치가 현저히 감소한 경우</li>
+                    <li>- 복제가 가능한 상품등의 포장을 훼손한 경우
+                        (자세한 내용은 고객만족센터 1:1 E-MAIL상담을 이용해 주시기 바랍니다.)</li>
+                    <li>※ 고객님의 마음이 바뀌어 교환, 반품을 하실 경우 상품반송 비용은 고객님께서 부담하셔야 합니다.
+                        (색상 교환, 사이즈 교환 등 포함)</li>
+                </ul>
+            </div>
+            <div class="item_option header" data="unactive">
+                <p>상품 옵션</p>
+            </div>
+            <div class="color">
+                <p>색상</p>
+                <div class="color_box">
+                    <div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="size">
+                <p>사이즈</p>
+                <form action="">
+                    <select name="size" id="size_select_box">
+                        <option value="">- [필수] 옵션을 선택해 주세요-</option>
+                        <option value="none">-----------------</option>
+                    </select>
+                </form>
+            </div>
+            <div class="price">
+                <p>Total : <strong>0</strong> (0개)</p>
+            </div>
+            <div class="button_box">
+                <button type="button">구매하기</button>
+                <button type="button"><img src="/shop_Img/shopping_cart.png" alt=""></button>
+                <button type="button"><img src="/shop_Img/favorite.png" alt=""></button>
+            </div>
+        </div>
+        <!-- 상단 오른쪽영역 끝-->
+    </div>
+    <!-- 상단영역 끝-->
+
+    <!-- 본문영역 -->
+    <div id="contentsZone">
+        <div class="text_box">
+            <p>좋아하는 것들, 화병.<br>
+                수공예로 제작된 유리 화병입니다. 유리의 질감을 살린 소박하고 사랑스러운 화병은 작은 사이즈이지만 한다발의 꽃을 담거나, 발향의 오일을 담거나,<br>
+                인테리어 소품들을 진열해 다양한 쓰임으로 활용할 수 있습니다. 하나 하나 손으로 제작되어 상품마다 차이가 있습니다.</p>
+        </div>
+        <div class="img_box">
+            <img src="/Images/1_shop1_235009.jpg" alt="">
+            <img src="/Images/2_shop1_235009.jpg" alt="">
+            <img src="/Images/3_shop1_235009.jpg" alt="">
+        </div>
+    </div>
+    <!-- 본문영역 끝 -->
+
+    <!-- 하단영역 -->
+    <div id="bottomZone">
+        <!-- 추천상품 -->
+        <div class="bestItem">
+            <div class="title">
+                <p>당신을 위한 추천 상품</p>
+                <p class="next">다음</p>
+                <p>/</p>
+                <p class="prev">이전</p>
+            </div>
+            <div class="items">
+                <ul class="items_container">
+                    <li><a href="/shop-1-item.html"><img src="/Images/04f31ecf8f6103b24fa4538a6a491f96.png" alt="">수공예
+                            유리화병</a><br><br>43,000원</li>
+                    <li><a href="/shop-1-item.html"><img src="/Images/4b59e63a58f9e0e134d305f6dc2556b2.png" alt="">수공예
+                            유리화병</a><br><br>43,000원</li>
+                    <li><a href="/shop-1-item.html"><img src="/Images/06c3e158a224b3fd875619c330bb415d.png" alt="">수공예
+                            유리화병</a><br><br>43,000원</li>
+                    <li><a href="/shop-1-item.html"><img src="/Images/06c97856f936f3a8e727f72bec3c0f7b.png" alt="">수공예
+                            유리화병</a><br><br>43,000원</li>
+                    <li><a href="/shop-1-item.html"><img src="/Images/8b39cc4859deac1835eadf4ba7593e63.png" alt="">수공예
+                            유리화병</a><br><br>43,000원</li>
+                    <li><a href="/shop-1-item.html"><img src="/Images/b5d19408ad90416a18299f0b8e7ce0a1.png" alt="">수공예
+                            유리화병</a><br><br>43,000원</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 추천상품 끝-->
+        <!-- 리뷰 -->
+        <div class="review">
+            <div class="title">
+                <p class="active">리뷰(9)</p>
+                <span>/</span>
+                <p>문의(1)</p>
+                <a href="/community/_Review.html">리뷰 전체보기</a>
+            </div>
+            <div class="review_box">
+                <img src="/shop_Img/icon_star5_bg.svg" alt="">
+                <div class="star">
+                    <img src="/shop_Img/icon_star5.svg" alt="">
+                </div>
+                <div class="score">
+                    <p>4.6</p>
+                    <p>/</p>
+                    <p>5</p>
+                </div>
+                <div class="slide_btn">
+                    <p>&lt;</p>
+                    <p>&gt;</p>
+                </div>
+                <div class="review_contents">
+                    <div class="slide_img">
+                        <img src="/Images/750f6afe98ba7d224f148871b37560e9.jpg" alt="">
+                        <img src="/Images/9d6252736d32e07711bbd6d2d93f566f.jpg" alt="">
+                        <img src="/Images/84031349fe7b93e1257d19eb71063597.jpg" alt="">
+                        <img src="/Images/0eddf15ee620721342672f766df0f8f3.jpg" alt="">
+                        <img src="/Images/e6642eff6790d5fd1c4ad80d20ecced3.jpg" alt="">
+                        <img src="/Images/ee80643491ef116324be8860394b7207.jpg" alt="">
+                        <img src="/Images/f954f98e2d88789636f7c5c9345b0242.jpg" alt="">
+                        <img src="/Images/84031349fe7b93e1257d19eb71063597.jpg" alt="">
+                    </div>
+                    <div class="contents first">
+                        <img src="/shop_Img/icon_star5.svg" alt="">
+                        <p>모아스튜디오</p>
+                        <p>2021-01-13</p>
+                        <p>주말 제외하고 8일만에 받았어요!!</p>
+                        <img src="/Images/750f6afe98ba7d224f148871b37560e9.jpg" alt="">
+                    </div>
+                    <div class="contents">
+                        <img src="/shop_Img/icon_star5.svg" alt="">
+                        <p>모아스튜디오</p>
+                        <p>2021-01-13</p>
+                        <p>주말 제외하고 8일만에 받았어요!!</p>
+                        <img src="/Images/750f6afe98ba7d224f148871b37560e9.jpg" alt="">
+                    </div>
+                    <div class="contents">
+                        <img src="/shop_Img/icon_star5.svg" alt="">
+                        <p>모아스튜디오</p>
+                        <p>2021-01-13</p>
+                        <p>주말 제외하고 8일만에 받았어요!!</p>
+                        <img src="/Images/750f6afe98ba7d224f148871b37560e9.jpg" alt="">
+                    </div>
+                    <div class="contents">
+                        <img src="/shop_Img/icon_star5.svg" alt="">
+                        <p>모아스튜디오</p>
+                        <p>2021-01-13</p>
+                        <p>주말 제외하고 8일만에 받았어요!!</p>
+                        <img src="/Images/750f6afe98ba7d224f148871b37560e9.jpg" alt="">
+                    </div>
+                    <div class="contents">
+                        <img src="/shop_Img/icon_star5.svg" alt="">
+                        <p>모아스튜디오</p>
+                        <p>2021-01-13</p>
+                        <p>주말 제외하고 8일만에 받았어요!!</p>
+                        <img src="/Images/750f6afe98ba7d224f148871b37560e9.jpg" alt="">
+                    </div>
+                    <div class="control_box">
+                        <span>이전</span>
+                        <p class="active">1</p>
+                        <p>2</p>
+                        <span>다음</span>
+                    </div>
+                </div>
+            </div>
+            <div class="inquiry">
+                <div class="contents">
+                    <p>모아스튜디오</p>
+                    <p>2021-01-13</p>
+                    <p>언제까지 세일인가요??</p>
+                </div>
+            </div>
+            <div class="review_detail">
+                <div class="background"></div>
+                <div class="contents">
+                    <div class="contents_left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="contents_right">
+                        <div class="top">
+                            <img src="/Images/b5d19408ad90416a18299f0b8e7ce0a1.png" alt="">
+                            <p>수공예 유리 화병</p>
+                            <p>X</p>
+                        </div>
+                        <div class="middle">
+                            <img src="/shop_Img/icon_star5.svg" alt="">
+                            <p>모아스튜디오</p>
+                        </div>
+                        <div class="bottom">
+                            <h4>산지 꽤 됐는데 튼튼하게 잘 하고 있습니다</h4>
+                            <p>실제로 보니까 너무 이뻐요 사이즈 딱이에요 색상이 실물이<br>
+                                너무너무 이뻐요 ㅎㅎ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 리뷰 끝 -->
+    </div>
+    <!-- 하단영역 끝-->
+
+    <!-- 푸터영역 -->
+     <div id="footerArea"></div>
+    <!-- 푸터영역 끝 -->
+</body>
+
+</html>

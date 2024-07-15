@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main-MR.css" />
+    <script src="js/jquery.js"></script>
+    <script>
+      function includeHTML(ctrl, page, callback) {
+        $.get(page, function (data) {
+          $("#" + ctrl).append(data);
+          if (callback) {
+            callback();
+          }
+        });
+      }
+
+      // exampleCode
+      $(function () {
+        // window 내부 스크립트가 있다면 스크립트 분리 후
+        // includeHTML을 해당 스크립트에서 사용하고 script:src로 연결 하기
+        includeHTML("main_header", "main_header.html", null);
+        includeHTML("main_footer", "main_footer.html", null);
+      });
+    </script>
+  </head>
+  <body>
+    <header id="main_header"></header>
+
+    <main>
+      <div class="bath">
+        <p>주방용품</p>
+        <div class="item-align">
+          <p>4ITEMS</p>
+          <ul>
+            <li><a href="#">신상품</a></li>
+            <li><a href="#">상품평</a></li>
+            <li><a href="#">낮은가격</a></li>
+            <li><a href="#">높은가격</a></li>
+            <li><a href="#">제조사</a></li>
+            <li><a href="#">인기상품</a></li>
+            <li><a href="#">사용후기</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bath-item">
+        <ul>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="	https://puresell.cafe24.com/web/product/medium/202310/3a879141ac99e62491aa07dbf4cd784c.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>
+                퓨어셀 프라임 상부장 부착식 물빠짐 식기건조대 싱크대 그릇 설거지
+                정리대
+              </p></a
+            >
+            <div>
+              <p>42,900원</p>
+              <p><s>59,900원</s></p>
+            </div>
+            <div class="price-percent">28%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="	https://puresell.cafe24.com/web/product/medium/202310/a382576318371752957a757eca607f1c.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>
+                퓨어셀 시그니처 상부장 부착식 물빠짐 식기건조대 싱크대 그릇
+                설거지 정리대
+              </p></a
+            >
+            <div>
+              <p>62,900원</p>
+              <p><s>84,900원</s></p>
+            </div>
+            <div class="price-percent">26%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202207/96e33330221b7da052f5dda946107dfd.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 녹슬지 않는 자동배수 깔끔 식기건조대</p></a>
+            <div>
+              <p>31,900원</p>
+              <p><s>45,900원</s></p>
+            </div>
+            <div class="price-percent">31%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202207/c07bced6ff112a3e2163b48b1691873c.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>퓨어셀 칼자국 칼집 안나는 항균 TPU 안심 이유식 도마</p></a
+            >
+            <div>
+              <p>15,900원</p>
+              <p><s>22,900원</s></p>
+            </div>
+            <div class="price-percent">31%</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-btn">
+        <a href="#"
+          ><img
+            src="	https://img.echosting.cafe24.com/skin/base/common/btn_page_first.gif"
+            alt=""
+        /></a>
+        <a href="#"
+          ><img
+            src="	https://img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif"
+            alt=""
+        /></a>
+        <a href="product-utensils.html"><u>1</u></a>
+        <a href="#"
+          ><img
+            src="https://img.echosting.cafe24.com/skin/base/common/btn_page_next.gif"
+            alt=""
+        /></a>
+        <a href="#"
+          ><img
+            src="https://img.echosting.cafe24.com/skin/base/common/btn_page_last.gif"
+            alt=""
+        /></a>
+      </div>
+    </main>
+    
+    <footer id="main_footer"></footer>
+  </body>
+</html>

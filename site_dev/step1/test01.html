@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            grid: 1080px;
+            color: Black/B2B2B2/F0F0F0/white;
+        }
+
+        h1 {
+            font-size: 24;
+        }
+
+        h2 {
+            font-size: 18;
+        }
+
+        ul {
+            list-style: none;
+            border: 1px solid green;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        div,
+        li {
+            border: 1px solid red;
+        }
+
+        #menu_box {
+            height:150px;
+            position: relative;
+            background-color: aquamarine;
+        }
+
+/* 메인메뉴 */
+        .menu-list {
+            width: 350px;
+            margin: 0 auto;
+            background-color: green;
+        }
+
+
+/* 서브메뉴 (ul) */
+        .menu-item {
+            float: left;
+            line-height: 50px;
+            font-size: 24px;
+            box-sizing: border-box;
+            padding: 3px 8px;
+        }
+
+/* 서브메뉴항목 (li) */
+        .sub-list {
+            display: none;
+            padding: absolute;
+            z-index: 10;
+        }
+      /*  .menu-link:hover .sub-list {
+            display: block;
+        } */
+
+
+
+         .menu-item:hover .sub-list {
+            display: block;
+        } 
+
+        .sub-item {
+            line-height: 30px;
+            font-size: 18px;
+        }
+
+        .user-list {
+            position: absolute;
+            right: 10px;
+            background-color: red;
+            /* top:20px; */
+            bottom:10px;
+        }
+
+        .user-item {
+            float: left;
+            line-height: 50px;
+            font-size: 18px;
+        }
+    </style>
+    <style>
+        #menu {
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="menu_box">
+            <div>
+
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">소개</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">구매</a>
+                        <ul class="sub-list">
+                            <li class="sub-item">
+                                <a href="#" class="sub-link">인기</a>
+                            </li>
+                            <li class="sub-item">
+                                <a href="#" class="sub-link">빵</a>
+                            </li>
+                            <li class="sub-item">
+                                <a href="#" class="sub-link">디저트</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">소식</a>
+                        <ul class="sub-list">
+                            <li class="sub-item">
+                                <a href="#" class="sub-link">공지</a>
+                            </li>
+                            <li class="sub-item">
+                                <a href="#" class="sub-link">후기</a>
+                            </li>
+                            <li class="sub-item">
+                                <a href="#" class="sub-link">문의</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">뭐하지</a>
+                    </li>
+                </ul>
+
+                <ul class="user-list">
+                    <li class="user-item">
+                        <a href="#" class="user-link">검색</a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-link">목록</a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-link">회원</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </header>
+    <main></main>
+    <footer></footer>
+</body>
+
+</html>

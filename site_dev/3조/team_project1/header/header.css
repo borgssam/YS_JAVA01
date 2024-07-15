@@ -1,0 +1,76 @@
+#navWrap .nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  height: 5rem;
+  width: 100%;
+  background-color: transparent;
+  transition: .3s ease-in;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+#navWrap .nav .logo {
+  float: left;
+  margin-top: 4px;
+}
+
+#navWrap .nav .logo img {
+  transition: .3s ease-in;
+}
+
+#navWrap .nav .tel {
+  float: right;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: .6rem 1.4rem;
+  box-sizing: border-box;
+}
+
+#navWrap .nav .tel span {
+  display: block;
+  background-image: url(../img/navIcon-1.png);
+  width: 18px;
+  height: 18px;
+  text-indent: 200px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  float: left;
+  margin-right: 5px;
+  box-sizing: border-box;
+  transition: .3s ease-in;
+}
+#navWrap .nav .tel p {
+  display: inline-block;
+  color: white;
+  line-height: 110%;
+  transition: .3s ease-in;
+  box-sizing: border-box;
+}
+
+#navWrap #menu {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+
+#navWrap #menu li {
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  padding: 0/6rem 0;
+  margin: 0 1.5rem;
+  transition: border-bottom .3s ease-in;
+}
+
+#navWrap .menu li.active {
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+
+/* body {
+  height: 4000px;
+} */

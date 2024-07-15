@@ -1,0 +1,141 @@
+main div.brand {
+  /* position: absolute; */
+  padding: 240px 0 90px 0;
+  z-index: 1;
+}
+
+main div.bath {
+  padding-top: 230px;
+  width: 1280px;
+  margin: 0 auto 60px auto;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.4);
+}
+
+.bath > p {
+  text-align: center;
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.item-align {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  height: 50px;
+  line-height: 50px;
+  padding-top: 10px;
+}
+
+.item-align > p {
+  margin: 0;
+  color: #999;
+}
+
+.item-align > ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.item-align > ul > li {
+  padding: 5px;
+}
+
+.item-align > ul > li > a {
+  color: #999;
+}
+
+.bath-item > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 80px 30px;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.bath-item li {
+  width: 290px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.bath-item img {
+  width: 100%;
+}
+
+.bath-item p {
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bath-item a:nth-of-type(2) p {
+  /* font-size: 16px; */
+  font-weight: 700;
+}
+
+.bath-item div:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 8px;
+}
+
+.bath-item div p:first-child {
+  font-size: 24px;
+  font-weight: 700;
+  padding-right: 8px;
+  color: #00aeff;
+}
+
+.bath-item div p:last-child {
+  color: #888;
+  font-weight: 600;
+}
+
+.price-percent {
+  position: absolute;
+  color: #fff;
+  font-weight: 600;
+  background-color: #00aeff;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  top: 0;
+  display: none;
+}
+
+li.discount-num:hover > div.price-percent {
+  display: block;
+}
+
+.page-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0 120px 0;
+}
+
+.page-btn a {
+  color: #333;
+  font-weight: 600;
+  overflow: hidden;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  display: block;
+  text-align: center;
+}
+
+.page-btn img {
+  vertical-align: top;
+  margin-top: -2px;
+  margin-left: -2px;
+}
+
+.global-toggle {
+  display: block;
+}

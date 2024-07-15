@@ -1,0 +1,270 @@
+#contactWrap {
+  position: relative;
+  width: 100%;
+  /* padding-top: 80px; */
+}
+#contactWrap .contact{
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 110px;
+}
+#contactWrap .wrap {
+  position: relative;
+  width: 1170px;
+  padding: 0 15px;
+  margin: 140px auto 0;
+}
+#contactWrap .wrap .contact_title{
+  display: block;
+  height: 400px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 6vw ;
+}
+#contactWrap .contactBg {
+  position: absolute;
+  width: 100%;
+  height: 550px;
+  background-color: #1c1c1c;
+  z-index: -2;
+}
+#contactWrap .contact_title  h2 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+#contactWrap .contact_title_line{
+  width: 100px;
+  height: 2px;
+  background-color: #f7d23d;
+  margin: 0 auto;
+}
+#contactWrap .contact_lorem > p {
+  font-size: 16px; 
+  text-align:center;
+  color: white;
+  line-height:1.5; 
+  margin-top: 30px;
+  margin-bottom: 80px;
+  color: #666;
+  z-index: 5;
+}
+
+#contactWrap .contact_img{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  overflow: hidden;
+}
+#contactWrap .contact_img .contact_img_item {
+  position: relative;
+  width: 31.5%;
+  padding: 2%;
+  min-height: 350px;
+  background-color: white;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+#contactWrap .contact_img .contact_img_item.ani1 {
+  animation: contactImgItem 1.7s;
+}
+#contactWrap .contact_img .contact_img_item.ani2 {
+  animation: contactImgItem 2.2s;
+}
+#contactWrap .contact_img .contact_img_item.ani3 {
+  animation: contactImgItem 2.7s;
+}
+@keyframes contactImgItem {
+  from { transform : translateY(360px) }
+  to { transform : translateY(0px) }  
+}
+#contactWrap .contact_img .contact_img_item .contact-icon {
+  width: 50px;
+  height: 50px;
+  margin: 60px auto 40px;
+  align-items: center;
+}
+#contactWrap .contact_img .contact_img_item .icon1 {
+  background:url(../img/contact-icon1.png) no-repeat;
+  background-size: cover;
+}
+#contactWrap .contact_img .contact_img_item .icon2 {
+  background:url(../img/contact-icon2.png) no-repeat;
+  background-size: cover;
+}
+#contactWrap .contact_img .contact_img_item .icon3 {
+  background:url(../img/contact-icon3.png) no-repeat;
+  background-size: cover;
+}
+#contactWrap .contact_img .contact_img_item h4  {
+  margin-top: 40PX;
+  font-size: 14px;
+  font-weight: bold;
+  align-items: center;
+}
+#contactWrap .contact_img .contact_img_item P{
+  margin-top: 40PX;
+  font-size: 0.9vw;
+  align-items: center; 
+  line-height: 1.2vw;
+  color: #666;
+}
+
+#contactWrap .contact_menu{
+  position: relative;
+  width: 1170px;
+  padding-top: 40px;
+  padding-bottom: 600px;
+  margin: 310px auto 0px;
+  overflow: hidden;
+}
+#contactWrap .left-menu{
+  position: absolute;
+  left: 0;
+  width: 50%;
+  padding: 0 20px;
+  bottom : -600px;
+}
+#contactWrap .left-menu > h2 {
+  text-align: left;
+  display: block;
+  font-size: 25px; 
+  color: #232323;
+  font-weight: 300;
+}
+#contactWrap ul.left-menu-list{
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+#contactWrap .left-menu-list > li{
+  width: 90%;
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+}
+#contactWrap .left-menu-list > li > .faq-questions {
+  display: block;
+  width: 100%;
+  clear: both;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 30px 0;
+}
+#contactWrap .left-menu-list > li > .faq-questions > h4 {
+  display: inline-block;
+  width: 340px;
+  text-align: left;
+  color: #232323;
+}
+#contactWrap .left-menu-list > li > .faq-questions > div {
+  color: #626262;
+  float: right;
+}
+#contactWrap .left-menu-list > li > .faq-answer {
+  width: 100%;
+  padding: 25px 0;
+  text-align: left;
+  color: #666;
+  line-height: 1.8;
+  display: none;
+  border-bottom: 1px solid #e4e4e4;
+}
+#contactWrap .left-menu-list > li:first-child > .faq-answer {
+  display: block;
+}
+
+
+#contactWrap .right-menu {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  bottom : -600px;
+  padding: 0 20px;
+}
+#contactWrap .right-menu .right-menu-wrapping {
+  width: 90%;
+  margin: 0 auto;
+}
+#contactWrap .right-menu > div {
+  width: 100%;
+}
+#contactWrap .right-menu h2 {
+  display: block;
+  font-size: 25px; 
+  margin-bottom:10px ;
+  text-align: left;
+  font-weight: 300;
+  color: #232323;
+}
+#contactWrap .button{
+  width: 100%;
+  margin-top: 40px;
+}
+#contactWrap .button li {
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  clear: both;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+#contactWrap .button li .textBox {
+  padding: 24px 18px;
+  display: inline-block;
+  border: none;
+  background-color: rgba(0,0,0,0.1);
+}
+#contactWrap .button li .textBox:focus {
+  outline: none;
+}
+#contactWrap .btn1{
+  width: 49%;
+  height: 30px;
+  float: left;
+}
+#contactWrap .btn2{
+  width: 49%;
+  height: 30px;
+  float: right;
+}
+#contactWrap .btn3{
+  width: 100%;
+  margin: 4px 0;
+}
+#contactWrap .btn4{
+  width: 100%;
+  min-height: 360px;
+  resize: none;
+}
+
+#contactWrap .send-message{
+  display: block;
+  width: 100%;
+  background-color: #232323;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  border: 2px solid #232323;
+  transition: 
+    border 0.4s ease,
+    background-color 0.4s ease,
+    color 0.4s ease
+  ;
+}
+#contactWrap .send-message:hover {
+  display: block;
+  border: 2px solid #232323;
+  background-color: #fff;
+  color: #232323;
+  box-sizing: border-box;
+  cursor: pointer;
+}

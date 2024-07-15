@@ -1,0 +1,144 @@
+*{font-family: "Nanum Myeongjo", serif;
+    font-style: normal;
+    font-family: "Noto Serif KR", serif;}
+body{
+    min-width: 360px;
+    min-height: 100%;
+}
+#top_banner{position: relative;}
+#top_banner ul{
+    position: relative; 
+    text-align: center; 
+    height: 60px;
+}
+#top_banner ul li{
+    position: absolute; 
+    width: 100%; 
+    text-align: center; 
+    padding: 20px 0; 
+}
+#top_banner ul li a{color: white;}
+#top_banner div{
+    position: absolute; 
+    right: 100px; 
+    top: 15px;  
+    width: 30px; 
+    height: 30px; 
+}
+#top_banner div p{
+    font-size: 30px; 
+    color: white; 
+    cursor: pointer;
+}
+#title_dummy{width: 100%; height: 70px;}
+#bodyArea{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 40px;
+}
+#leftmeunzone{
+    float: left;
+    width: 200px;
+    position: relative;                
+}
+#leftmeunzone #left_top_menu{
+    display: block;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    top: 0px;
+}    
+#left_top_menu ul li a{color: #929887; font-weight:500; }
+#left_top_menu ul li a:hover{color: #535c4c;}
+#left_top_menu ul li{margin-bottom: 10px;}
+
+#leftmeunzone #left_bottom_menu{
+    display: none;
+    position: absolute;
+    top: 650px;
+}
+#left_bottom_menu ul li a{color: #929887; font-weight:500;}
+#left_bottom_menu ul li a:hover{color: #535c4c;}
+#contentzone{
+    float: right;
+    width: calc(100% - 200px);
+    height: auto;
+}
+#content{width: 100%; overflow: hidden;}
+
+.flower_item p.name{margin-top: 10px;}
+.flower_item p.money{
+    margin-top: 5px; 
+    margin-bottom: 55px;
+    color: #929887;
+}
+.flower_item p.money span:first-child{padding-right: 3px;}
+
+tr td p,p a{color: #929887;}
+
+.flower_photo, .flower_photo_soldout {
+    position: relative;
+    display: inline-block;
+}
+.sold_out {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 10%;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 2;
+    cursor: pointer;
+}
+.flower_photo_soldout img{opacity: 0.6;}
+.flower_list{
+    overflow: hidden; 
+    display: flex;
+    width: 1800px;
+    margin-left: 50px;
+}
+.flower_item{
+    padding-right: 20px;
+    margin-bottom: 50px;
+    float: left;
+}
+#content_bottom{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    padding: 10px 50px;
+    font-size: 16px;
+    width: 100%;
+}
+#content_bottom a{color: #797d72;}
+#first_button{
+    margin-left: 10px;   
+}
+#list_page_button{
+    text-align: center;
+    
+}
+#list_page_button ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+#list_page_button ul li{
+    margin: 0 10px;
+}
+#last_button{
+    text-align: right;
+    margin-right: 50px;
+}

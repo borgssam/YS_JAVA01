@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 붙이려는 내부에 script가 있다면 사용하는방법 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample page</title>
+    <script src="../js/jquery.js"></script>
+    <!-- script 붙이기 -->
+    <script src="js_sample/sample_header_window.js"></script>
+    <style>
+        #header_window{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            border-bottom: 1px solid #ddd;
+        }
+        #content_window{
+            width: 1500px;
+            margin: 0 auto;
+        }
+        #footer_window{
+            width: 100vw;
+            margin-top: 120px;
+            position: relative;
+        }
+
+    </style>
+    <script>
+        function includeHTML(ctrl,page,callback){
+                $.get(page,function(data){
+                    $('#'+ctrl).append(data);
+                    if(callback){
+                        callback();
+                    }
+                });
+        }
+
+        // exampleCode
+        $(function(){
+            // window 내부 스크립트가 있다면 스크립트 분리 후 
+            // includeHTML을 해당 스크립트에서 사용하고 script:src로 연결 하기
+            includeHTML('footer_window','sample_btn_scroll.html',null);
+            includeHTML('footer_window','sample_footer_window.html',null);
+        });
+    </script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header_window"></div>
+
+    <!-- 메인 -->
+    <div id="content_window"></div>
+
+    <!-- 푸터 -->
+    <div id="footer_window"></div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeaderWindow</title>
+    <!-- reset.css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset_plus.css">
+    <!-- jsQuery.js -->
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <style>
+        #header_container {
+            width: 1280px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <!-- 상단 로그인 회원가입 고객센터 -->
+    <style>
+        #header_top_container {
+            overflow: hidden;
+        }
+
+        #header_top_container>p {
+            float: right;
+        }
+    </style>
+
+    <!-- 타이틀 -->
+    <style>
+        #title_container {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+
+    <!-- 하단 브랜드 All 바스 주방용품 리빙 CS  검색 장바구니-->
+    <style>
+        #header_bottom_container {
+            position: relative;
+            padding: 18px 0;
+        }
+        #gnb_container{
+            text-align: center;
+        }
+        .gnb-list-box {
+            display: inline-block;
+        }
+
+
+        .gnb-btn-box {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gnb-btn-box::before {
+            content: '';
+            margin-left: 70px;
+        }
+
+        .gnb-btn-box>a{
+            font-size:18px;
+            font-weight: 500;
+            color: #191919;
+            transition: .3s;
+            padding-bottom: 10px;
+        } 
+        .gnb-detail-list {
+            display: none;
+            position: absolute;
+            left: 18%;
+            top: 32px;
+            z-index: 1;
+            width: 150px;
+            /* transform: translateX(-50%); */
+            border: 1px solid #333;
+            background: rgba(255,255,255,.8);
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+        .gnb-detail-list>li{
+            line-height: 1;
+            padding: 10px 10px;
+        }
+
+
+        .gnb-icon-box{
+            position: absolute;
+            top: 20px;
+            right: 0;
+        }
+        .gnb-icon-box p{
+            display: inline-block;
+            max-width: 30px;
+        }
+        .gnb-icon-box p:last-child{
+            margin-left: 25px;
+        }
+
+    </style>
+
+    <div id="header_container">
+        <div id="header_top_container">
+            <p id="login_box"><a href="">로그인</a></p>
+            <p id="register_box"><a href="">회원가입</a></p>
+            <p id="service_box"><a href="">고객센터</a></p>
+        </div>
+        <div id="title_container">
+            <a id="title_btn" href="main.html"><img src="/images/title_logo.png" alt="title logo"></a>
+        </div>
+        <div id="header_bottom_container">
+            <div id="gnb_container">
+                <div class="gnb-list-box">
+                    <ul class="gnb-list">
+                        <li class="gnb-btn-box"><a id="brand_btn" href="">브랜드</a></li>
+                        <li class="gnb-btn-box"><a id="all_btn" href="">ALL</a></li>
+                        <li class="gnb-btn-box">
+                            <a id="vas_btn" href="">바스</a>
+                            <ul id="vas_list" class="gnb-detail-list">
+                                <li><a href="">ALL</a></li>
+                                <li><a href="">샤워기</a></li>
+                                <li><a href="">싱크대</a></li>
+                                <li><a href="">세면대</a></li>
+                                <li><a href="">필터</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-btn-box">
+                            <a id="kitchen_btn" href="">주방용품</a>
+                            <ul id="kitchen_list" class="gnb-detail-list">
+                                <li><a href="">ALL</a></li>
+                                <li><a href="">도마</a></li>
+                                <li><a href="">식기건조대</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-btn-box">
+                            <a id="living_btn" href="">리빙</a>
+                            <ul id="living_list" class="gnb-detail-list">
+                                <li><a href="">ALL</a></li>
+                                <li><a href="">매트리스</a></li>
+                                <li><a href="">토퍼</a></li>
+                                <li><a href="">배게</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-btn-box">
+                            <a id="cs_btn" href="">CS</a>
+                            <ul id="cs_list" class="gnb-detail-list">
+                                <li><a href="">QNA</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">FAQ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gnb-icon-box">
+                    <p>
+                        <a href=""><img src="images/svg/ic_hd_search.svg" alt="search"></a>
+                    </p>
+                    <p>
+                        <a href=""><img src="images/svg/ic_bag.svg" alt="basket"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
