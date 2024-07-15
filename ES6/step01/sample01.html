@@ -83,48 +83,97 @@
     // console.log(message5);
   </script>
   <script>
-    //7.화살표함수(람다식)  ()=>{}
-    //기명함수방식(일반)
-    let a = 3; let b =4;
-    function func1(a, b){
-      return a+b;
-    }
-    console.log(`${a} + ${b} = ${func1(a,b)}`);
+    // //7.화살표함수(람다식)  ()=>{}
+    // //기명함수방식(일반)
+    // let a = 3; let b =4;
+    // function func1(a, b){
+    //   return a+b;
+    // }
+    // console.log(`${a} + ${b} = ${func1(a,b)}`);
 
-    //무명함수를 변수로 받아서 사용
-    let plus = function(a,b){return a+b};
-    console.log(`${a} + ${b} = ${plus(a,b)}`);
+    // //무명함수를 변수로 받아서 사용
+    // let plus = function(a,b){return a+b};
+    // console.log(`${a} + ${b} = ${plus(a,b)}`);
 
-    //람다식1
-    let add = (a,b) =>{return a+b};
-    console.log(`${a} + ${b} = ${add(a,b)}`);
+    // //람다식1
+    // let add = (a,b) =>{return a+b};
+    // console.log(`${a} + ${b} = ${add(a,b)}`);
 
-    //람다식2 (return 제거)
-    let add2 = (a,b) => a+b;
-    console.log(`${a} + ${b} = ${add2(a,b)}`);
+    // //람다식2 (return 제거)
+    // let add2 = (a,b) => a+b;
+    // console.log(`${a} + ${b} = ${add2(a,b)}`);
 
-    //람다식3 (return 제거 + 객체)
-    let name = '홍길동';
-    let age  = 24;
-    const add3 = (_name, _age) => (
-      {
-        name:_name,
-        age: _age,
-      }
-    );
-    console.log(`람다식(객체) ${ JSON.stringify(add3(name,age))}`);
-
-
-    //람다식4 (return 제거 + 객체)
-    const add4 = (name, age) => (
-      {
-        name,
-        age,
-      }
-    );
-    console.log(`람다식(객체) ${ JSON.stringify(add4(name,age))}`);
+    // //람다식3 (return 제거 + 객체)
+    // let name = '홍길동';
+    // let age  = 24;
+    // const add3 = (_name, _age) => (
+    //   {
+    //     name:_name,
+    //     age: _age,
+    //   }
+    // );
+    // console.log(`람다식(객체) ${ JSON.stringify(add3(name,age))}`);
 
 
+    // //람다식4 (return 제거 + 객체)
+    // const add4 = (name, age) => (
+    //   {
+    //     name,
+    //     age,
+    //   }
+    // );
+    // console.log(`람다식(객체) ${ JSON.stringify(add4(name,age))}`);
+  </script>
+  <script>
+    // //8.분할대입(객체) {} 
+    // //일반적인 방법
+    // const myProfile = {
+    //   name: "홍길동", age: 24, sex:'남',
+    // };
+    // const message = `나의 이름은 ${myProfile.name}입니다. 나이는 ${myProfile.age} 살입니다.`;
+    // console.log(message);
+    // //분알대입법
+    // // const {age, name} = myProfile;
+    // // // name = '강감찬';
+    // // // const{age} = myProfile;
+
+    // // const message2 = `나의 이름은 ${name}입니다. 나이는 ${age} 살입니다.`;
+    // // console.log(message2);
+
+    // const {age : _age, name: _name} = myProfile;
+    // const message3 = `나의 이름은 ${_name}입니다. 나이는 ${_age} 살입니다.`;
+    // console.log(message3);
+  </script>
+  <script>
+    //9.분할대입(배열)  []
+    //일반적인 방법
+    // const myProfile = ["홍길동", 24];
+    // const message = `나의 이름은 ${myProfile[0]}입니다. 나이는 ${myProfile[1]} 살입니다.`;
+    // console.log(message);
+
+    // const [name, age] = myProfile;
+    // const message3 = `나의 이름은 ${name}입니다. 나이는 ${age} 살입니다.`;
+    // console.log(message3);
+
+  </script>
+  <script>
+    //10.디폴트 파라미터  (=)
+    // const sayHello = (name='손') => console.log(`${name}님 안녕하세요`);
+    // sayHello('홍길동');
+    // sayHello();
+
+    const sayHello2 = (name='손흥민',age=1) => console.log(`당신 ${name}입니다. 나이는 ${age}살입니다.`);
+
+    sayHello2('홍길동',24);
+    sayHello2();
+    sayHello2('을지문덕');
+    sayHello2(null,33);  //앞은 디폴트 뒤는 지정하는 방식은 안됨
+
+
+    const myProfile={age:24,name:'홍길동'}
+    const {name="을지문덕"} = myProfile;
+    const message3 = `나의 이름은 ${name}입니다. 나이는 ${myProfile.age} 살입니다.`;
+    console.log(message3);
 
   </script>
 
