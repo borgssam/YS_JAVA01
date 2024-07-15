@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1. var 의 특징
+    // var var1 = "var 변수";
+    // console.log("var1 =>", var1);
+
+    // var1 = "var 변수 덮어쓰기";
+    // console.log("var1 =>", var1);
+
+    // var var1 = "var 변수 재정의";  //여기서 에러가 안남: 가장문제임.
+    // console.log("var1 =>", var1);    
+  </script>
+  <script>
+    //2.let 의 특징
+    // let let1 = "let 변수";
+    // console.log("let1 =>", let1);
+
+    // let = "let 변수 덮어쓰기";
+    // console.log("let1 =>", let1);
+
+    // //let let1 = "let 변수 재정의";  //여기서 에러가 남
+    // // console.log("let1 =>", let1);    
+  </script>
+  <script>
+    //3.const 의 특징1
+    // const const1 = "const 변수";
+    // console.log("const1 =>", const1);
+
+    // // const1 = "const 변수 덮어쓰기";  //여기서 에러남
+    // // console.log("const1 =>", const1); 
+
+    // // const const1 = "const 변수 재정의";  //여기서 에러가 남
+    // // console.log("const =>", const1);    
+  </script>
+  <script>
+    //4.const의 특징2(객체)
+    // const obj1 = { name:'홍길동',age:24};
+    // console.log(obj1);
+    // obj1.age = 22;
+    // console.log(obj1);
+
+    // obj1 = {name:'강감찬',age:33};
+    // console.log(obj1);
+  </script>
+  <script>
+    //5.const의 특징3(배열)
+    // const arr1 = ["강아지","토끼", "거북이"];
+    // console.log(arr1);
+    // arr1.push("야옹이");
+    // console.log(arr1);
+    // // arr1 =  ["강아지","토끼", "거북이","야옹이", "어흥이"];//에러남
+    // // console.log(arr1);
+  </script>
+  <script>
+    //6.템플릿 문자열(리터럴표기법)
+    // const name = '홍길동';
+    // const age  = 24;
+    // const message = '내이름은 '+name+' 입니다. 나이는 '+age+' 살입니다.';
+    // console.log(message);
+    // const message2 = `내이름은 ${name} 입니다. 나이는 ${age} 살입니다.`;
+    // console.log(message2);
+
+    // function sayHello(){
+    //   return "안녕하세요!";
+    // }
+    // const month = 7;
+    // const message3 = `여러문 ${sayHello()} 우리가 수업한지 ${month - 6}개월 됬습니다. `;
+    // console.log(message3);
+
+    // const obj1 = { name:'홍길동',age:24};
+    // const message4 = `객체출력 => ${JSON.stringify(obj1)} `;
+    // console.log(message4);
+
+    // const arr1 = ["강아지","토끼", "거북이"];
+    // const message5= `배열출력 => ${arr1} `;
+    // console.log(message5);
+  </script>
+  <script>
+    //7.화살표함수(람다식)  ()=>{}
+    //기명함수방식(일반)
+    let a = 3; let b =4;
+    function func1(a, b){
+      return a+b;
+    }
+    console.log(`${a} + ${b} = ${func1(a,b)}`);
+
+    //무명함수를 변수로 받아서 사용
+    let plus = function(a,b){return a+b};
+    console.log(`${a} + ${b} = ${plus(a,b)}`);
+
+    //람다식1
+    let add = (a,b) =>{return a+b};
+    console.log(`${a} + ${b} = ${add(a,b)}`);
+
+    //람다식2 (return 제거)
+    let add2 = (a,b) => a+b;
+    console.log(`${a} + ${b} = ${add2(a,b)}`);
+
+    //람다식3 (return 제거 + 객체)
+    let name = '홍길동';
+    let age  = 24;
+    const add3 = (_name, _age) => (
+      {
+        name:_name,
+        age: _age,
+      }
+    );
+    console.log(`람다식(객체) ${ JSON.stringify(add3(name,age))}`);
+
+
+    //람다식4 (return 제거 + 객체)
+    const add4 = (name, age) => (
+      {
+        name,
+        age,
+      }
+    );
+    console.log(`람다식(객체) ${ JSON.stringify(add4(name,age))}`);
+
+
+
+  </script>
+
+
+  
+  
+</body>
+</html>
