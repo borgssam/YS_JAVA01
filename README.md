@@ -217,9 +217,36 @@
     </table>
 
     
-
-  - Step 11
+# 사이트연습
+  - Step 1
     - 사이트연습
+      <p >
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+      </p>
+  - Step 2
+    - 사이트연습
+      <p >
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+      </p>
+      
+  - Step 조별
+    - 1조
+      <p >
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+      </p>
+    - 2조
+      <p >
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+      </p>
+    - 3조
+      <p >
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+      </p>
+    - 4조
+      <p >
+        <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
+      </p>
+    - 5조
       <p >
         <img src="https://github.com/borgssam/YS_JAVA01/assets/171772501/638d434a-8d0c-438a-bd0a-345daf80eb3b" width="50%"/>
       </p>
