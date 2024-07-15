@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+
+    <link rel="stylesheet" href="sigh_in_style.css">
+
+    <script src="https://kit.fontawesome.com/978a2e1a55.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./SJ/SJ.css" />
+
+    <script src="./js_min.js"></script>
+    <script src="./SJ/SJ.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <!--헤더-->
+        <div id="header">
+            <header>
+                <div class="Top">
+                    <h1 style="font-weight: 900; letter-spacing: -2pt">AWESOMED</h1>
+                    <div>
+                        <ul class="Top_right">
+                            <li class="menu-container">
+                                <a href="./sigh_in.html" class="hohover-container">
+                                    <img class="hohover default" src="./SJ/img/mypage.png" width="35" alt="마이페이지" />
+                                    <img class="hohover hover" src="./SJ/img/mypagehover.png" width="35" alt="마이페이지 호버"
+                                        style="padding-bottom: 32px" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./cart.html"><img src="./SJ/img/cart.png" width="35" alt="장바구니" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./SJ/img/glass.png" width="35" alt="검색" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Top_menu">
+                        <ul>
+                            <h3>브랜드스토리</h3>
+                        </ul>
+                        <ul>
+                            <h3>상품소개</h3>
+                        </ul>
+                        <ul class="shoping">
+                            <h3>쇼핑하기</h3>
+                            <div class="menu_box">
+                                <li><a href="./SJ/01.html">신상품</a></li>
+                                <li><a href="./SJ/best.html">베스트</a></li>
+                                <li><a href="#">요거트</a></li>
+                                <li><a href="#">시리얼</a></li>
+                                <li><a href="#">시리얼&요거트</a></li>
+                            </div>
+                        </ul>
+                        <ul class="comm">
+                            <h3>커뮤니티</h3>
+                            <div class="menu_box">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">상품리뷰</a></li>
+                                <li><a href="#">상품 Q&A</a></li>
+                                <li><a href="#">이벤트</a></li>
+                            </div>
+                        </ul>
+                        <ul>
+                            <h3>문의하기</h3>
+                        </ul>
+                    </div>
+                    <div class="right_menu_box">
+                        <ul>
+                            <li><a href="./sigh_in.html">로그인</a></li>
+                            <li><a href="./sigh_up.html">회원가입</a></li>
+                            <li><a href="./sigh_in.html">마이페이지</a></li>
+                            <li><a href="./sigh_in.html">주문조회</a></li>
+                            <li><a href="./sigh_in.html">관련상품</a></li>
+                            <li><a href="./sigh_in.html">적립금조회</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <!--컨텐츠-->
+        <div id="content">
+            <!--로그인박스-->
+            <div id="login_box">
+                <h1 id="title">로그인</h1>
+                <!--로그인-->
+                <form action="" id="sigh_in">
+                    <input type="text" name="" id="id_box" placeholder="아이디">
+                    <input type="password" name="" id="pw_box" placeholder="비밀번호">
+                    <div id="idpw_find">
+                        <input type="checkbox" id="sc_sigh" checked="checked">
+                        <label for="sc_sigh" id="sc_sigh_text" class="find">
+                            <img src="./icon/toggle-on-solid.svg" alt="" id="toggle_on">
+                            <img src="./icon/toggle-off-solid.svg" alt="" id="toggle_off">
+                            보안접속
+                        </label>
+                        <a href="#" class="find id_find">아이디 찾기</a>
+                        <a href="#" class="find pw_find">비밀번호찾기</a>
+                    </div>
+                    <input type="button" value="로그인" id="login_btn">
+                </form>
+                <!--회원가입-->
+                <form action="" id="sigh_up">
+                    <p id="sigh_up_title">아직 회원이 아니신가요?</h2>
+                        <p id="sigh_up_text">회원가입 후 다양한 혜택과 서비스를 누려보세요!</p>
+                        <input type="button" id="sigh_up_btn" value="회원가입">
+                </form>
+            </div>
+        </div>
+        <!--푸터-->
+        <div id="footer">
+            <div id="left_box">
+                <div id="person">
+                    <h2>02-123-4567</h2>
+                    <p>MON-FRI 10:00 - 18:00</p>
+                    <p>LUNCH 12:00 - 13:30</p>
+                    <p>SAT, SUN, HOLY OFF</p>
+                    <p>국민 0000-00-0000 / 예금주 어썸디</p>
+                </div>
+                <div id="company">
+                    <h2>COMPANY</h2>
+                    <p>AWESOMED / 대표이사 어떰디 / 개인정보보호책임자 어썸디 / 사업자등록번호 0000-00-00000</p>
+                    <p>통신판매신고번호 제2024-서울강남-12345호</p>
+                    <p>대표전화 02-123-4567 / 팩스 / 대표메일 awesomed@awesomed.com</p>
+                    <p>주소 서울 강남구 가로수길 23</p>
+                </div>
+            </div>
+            <div id="right_box">
+                <div class="footer_bar">
+                    <span><a href="">회사소개</a></span>
+                    <span><a href="">이용약관</a></span>
+                    <span><a href="">쇼핑몰이용안내</a></span>
+                    <span><a href="">개인정보처리방침</a></span>
+                </div>
+                <div class="footer_sub">
+                    <p><a href="./sigh_in.html">마이페이지</a></p>
+                    <p><a href="./cart.html">장바구니 (1)</a></p>
+                    <p><a href="./sigh_in.html">관심상품 (0)</a></p>
+                    <p><a href="./sigh_in.html">주문조회</a></p>
+                    <p><a href="./sigh_in.html">쿠폰내역</a></p>
+                    <p><a href="./sigh_in.html">적립금내역</a></p>
+                </div>
+                <div class="footer_sub">
+                    <p><a href="">공지사항</a></p>
+                    <p><a href="">상품리뷰</a></p>
+                    <p><a href="">상품 Q&A</a></p>
+                    <p><a href="">이벤트</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

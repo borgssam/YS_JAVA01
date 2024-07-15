@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer window</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset_plus.css">
+
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+
+    <!-- footer 버튼 4개 회사소개, 이용약관, 개인정보처리방침, 이용안내 -->
+     <style>
+        #footer_navi_container{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        #footer_navi_container>ul{
+            width: 1280px;
+            margin: 0 auto;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+        #footer_navi_container>ul>li{
+            display: inline-block;
+            position: relative;
+            margin-right: 60px;
+            height: 60px;
+            line-height: 60px;
+        }
+        #footer_navi_container>ul>li::before{
+            content: '';
+            width: 1px;
+            height: 8px;
+            background: #797979;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -30px;
+        }
+     </style>
+
+    <!-- footer 하단 정보 -->
+    <style>
+        #footer_company_info_container{
+            width: 1280px;
+            margin: 0 auto;
+            padding-top: 30px;
+            overflow: hidden;
+        }
+        
+        #footer_company_info_container>p{
+            font-size: 13px;
+            color: #797979;
+            margin-left: 43px;
+        }
+        #company_info span{
+            display: inline-block;
+            margin: 5px 0;
+        }
+        #cs_info{
+            width: 220px;
+            text-align: left;
+        }
+
+        #cs_info .btn-info{
+            margin-top: 15px;
+        }
+        #cs_info .btn-info>a{
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: center;
+            width: 104px;
+            font-size: 12px;
+            line-height: 30px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="footer_container">
+        <div id="footer_navi_container">
+            <ul>
+                <li><a href="">회사소개</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">이용안내</a></li>
+            </ul>
+        </div>
+        <div id="footer_company_info_container" class="clearfix">
+                
+            <a class="fleft" href="" ><img src="images/logo.png" alt="logo"></a>
+            <p class="fleft">
+                <span>(주) 퓨어셀코리아 </span><br>
+                <span> 대표자 : 김철호 &nbsp;&nbsp;&nbsp; 사업자 등록번호 : 411-81-92320 </span><br>
+                <span>통신판매업 신고번호 : 2020-서울강남-02095 [사업자정보확인] </span><br>
+                <span>주소 : 서울특별시 강남구 학동로101길 26 (청담동) 211호개인정보관리책임자 : 이진희 </span><br><br>
+                
+                Copyright © PURESELL 퓨어셀. All rights reserved.
+            </p>
+
+            <div id="cs_info" class="fright">
+                <h3 style="font: 18px;">CS CENTER 1599-8604</h3>
+                <p>
+                    평일 10:00 - 17:00 <br>
+                    (점심시간 : 12:00 - 13:00) <br>
+                    ​토.일.공휴일 휴무 <br>
+                </p>
+                <div class="btn-info">
+                    <a href="">1:1 문의하기</a>
+                    <a href="">자주 묻는 질문</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

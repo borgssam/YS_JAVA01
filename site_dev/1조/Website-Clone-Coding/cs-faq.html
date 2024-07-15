@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퓨어셀</title>
+    <!-- <link rel="stylesheet" href="/css/reset.css"> -->
+    <link rel="icon" href="/images/logo123.png">
+    <script src="/js/jquery.js"></script>
+
+    <style>
+        body {
+            /* width: 1480px; */
+            max-width: 100%;
+            margin: 0 auto;
+
+        }
+
+        .wrap {
+            position: relative;
+            width: 100%;
+            margin: 0, auto;
+        }
+
+        .container {
+            width: 1280px;
+            margin: 0 auto;
+            padding-top: 200px;
+        }
+
+        .title-notice {
+            text-align: center;
+        }
+
+        .title-notice>p {
+            color: #868e96;
+            margin-bottom: 60px;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border-top: 3px solid black;
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 10px;
+            color: #555555;
+        }
+
+        .notice-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .notice-title>p {
+            color: #999999;
+        }
+
+        .notice-category {
+            display: flex;
+            margin-bottom: 80px;
+            vertical-align: middle;
+        }
+
+        .notice-category li {
+            text-align: center;
+            display: flex;
+            border: 1px solid #ddd;
+        }
+
+        .notice-category li:not(.notice-category-selected):hover {
+            background-color: #00AFFF;
+            transition: background-color, 0.5s;
+        }
+
+        .notice-category li:not(.notice-category-selected):hover a {
+            color: white;
+            transform: color 0.5 ease;
+        }
+
+        .notice-category li:not(.notice-category-selected) {
+            width: 319px;
+            height: 50px;
+            color: #333;
+        }
+
+        .notice-category>li:not(.notice-category-selected)>a {
+            text-decoration: none;
+            color: #333333;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .notice-category-selected>a {
+            width: 320px;
+            line-height: 50px;
+            text-decoration: none;
+            background-color: #00AFFF;
+            color: white;
+            font-size: 16px;
+            display: block;
+            text-align: center;
+        }
+
+        .cs-table-contents {
+            border-top: 1px solid #ddd;
+        }
+
+        .cs-table-header th {
+            padding-bottom: 15px;
+        }
+
+        .cs-table-no-content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .QnaSearchForm {
+            padding: 20px 0px;
+        }
+
+        .cs-search-date {
+            width: 90px;
+            height: 30px;
+            margin: 0px 5px 0px 0px;
+            padding: 0px 5px;
+            border: 1px solid #ebebeb;
+        }
+
+        .cs-search-key {
+            width: 90px;
+            height: 30px;
+            margin: 0px 5px 0px 0px;
+            padding: 0px 5px;
+            border: 1px solid #ebebeb;
+        }
+
+        .cs-search-input {
+            width: 172px;
+            height: 30px;
+            border: 1px solid #ebebeb;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button,
+        input::-webkit-search-results-button,
+        input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .cs-search-btn {
+            display: inline-block;
+            width: 72px;
+            height: 30px;
+            padding-top: 7px;
+            box-sizing: border-box;
+            font-size: 13px;
+            color: #fff;
+            background: #bbb;
+            transition: background-position 0.3s;
+            background-size: 200% 100%;
+            background-image: linear-gradient(to right, #bbb 50%, #D3D3D3 50%);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .cs-search-btn:hover {
+            background-position: -100% 0;
+        }
+
+        .notice-nothing-search {
+            text-align: center;
+            font-size: 16px;
+            color: #353535;
+            padding: 20px;
+        }
+    </style>
+
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function (data) {
+                $('#' + ctrl).append(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+
+        // exampleCode
+        $(function () {
+            // window 내부 스크립트가 있다면 스크립트 분리 후 
+            // includeHTML을 해당 스크립트에서 사용하고 script:src로 연결 하기
+            includeHTML('header_window', "main_header.html", null);
+            includeHTML('footer_window', 'main_footer.html',null);
+            // includeHTML('btn_scroll_window','btn_scroll.html',null);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header_window"></div>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="contents-cs">
+                <!-- FAQ 테이블 시작 -->
+                <div class="title-notice">
+                    <h1>FAQ</h1>
+                    <p>FAQ입니다.</p>
+                </div>
+                <ul class="notice-category">
+                    <li>
+                        <a href="#">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="#">EVENT</a>
+                    </li>
+                    <li>
+                        <a href="#">REVIEW</a>
+                    </li>
+                    <li class="notice-category-selected">
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+                <p class="notice-nothing-search">검색 결과가 없습니다.</p>
+            </div>
+            <!-- 검색 메뉴 시작 -->
+            <form class="QnaSearchForm" id="QnaSearchForm" action="#" method="get" target="top">
+                <div class="cs-form">
+                    <fieldset>
+                        <p>
+                            <select class="cs-search-date" name="cs-search-date" id="cs-search-date">
+                                <option value="week">일주일</option>
+                                <option value="month">한달</option>
+                                <option value="month3">세달</option>
+                                <option value="all">전체</option>
+                            </select>
+                            <select class="cs-search-key" name="cs-search-key" id="cs-search-key">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                                <option value="writer_name">글쓴이</option>
+                                <option value="user_id">아이디</option>
+                            </select>
+                            <input class="cs-search-input" type="search" id="cs-search-input" name="cs-search-input">
+                            <a href="#" class="cs-search-btn">찾기</a>
+                        </p>
+                    </fieldset>
+                </div>
+            </form>
+            <!-- 검색 메뉴 끝 -->
+        </div>
+        <!-- FAQ 테이블 끝 -->
+    </div>
+    <div id="btn_scroll_window"></div>
+    <div id="footer_window"></div>
+</body>
+
+</html>

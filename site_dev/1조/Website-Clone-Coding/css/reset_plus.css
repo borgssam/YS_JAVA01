@@ -1,0 +1,16 @@
+a{
+    text-decoration: none;
+}
+body{
+    font-weight: 400;
+    color: #353535;
+    font: 0.75em;
+}
+
+.fleft{
+    float: left;
+}
+
+.fright{
+    float: right;
+}

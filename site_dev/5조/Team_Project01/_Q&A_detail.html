@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="/css/Q&A_detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+<script>
+    function includeHTML(ctrl, page, callback) {
+        $.get(page, function (data) {
+            $('#' + ctrl).html(data);
+            if (callback) {
+                callback();
+            }
+        });
+    }
+    includeHTML('navZone', 'nav/nav_sub.html', null);
+    includeHTML('footerArea', 'footer/footer.html', null);
+    // $(function () {
+    //     $('body').fadeIn(1000);
+    // });
+</script>
+<script>
+    $(function () {
+        $('body').fadeIn(1000);
+    });
+</script>
+</head>
+<body>
+    <div id="navZone"></div>
+    <div id="topArea">
+        <h4>Q&A</h4>
+    </div>
+    <div id="middleArea">
+        <div>
+            <img src="Images/04f31ecf8f6103b24fa4538a6a491f96.png" alt="">
+            <p>수공예 유리 화병</p>
+            <p>43,000원</p>
+            <a href="/shop-1-item.html">상품 상세보기</a>
+        </div>
+        <div>
+            <h4>요청시 포장도 해주시나요?</h4>
+            <p>by 모아스튜디오</p>
+            <p>2024-01-13</p>
+        </div>
+        <div>
+            지인에게 선물하고 싶은데 요청 시에 포장도 해주시나요?
+        </div>
+        <a href="/community/_Q&A.html">목록</a>
+    </div>
+    <div id="bottomArea">
+        <div id="title">
+            <h5>관련 글 보기</h5>
+        </div>
+        <table>
+            <thead>
+                <th>번호</th>
+                <th>상품명</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회</th>
+            </thead>
+            <tbody>
+                <td>112</td>
+                <td>수공예 유리화병</td>
+                <td>요청시 포장도 해주시나요?</td>
+                <td>모아스튜디오</td>
+                <td>2021-01-13</td>
+                <td>224</td>
+            </tbody>
+        </table>
+        
+    </div>
+    <div id="footerArea"></div>
+</body>
+</html>

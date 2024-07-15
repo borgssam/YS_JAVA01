@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <script src="../js/jquery.min.js"></script>
+
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function (data) {
+                $('#' + ctrl).html(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+        includeHTML('navZone', '/nav/nav_sub.html', null);
+
+        $(function () {
+            $('#EventAll').fadeIn(1000);
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Nanum Myeongjo", serif;
+            font-style: normal;
+            font-family: "Noto Serif KR", serif;
+
+
+        }
+
+        body {
+            background-color: #F2F0EB;
+        }
+
+        #EventAll {
+            display: none;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a,
+        p {
+            text-decoration: none;
+            color: rgb(0, 36, 0);
+            padding: 5px 10px;
+        }
+
+        /* 테이블 css */
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-top: 2px solid rgb(0, 36, 0);
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+
+        thead>tr>th,
+        tbody>tr>td {
+            border-bottom: 1px solid #bbbbbb;
+            padding: 20px;
+            font-size: small;
+            border-collapse: collapse;
+            width: 10%;
+
+        }
+
+        .tbl {
+            width: 60%;
+        }
+
+
+        /* tabel 페이지 이동*/
+        #tab_num {
+            margin: 0 auto;
+            height: 40px;
+            padding-bottom: 30px;
+        }
+
+        #tab_num>ul {
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        #tab_num>ul>li {
+            font-size: small;
+            float: left;
+        }
+
+        /* search box */
+
+        #searchBox {
+            margin: 0 auto;
+            height: 40px;
+        }
+
+        #search_All {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        #search_input>select {
+            width: 70px;
+            height: 34px;
+            background-color: #F2F0EB;
+            appearance: none;
+            text-align: left;
+            margin-left: 5px;
+            border-color: #bbbbbb;
+            float: left;
+            font-size: small;
+        }
+
+        #search_input>select {
+            padding-left: 8px;
+            text-align: left;
+        }
+
+        #search_box {
+            width: 210px;
+            height: 34px;
+            background-color: #F2F0EB;
+            border: 1px solid #bbbbbb;
+            margin-left: 5px;
+        }
+
+        #search_box_find {
+            width: 70px;
+            height: 34px;
+            background-color: #52594A;
+            color: white;
+            border: none;
+        }
+
+        /* 팝업 */
+
+        #popup {
+            margin: 0 auto;
+            height: 40px;
+            overflow: hidden;
+            /* position: relative; */
+        }
+
+        #popup>ul>a>li {
+            float: left;
+            height: 40px;
+            width: 100%;
+            background-color: dimgray;
+
+        }
+
+        #popup>ul>a>li>p {
+            text-align: center;
+            font-size: small;
+            margin-top: 8px;
+        }
+
+        /* 메인창  */
+        #navZone {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            /* 필요에 따라 배경색을 변경하세요 */
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .gnb {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .gnb>ul {
+            overflow: hidden;
+        }
+
+        .gnb>ul li {
+            float: left;
+            padding: 10px;
+        }
+
+        .gnb>ul li>a {
+            color: rgb(0, 36, 0);
+            padding: 20px 0;
+            text-decoration: none;
+        }
+
+        .gnb div.Shop_item {
+            color: rgb(0, 36, 0);
+            position: absolute;
+            width: 120px;
+            top: 40px;
+            /* 위치 조정 */
+            left: 130px;
+            /* 위치 조정 */
+            display: none;
+            /* 초기 상태 숨김 */
+        }
+
+        .gnb div.Community_item {
+            color: white;
+            position: absolute;
+            width: 100px;
+            top: 40px;
+            /* 위치 조정 */
+            left: 190px;
+            /* 위치 조정 */
+            display: none;
+            /* 초기 상태 숨김 */
+        }
+
+        .gnb div>ul>li {
+            opacity: 0;
+            display: none;
+            margin-top: 10px;
+        }
+
+
+
+
+        /* 페이지 */
+
+        #container {
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        #titleAria {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 35px;
+        }
+
+        #container>#title_list {
+            width: 100%;
+            height: 40px;
+            padding-bottom: 35px;
+        }
+
+        #container>#title_list>ul {
+            width: 300px;
+            margin: 0 auto;
+            font-size: small;
+
+        }
+
+        #title_list>ul>li {
+            float: left;
+        }
+
+
+
+        /* 하단 스타일 -  */
+        #bottomArea {
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        #bottomArea>.leftZone>div {
+            width: 100px;
+        }
+
+        #bottomArea>.leftZone>div>img {
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        #bottomArea p {
+            padding: 2px;
+            color: green;
+            font-size: 12px;
+        }
+
+        #bottomArea>div.leftZone {
+            float: left;
+        }
+
+        #bottomArea>div.rightZone {
+            display: flex;
+            float: right;
+            width: 800px;
+            height: 160px;
+            /* background-color: red; */
+        }
+
+        #bottomArea>div.rightZone>div {
+            margin-right: 50px;
+        }
+
+        .rightZone1>p:nth-child(4) {
+            margin-top: 50px;
+        }
+
+        .rightZone2>p:nth-child(5) {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top_page">
+        <!-- 1.팝업 -->
+        <div id="popup">
+            <ul>
+                <a href="#">
+                    <li>
+                        <p>관리자에서 클릭만으로 편리하게 관리 가능합니다.</p>
+                    </li>
+                </a><a href="#">
+                    <li>
+                        <p>모아스튜디오 고객님께만 드리는 특별한 혜택!</p>
+                    </li>
+                </a><a href="#">
+                    <li>
+                        <p>모아스튜디오는 서브페이지까지 모두 디자인합니다.</p>
+                    </li>
+                </a>
+            </ul>
+
+
+        </div>
+
+        <!-- x 표시 이미지 찾아서 삽입하깅 -->
+
+    </div>
+
+    <!-- 2.상단창  -->
+    <div id="navZone">
+        <div class="logo">
+            <a href="../index.html"><img src="./com_img/logogreensmall.png" alt=""></a>
+        </div>
+        <div class="gnb">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="Shop">Shop</a>
+                    <div class="Shop_item">
+                        <ul>
+                            <li><a href="#" class="Shop">Furniture</a></li>
+                            <li><a href="#" class="Shop">Home deco</a></li>
+                            <li><a href="#" class="Shop">Lighting</a></li>
+                            <li><a href="#" class="Shop">Kitchen</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#" class="Community">Community</a>
+                    <div class="Community_item">
+                        <ul>
+                            <li><a href="#" class="Community">Notice</a></li>
+                            <li><a href="#" class="Community">Event</a></li>
+                            <li><a href="#" class="Community">Q&A</a></li>
+                            <li><a href="#" class="Community">Review</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Log in</a></li>
+                <li><a href="#"><img src="" alt=""></a></li>
+                <li><a href="#"><img src="" alt=""></a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!--페이지 -->
+    <div id="EventAll">
+        <div id="container">
+
+            <div id="titleAria">
+                <p>Event</p>
+            </div>
+            <div id="title_list">
+                <ul>
+                    <li><a href="./_Notice.html">Notice</a> &nbsp;/&nbsp;&nbsp;</li>
+                    <li><a href="./_Event.html">Event</a> &nbsp;/&nbsp;&nbsp;</li>
+                    <li><a href="./_Q&A.html">Q&A</a> &nbsp;/&nbsp;&nbsp;</li>
+                    <li><a href="./_Review.html">Review</a>&nbsp;</li>
+
+                </ul>
+            </div>
+
+            <!-- 페이지의 테이블 -->
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            번호
+                        </th>
+                        <th class="tbl">
+                            제목
+                        </th>
+                        <th>
+                            작성자
+                        </th>
+                        <th>
+                            작성일
+                        </th>
+                        <th>
+                            조회
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>3</td>
+                        <td class="tbl"><a href="#">여름 한정 세일 기간 7/1~8/31 (10%~50%)</a></td>
+                        <td>
+                            <p>모아스튜디오</p>
+                        </td>
+                        <td>
+                            <p>2021-01-13</p>
+                        </td>
+                        <td>
+                            <p>686</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td class="tbl"><a href="#">할인쿠폰,마일리지와 함께 쓸 수 있는 다양한 결제 혜택</a></td>
+                        <td>
+                            <p>모아스튜디오</p>
+                        </td>
+                        <td>
+                            <p>2021-01-13</p>
+                        </td>
+                        <td>
+                            <p>686</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="tbl"><a href="#">당신을 위한 7월의 혜택</a></td>
+                        <td>
+                            <p>모아스튜디오</p>
+                        </td>
+                        <td>
+                            <p>2021-01-13</p>
+                        </td>
+                        <td>
+                            <p>60</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <!-- 테이블 페이지 조정 -->
+            <div id="tab_num">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">다음</a></li>
+                </ul>
+
+            </div>
+
+            <div id="searchBox">
+                <div id="search_All">
+                    <div id="search_input">
+                        <select name="month" id="month">
+                            <option value="일주일">
+                                일주일
+                            </option>
+                            <option value="한달">
+                                한달
+                            </option>
+                            <option value="세달">
+                                세달
+                            </option>
+                            <option value="전체">
+                                전체
+                            </option>
+                        </select>
+                        <select name="subject" id="subject">
+                            <option value="제목">
+                                제목
+                            </option>
+                            <option value="내용">
+                                내용
+                            </option>
+                            <option value="글쓴이">
+                                글쓴이
+                            </option>
+                            <option value="아이디">
+                                아이디
+                            </option>
+                            <option value="별명">
+                                별명
+                            </option>
+                        </select>
+                    </div>
+
+                    <div id="search_text">
+                        <input type="search" name="" id="search_box">
+                        <input type="submit" value="찾기" id="search_box_find">
+                    </div>
+                </div>
+            </div>
+       
+
+    </div>
+    <!-- 4.주소 -->
+
+    <div id="bottomArea">
+        <div class="leftZone">
+            <div class="fotterLogo">
+                <img src="../Images/logo_fotter.png" alt="">
+            </div>
+            <p>모아스튜디오</p>
+            <p>Copyright ⓒ모아스튜디오.All right reserved</p>
+        </div>
+        <div class="rightZone">
+            <div class="rightZone1">
+                <p>070-8095-3686</p>
+                <p>MON - FRI : 11-6pm</p>
+                <p>SON,MON OFF</p>
+                <p>우리은행:1002-955-738542 (고종현)</p>
+                <p>모아스튜디오</p>
+            </div>
+            <div class="rightZone2">
+                <p>Owner : 고종현</p>
+                <p>Address : 서울특별시 강서구 곰달래로31나길</p>
+                <p>Business License : </p>
+                <p>Online business license</p>
+                <p>Designed by moa-studio·Hosting by 카페24(주)</p>
+            </div>
+            <div class="rightZone3">
+                <p>about</p>
+                <p>agreement</p>
+                <p>guide</p>
+                <p>privacy</p>
+            </div>
+            <div class="rightZone4">
+                <p>Instagram</p>
+                <p>youtube</p>
+                <p>naverstore</p>
+                <p>facebook</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+    <!-- 하단 Area끝 -->
+
+
+
+
+
+    <!-- #################### 자바 스크립트 ########################### -->
+
+    <script>
+        // 상단바
+        $(function () {
+            $('.gnb > ul > li:nth-child(3)').on('mouseover', function () {
+                const subMenuItems = $('.gnb>ul>li:nth-child(3) div > ul > li');
+                subMenuItems.css('display', 'block').each(function (index) {
+                    $(this).delay(index * 200).animate({
+                        'opacity': '1',
+                        'margin-top': '0'
+                    }, 500); // 애니메이션 시간 변경
+                });
+                $('.gnb div.Shop_item').fadeIn(); // 서브 메뉴 보이기
+            });
+
+            $('.gnb > ul > li:nth-child(3)').on('mouseleave', function () {
+                const subMenuItems = $('.gnb>ul>li:nth-child(3) div > ul > li');
+                subMenuItems.stop(true, true).each(function (index) {
+                    $(this).delay(index * 200).animate({
+                        'opacity': '0',
+                        'margin-top': '10px'
+                    }, 500, function () {
+                        $(this).css('display', 'none');
+                    });
+                });
+                $('.gnb div.Shop_item').fadeOut(); // 서브 메뉴 숨기기
+            });
+            $('.gnb > ul > li:nth-child(4)').on('mouseover', function () {
+                const subMenuItems = $('.gnb>ul>li:nth-child(4) div > ul > li');
+                subMenuItems.css('display', 'block').each(function (index) {
+                    $(this).delay(index * 100).animate({
+                        'opacity': '1',
+                        'margin-top': '0'
+                    }, 500); // 애니메이션 시간 변경
+                });
+                $('.gnb div.Community_item').fadeIn(); // 서브 메뉴 보이기
+            });
+
+            $('.gnb > ul > li:nth-child(4)').on('mouseleave', function () {
+                const subMenuItems = $('.gnb>ul>li:nth-child(4) div > ul > li');
+                subMenuItems.stop(true, true).each(function (index) {
+                    $(this).delay(index * 100).animate({
+                        'opacity': '0',
+                        'margin-top': '10px'
+                    }, 500, function () {
+                        $(this).css('display', 'none');
+                    });
+                });
+                $('.gnb div.Community_item').fadeOut(); // 서브 메뉴 숨기기
+            });
+        });
+
+        // 메인페이지 리스트
+    </script>
+
+    <script>
+        $(function () {
+            $("#title_list>ul>li>a:nth-child(1)").hover(function () {
+
+                $(this).css({
+                    'color': 'rgb(0,36,0)'
+                }, {
+                    'font-weight': '500'
+                });
+
+            }, function () {
+                $(this).css('color', ' rgb(104, 113, 104)');
+            });
+        });
+
+        $(function () {
+            $("#title_list>ul>li>a:nth-child(1)").on('click', function () {
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

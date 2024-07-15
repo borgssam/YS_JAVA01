@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퓨어셀</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="icon" href="/images/logo123.png">
+    <script src="/js/jquery.js"></script>
+    <style>
+        body {
+            /* width: 1480px; */
+            margin: 0 auto;
+
+        }
+
+        .wrap {
+            position: relative;
+            width: 100%;
+            margin: 0, auto;
+        }
+
+        .container {
+            width: 1280px;
+            margin: 0 auto;
+            padding-top: 200px;
+        }
+
+        .title-qna {
+            text-align: center;
+        }
+
+        .title-qna>p {
+            color: #868e96;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border-top: 3px solid black;
+            margin-top: 40px;
+            margin-bottom: 5px;
+        }
+
+        /* reset.css로 인해 h1 적용되지 않아 따로 선언 */
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        .cs-table-header {
+            position: relative;
+            border-bottom: 1px solid #ebebeb;
+            color: #555555;
+            line-height: 1.5;
+        }
+
+        .cs-table-header th {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .cs-table-contents {
+            height: 40px;
+            font-size: 14px;
+            background-color: #fff;
+            padding-top: 10px;
+        }
+
+        .cs-table-contents td {
+            border-bottom: 1px solid #ebebeb
+        }
+
+        .cs-table-num {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .cs-table-contents {
+            padding-left: 10px;
+            vertical-align: middle;
+
+        }
+
+        .cs-table-contents>a {
+            text-decoration: none;
+            color: #555555;
+        }
+
+        .cs-table-writer {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .date-left {
+            text-align: center;
+            font-size: 12px;
+            color: #868e96;
+            vertical-align: middle;
+        }
+
+        .table-answer {
+            padding-left: 30px;
+
+        }
+
+        .table-icon {
+            text-align: center;
+        }
+
+        .cs-thumb-img {
+            width: 46px;
+        }
+
+        .thumb-left {
+            padding-top: 12px;
+            padding-left: 10px;
+            padding-bottom: 12px;
+        }
+
+        .thumb-left>a {
+            text-decoration: none;
+            color: #555555;
+        }
+
+        .cs-thumb-description {
+            display: inline-block;
+            width: 100px;
+            height: 32px;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .cs-table-title {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .cs-bottom-paging {
+            margin: 50px 0 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-paging-num>a {
+            width: 13px;
+            color: black;
+            font-weight: bold;
+            margin: 1px 5px 0;
+        }
+
+        .cs-paging-btn {
+            clip-path: inset(3px 3px 3px 3px);
+            margin-top: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .QnaSearchForm {
+            padding: 20px 0px;
+        }
+
+        .cs-search-date {
+            width: 90px;
+            height: 30px;
+            margin: 0px 5px 0px 0px;
+            padding: 0px 5px;
+            border: 1px solid #ebebeb;
+        }
+
+        .cs-search-key {
+            width: 90px;
+            height: 30px;
+            margin: 0px 5px 0px 0px;
+            padding: 0px 5px;
+            border: 1px solid #ebebeb;
+        }
+
+        .cs-search-input {
+            width: 172px;
+            height: 30px;
+            border: 1px solid #ebebeb;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button,
+        input::-webkit-search-results-button,
+        input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .cs-search-btn {
+            display: inline-block;
+            width: 72px;
+            height: 30px;
+            padding-top: 6px;
+            border: 1px solid #111;
+            box-sizing: border-box;
+            font-size: 13px;
+            color: #222222;
+            background: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .cs-search-btn:hover {
+            background: #dddddd;
+        }
+    </style>
+
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function (data) {
+                $('#' + ctrl).append(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+
+        $(function () {
+            includeHTML('header_window', "main_header.html", null);
+            includeHTML('footer_window', 'main_footer.html', null);
+            includeHTML('btn_scroll_window', 'btn_scroll.html', null);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header_window"></div>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="contents-qna">
+                <!-- QNA 테이블 시작 -->
+                <div class="title-qna">
+                    <h1>QNA</h1>
+                    <p>QNA입니다.</p>
+                </div>
+                <hr>
+                <div class="cs-table">
+                    <table border="1">
+                        <!-- colgroup으로  테이블 크기 설정-->
+                        <colgroup style="background-color: #fff;">
+                            <col style="width:60px">
+                            <col style="width:250px">
+                            <col style="width:65%">
+                            <col style="width:120px;">
+                            <col style="width:105px;">
+                            </colgroup`>
+                        <thead class="cs-table-header">
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">상품정보</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cs-table-contents">
+                            <tr>
+                                <td class="cs-table-num">10</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#"><span class="cs-table-title">퓨어셀 리퓨어 샤워기 필터, 헤드 물곰팡이 질문드려요</span></a>
+                                </td>
+                                <td class="cs-table-writer">양****</td>
+                                <td class="date-left">
+                                    <span class="text-num" `>2024-07-10</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <div class="cs-table-num"></div>
+                                <td class="cs-table-num">9</td>
+                                <td class="thumb-left">
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image1.jpg" alt="썸네일 이미지 1">
+                                        <span class="cs-thumb-description">퓨어셀 3단 접이식 매트리스 바닥 토퍼 접는 단단한 허리에 좋은 1인용 디스크
+                                            매트릭스 싱글</span>
+                                    </a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#"><span class="cs-table-title">상품문의</span></a> <img class="table-icon"
+                                        src="/images/ico_lock.gif" alt="비밀글">
+                                    [1]
+                                </td>
+                                <td class="cs-table-writer">이****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-06-07</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">8</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#"><span class="cs-table-title">베개 커버</span></a> <img class="table-icon"
+                                        src="/images/ico_hit.gif" alt="HIT">
+                                    [1]
+                                </td>
+                                <td class="cs-table-writer">정****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-06-01</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">7</td>
+                                <td class="thumb-left">
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image1.jpg" alt="썸네일 이미지 2">
+                                        <span class="cs-thumb-description">퓨어셀 3단 접이식 매트리스 바닥 토퍼 접는 단단한 허리에 좋은 1인용 디스크
+                                            매트릭스 싱글</span>
+                                    </a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#"><span class="cs-table-title">사용 문의</span></a> <img class="table-icon"
+                                        src="/images/ico_hit.gif" alt="HIT">
+                                    [1]
+                                </td>
+                                <td class="cs-table-writer">김****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-05-31</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">6</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#"><span class="cs-table-title">상품 다시 보내주신다고 그러셨는데</span></a> <img
+                                        class="table-icon" src="/images/ico_hit.gif" alt="HIT"> [1]
+                                </td>
+                                <td class="cs-table-writer">E****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-05-29</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">5</td>
+                                <td class="thumb-left">
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image2.jpg" alt="썸네일 이미지 2">
+                                        <span class="cs-thumb-description">퓨어셀 녹물제거 주방 필터 헤드 기본세트_코브라형</span>
+                                    </a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#"><span class="cs-table-title">주방 헤드 호환 문의</span></a> <img
+                                        class="table-icon" src="/images/ico_hit.gif" alt="HIT">
+                                </td>
+                                <td class="cs-table-writer">김****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-05-12</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">4</td>
+                                <td class="thumb-left">
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image3.jpg" alt="썸네일 이미지 2">
+                                        <span class="cs-thumb-description">퓨어셀 칼자국 칼집 안 나는 향균 TPU 안심 이유식 도마</span>
+                                    </a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#"><span class="cs-table-title">도마 고리 부분도 휘어지나요?</span></a> <img
+                                        class="table-icon" src="/images/ico_hit.gif" alt="HIT">
+                                </td>
+                                <td class="cs-table-writer">김****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-04-29</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">3</td>
+                                <td class="thumb-left"></td>
+                                <td class="cs-table-contents">
+                                    <img src="images/ico_re.gif" alt="답변"><a href="#" class="table-answer">도마 고리 부분도
+                                        휘어지나요?</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
+                                </td>
+                                <td class="cs-table-writer">PURESELL 퓨어셀</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-04-29</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">2</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">가방도 세탁이 되나요?</a>
+                                </td>
+                                <td class="cs-table-writer">양****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-04-21</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">1</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <img src="images/ico_re.gif" alt="답변"><a href="#" class="table-answer">가방도 세탁이
+                                        되나요?</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
+                                </td>
+                                <td class="cs-table-writer">PURESELL 퓨어셀</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-04-21</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 하단 페이징 시작 -->
+                <div class="cs-bottom-paging">
+                    <a href="#">
+                        <img class="cs-paging-btn" src="/images/btn_page_prev.gif" alt="이전 버튼">
+                    </a>
+                    <ol>
+                        <li class="cs-paging-num">
+                            <a href="#">1</a>
+                        </li>
+                    </ol>
+                    <a href="#">
+                        <img class="cs-paging-btn" src="/images/btn_page_next.gif" alt="다음 버튼">
+                    </a>
+                </div>
+                <!-- 하단 페이징 끝 -->
+            </div>
+            <!-- 검색 메뉴 시작 -->
+            <form class="QnaSearchForm" id="QnaSearchForm" action="#" method="get" target="top">
+                <div class="cs-form">
+                    <fieldset>
+                        <p>
+                            <select class="cs-search-date" name="cs-search-date" id="cs-search-date">
+                                <option value="week">일주일</option>
+                                <option value="month">한달</option>
+                                <option value="month3">세달</option>
+                                <option value="all">전체</option>
+                            </select>
+                            <select class="cs-search-key" name="cs-search-key" id="cs-search-key">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                                <option value="writer_name">글쓴이</option>
+                                <option value="user_id">아이디</option>
+                            </select>
+                            <input class="cs-search-input" type="search" id="cs-search-input" name="cs-search-input">
+                            <a href="#" class="cs-search-btn">찾기</a>
+                        </p>
+                    </fieldset>
+                </div>
+            </form>
+            <!-- 검색 메뉴 끝 -->
+        </div>
+        <!-- QNA 테이블 끝 -->
+    </div>
+    <div id="btn_scroll_window"></div>
+    <div id="footer_window"></div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+
+#login_container{
+    margin-left: 14px;
+    text-align: center;
+    font-size: 0;
+}
+.log-tab{
+}
+.member-wrap{
+    display: inline-block;
+    width: 600px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.nomem-wrap{
+    display: inline-block;
+    width: 600px;
+    margin-left: 60px;
+    box-sizing: border-box;
+}
+
+.title-area{
+    text-align: left;
+    margin: 100px 0.25px;
+}
+.member-wrap .title-area > h2{
+    color: #00afff;
+}
+
+.title-area h2{
+    font-size: 34px;
+}
+.log-tab .login{
+    padding: 35px 50px 40px 50px;
+    color: #2e2e2e;
+    border: 1px solid #ddd;
+}
+.snsLogin{
+    margin: 30px 46px 0 50px;
+}
+
+.ePlaceholder{
+    overflow: hidden;
+    display: block;
+    height: 55px;
+    border-bottom: 1px solid #ebebeb;
+}
+.ePlaceholder>input{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    font-size: 16px;
+    font-weight: 300px;
+    color: #999;
+    letter-spacing: -0.54px;
+    border: 0 none;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+#security_wrap{
+    margin: 23px 0 34px;
+}
+
+.security{
+    font-size: 16px;
+    color: #191919;
+    letter-spacing: -0.48px;
+}
+
+#member_check_save_id{
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.log_lock{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.login fieldset li{
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+}
+.login fieldset li a{
+    font-size: 16px;
+    color: #191919;
+    letter-spacing: -0.48px;
+}
+
+.login .a-btn{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 0;
+    letter-spacing: -0.54px;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.btnLogin{
+    background: #00afff;
+    color: #fff;
+}
+.btnJoin{
+    background: #fff;
+    border: 1px solid #00afff;
+    color: #00afff;
+    margin-top: 15px;
+}
+
+.btnNormal{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    color: #00afff !important; 
+    border: 1px solid #00afff !important;
+    background: #fff;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nomem-wrap fieldset p{
+    font-size: 15px;
+    color: #999;
+    text-align: center;
+    margin: 27px 0 0 0;
+    font-weight: 600;
+    line-height: 1.2;
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="ic_sns_facebook" transform="translate(0.002)">
+    <g id="타원_30" data-name="타원 30" transform="translate(-0.002)" fill="#fff" stroke="#ddd" stroke-width="1">
+      <circle cx="18" cy="18" r="18" stroke="none"/>
+      <circle cx="18" cy="18" r="17.5" fill="none"/>
+    </g>
+    <g id="페이스북" transform="translate(13.5 9.894)">
+      <path id="패스_40" data-name="패스 40" d="M645.542,202.5v-7.389h2.653l.4-2.88h-3.051v-1.839c0-.834.248-1.4,1.53-1.4H648.7v-2.576a23.392,23.392,0,0,0-2.377-.113c-2.353,0-3.96,1.342-3.96,3.807v2.123H639.7v2.88h2.66V202.5Z" transform="translate(-639.7 -186.301)" fill="#797979"/>
+    </g>
+  </g>
+</svg>

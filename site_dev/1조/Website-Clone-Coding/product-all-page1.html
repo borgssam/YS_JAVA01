@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main-MR.css" />
+    <script src="js/jquery.js"></script>
+    <script>
+      function includeHTML(ctrl, page, callback) {
+        $.get(page, function (data) {
+          $("#" + ctrl).append(data);
+          if (callback) {
+            callback();
+          }
+        });
+      }
+      $(function () {
+        // window 내부 스크립트가 있다면 스크립트 분리 후
+        // includeHTML을 해당 스크립트에서 사용하고 script:src로 연결 하기
+        includeHTML("main_header", "main_header.html", null);
+        includeHTML("main_footer", "main_footer.html", null);
+      });
+    </script>
+    <script>
+      scrp;
+    </script>
+  </head>
+  <body>
+    <header id="main_header"></header>
+
+    <main>
+      <div class="bath">
+        <p>ALL</p>
+        <div class="item-align">
+          <p>20ITEMS</p>
+          <ul>
+            <li><a href="#">신상품</a></li>
+            <li><a href="#">상품평</a></li>
+            <li><a href="#">낮은가격</a></li>
+            <li><a href="#">높은가격</a></li>
+            <li><a href="#">제조사</a></li>
+            <li><a href="#">인기상품</a></li>
+            <li><a href="#">사용후기</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bath-item">
+        <ul>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202208/aa1eafa27cff5e50a8520be206dc1d13.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 세면대 녹물제거 필터세트</p></a>
+            <div>
+              <p>14,900원</p>
+              <p><s>18,900원</s></p>
+            </div>
+            <div class="price-percent">21%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="	https://puresell.cafe24.com/web/product/medium/202207/b02ebc396f61f1052ceed1f2a6c80f91.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 주방 헤드용 필터세트</p></a>
+            <div>
+              <p>14,900원</p>
+              <p><s>18,900원</s></p>
+            </div>
+            <div class="price-percent">21%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202307/b35e51226c93dd7732946ee295b8fdd1.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>
+                퓨어셀 3단 접이식 매트리스 바닥 토퍼 접는 단단한 허리에좋은
+                1인용 디스크 매트릭스 싱글
+              </p></a
+            >
+            <div>
+              <p>169,000원</p>
+              <p><s>549,000원</s></p>
+            </div>
+            <div class="price-percent">69%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="	https://puresell.cafe24.com/web/product/medium/202207/3c656bb15f5aa0373a48a423039dc76a.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 녹물제거 주방 헤드 1년세트_핸디형</p></a>
+            <div>
+              <p>26,900원</p>
+              <p><s>34,900원</s></p>
+            </div>
+            <div class="price-percent">23%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="	https://puresell.cafe24.com/web/product/medium/202207/b2f89d7f82a10905cbc79db89335e2d0.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 PVC 샤워호스</p></a>
+            <div>
+              <p>13,900원</p>
+              <p><s>17,900원</s></p>
+            </div>
+            <div class="price-percent">22%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202310/389ba0ac39b7c2a7e4caf845c3dd5afc.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 녹물제거 필터 샤워기 1년세트</p></a>
+            <div>
+              <p>31,900원</p>
+              <p><s>39,900원</s></p>
+            </div>
+            <div class="price-percent">22%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202210/b7527a52b93f7da15fff9467a52f9ee9.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>
+                퓨어셀 허리에좋은 액티브 메모리폼 매트리스 침대 매트릭스 퀸
+                사이즈 Q
+              </p></a
+            >
+            <div>
+              <p>339,000원</p>
+              <p><s>459,000원</s></p>
+            </div>
+            <div class="price-percent">26%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202208/53d360e26dbf6b75c461db175d233273.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 비타민 필터</p></a>
+            <div>
+              <p>13,900원</p>
+              <p><s>17,900원</s></p>
+            </div>
+            <div class="price-percent">22%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202208/90eb598e52705fed5c6791f4f5adb15d.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 코브라 주방 필터세트</p></a>
+            <div>
+              <p>14,900원</p>
+              <p><s>18,900원</s></p>
+            </div>
+            <div class="price-percent">21%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202208/3778cd8747bb88f188dc853bb70d0813.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>퓨어셀 녹물제거 주방 필터 헤드 1년세트_코브라형</p></a
+            >
+            <div>
+              <p>26,900원</p>
+              <p><s>33,900원</s></p>
+            </div>
+            <div class="price-percent">21%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202208/f3e17b74951971363466863cbd188b92.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>퓨어셀 녹물제거 주방 필터 헤드 기본세트_코브라형</p></a
+            >
+            <div>
+              <p>19,900원</p>
+              <p><s>25,900원</s></p>
+            </div>
+            <div class="price-percent">23%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202208/dc1afc264af57a4bea82e2f3d923a4e2.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 녹물제거 세면대 필터 헤드 1년세트</p></a>
+            <div>
+              <p>25,900원</p>
+              <p><s>33,900원</s></p>
+            </div>
+            <div class="price-percent">24%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="	https://puresell.cafe24.com/web/product/medium/202207/2ffbd23947877658e07a2a5514016576.png"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 녹물제거 주방 헤드 기본세트_핸디형</p></a>
+            <div>
+              <p>21,900원</p>
+              <p><s>26,900원</s></p>
+            </div>
+            <div class="price-percent">19%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202208/e93d99149192498c1e49c2f18279c2c0.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 녹물제거 세면대 필터 헤드 기본세트</p></a>
+            <div>
+              <p>19,900원</p>
+              <p><s>25,900원</s></p>
+            </div>
+            <div class="price-percent">23%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202210/27905aaae17cc88fc8a34b1645907193.jpg"
+                alt=""
+            /></a>
+            <a href="#"
+              ><p>
+                퓨어셀 허리에좋은 액티브 메모리폼 매트리스 침대 매트릭스
+                슈퍼싱글 사이즈 SS
+              </p></a
+            >
+            <div>
+              <p>309,000원</p>
+              <p><s>429,000원</s></p>
+            </div>
+            <div class="price-percent">28%</div>
+          </li>
+          <li class="discount-num">
+            <a href="#"
+              ><img
+                src="https://puresell.cafe24.com/web/product/medium/202207/96e33330221b7da052f5dda946107dfd.jpg"
+                alt=""
+            /></a>
+            <a href="#"><p>퓨어셀 녹슬지 않는 자동배수 깔끔 식기건조대</p></a>
+            <div>
+              <p>31,900원</p>
+              <p><s>45,900원</s></p>
+            </div>
+            <div class="price-percent">31%</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-btn">
+        <a href="product-all-page1.html"
+          ><img
+            src="	https://img.echosting.cafe24.com/skin/base/common/btn_page_first.gif"
+            alt=""
+        /></a>
+        <a href="product-all-page1.html"
+          ><img
+            src="	https://img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif"
+            alt=""
+        /></a>
+        <a href="product-all-page1.html"><u>1</u></a>
+        <a href="product-all-page2.html"><span>2</span></a>
+        <a href="product-all-page2.html"
+          ><img
+            src="https://img.echosting.cafe24.com/skin/base/common/btn_page_next.gif"
+            alt=""
+        /></a>
+        <a href="product-all-page2.html"
+          ><img
+            src="https://img.echosting.cafe24.com/skin/base/common/btn_page_last.gif"
+            alt=""
+        /></a>
+      </div>
+    </main>
+    
+    <footer id="main_footer"></footer>
+  </body>
+</html>
