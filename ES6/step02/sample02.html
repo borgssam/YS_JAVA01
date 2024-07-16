@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <h1 id="title">간단한 메모장</h1>
+  <input type="text" id="add-text"/>
+  <button id ='add-button'>추가</button>
+  <div class="container">
+    <p>메모목록</p>
+    <ul id="memo-list">
+      <!-- <li>
+        <div>
+          <p>입력값</p>
+          <button>삭제</button>
+        </div>
+      </li> -->
+    </ul>
+  </div>
+  <script>
+    const onClickAdd = ()=>{
+      //텍스트박스 값얻기
+      const textEle = document.getElementById('add-text');
+      const text = textEle.value;
+      textEle.value = '';
+      console.log(text);
+
+      const ulEle = document.getElementById('memo-list');
+      const liEle = document.createElement('li');
+      const divEle = document.createElement('div');
+      const pEle = document.createElement('p');
+      pEle.textContent = text;
+      const btnEle = document.createElement('button');
+      btnEle.textContent='삭제';
+
+      btnEle.addEventListener('click', ()=>{
+        ulEle.removeChild(liEle);
+      });
+
+      liEle.appendChild(divEle);
+      divEle.appendChild(pEle);
+      divEle.appendChild(btnEle);
+      ulEle.appendChild(liEle);
+
+
+
+
+      
+    }
+
+    const addBtn = document.getElementById('add-button');
+    addBtn.addEventListener('click', onClickAdd );
+  </script>
+  
+</body>
+</html>
