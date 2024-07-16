@@ -81,3 +81,16 @@
 
         </div>
         <!-- 하단Area끝 -->
+         
+        <div>
+            <button onclick="count_up();">카운트</button>
+            <p id="p_count">0</p>
+            <script>
+                let total_count = 0;
+                function count_up(){
+                total_count++;
+                const p_countEle = document.getElementById('p_count');
+                p_countEle.textContent = total_count;
+                }
+            </script>
+        </div>

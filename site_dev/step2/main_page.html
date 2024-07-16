@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        *{margin:0; padding: 0;}
+        a{text-decoration: none; text-align: center;}
+        ul,li{
+            list-style: none;
+            border: 1px solid green;
+        }
+        div{
+            border: 1px solid blue;
+            /* height:30px; */
+        }
+    </style>
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function(data) {
+                $('#' + ctrl).html(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }          
+    </script>    
+    <script>
+        function movepage(sub1, sub2){
+          // alert(sub1 +','+sub2);
+          const subPage = 'sub_'+sub1+'_'+sub2+'.html';
+          //alert(subPage);
+          includeHTML('contentsZonePage',subPage, null);
+        }
+        function initSlider() {
+            const $sliderPanel = $('.slider_panel');
+            const $controlBtns = $('.control_btn');
+            const $leftBtn     = $('.left_btn img');
+            const $rightBtn    = $('.right_btn img');
+
+            let currentIndex = 0;
+            function updateSlider(index){
+                $sliderPanel.css('left', `-${index * 100}%`);
+                $controlBtns.removeClass('active');
+                $controlBtns.eq(index).addClass('active');
+            }
+
+            $leftBtn.on('click',function(){
+                currentIndex--;
+                if(currentIndex<0){
+                    currentIndex=0;
+                }
+                updateSlider(currentIndex);
+            });
+            $rightBtn.on('click', function(){
+                currentIndex++;
+                if(currentIndex>2){
+                    currentIndex=2;
+                }
+                updateSlider(currentIndex);
+            });
+
+            $controlBtns.on('click',function(){
+                currentIndex = parseInt($(this).data('index'));
+                updateSlider(currentIndex);
+
+            });
+            setInterval(function(){
+                currentIndex=(currentIndex+1) % $controlBtns.length;
+                updateSlider(currentIndex);
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <div id="site">
+        <!-- 상단Area시작 -->
+        <div id="topArea">
+
+            <!-- 타이틀Zone시작 -->
+            <div id="titleZonePage"></div>
+            <script>
+                $(function(){
+                    includeHTML('titleZonePage','titleZonePage.html', null);
+                });
+            </script>            
+            <!-- 타이틀Zone끝 -->
+
+            <!-- 메뉴Zone시작 -->
+            <div id="menuZonePage"></div>
+            <script>
+                $(function(){
+                    includeHTML('menuZonePage','menuZonePage.html', null);
+                });
+            </script>     
+            <!-- 메뉴Zone끝 -->
+
+
+            <!-- 슬라이더Zone시작 -->
+            <div id="sliderZonePage"></div>
+            <script>
+                $(function(){
+                    includeHTML('sliderZonePage', 'sliderZonePage.html', initSlider);
+                });
+            </script>
+            <!-- 슬라이더Zone끝 -->
+        </div>
+        <!-- 상단Area끝 -->
+        <!-- 본문Area시작 -->
+        <style>
+            #bodyArea{
+                position: relative;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                overflow: hidden;
+
+            }
+            #leftmenuZone{
+                float: left;
+                width: 20%;
+
+            }
+            #contentsZone{
+                float: right;
+                width: 75%;
+            }
+        </style>
+        <div id="bodyArea">
+
+            <!-- 왼쪽메뉴Zone시작 -->
+            <div id="leftmenuZonePage"></div>
+            <script>
+                $(function(){
+                    includeHTML('leftmenuZonePage','page_6_menu.html',null);
+                });
+            </script>
+
+
+            <!-- 왼쪽메뉴Zone끝 -->
+
+            <!-- 내용Zone시작 -->
+            <style>
+                .contents_title{
+                    font-size: 32px;
+                    padding: 10px 30px;
+                    border-bottom: 5px solid gray;
+                }
+                .album{
+                    border-top:1px solid green;
+                }
+                .album td{
+                    padding : 5px;
+                    border-bottom: 1px solid green;
+                }
+            </style>
+            <div id="contentsZonePage">            </div>
+            <!-- 내용Zone끝 -->
+        </div>
+        <!-- 본문Area끝 -->
+        <!-- 하단Area시작 -->
+        <div id="bottomAreaPage"></div>
+        <script>
+            $(function(){
+                includeHTML('bottomAreaPage', 'bottomAreaPage.html', null);
+            });
+        </script>
+        <!-- 하단Area끝 -->
+    </div>
+
+    
+</body>
+</html>
